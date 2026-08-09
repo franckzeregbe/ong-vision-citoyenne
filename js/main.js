@@ -37,7 +37,9 @@
       meta_desc: "ONG Vision Citoyenne - Eau, Hygiène et Assainissement en milieu scolaire et communautaire. Accès à l'eau potable, latrines dignes et promotion de l'hygiène en Côte d'Ivoire.",
       brand_sub: 'Organisation Non Gouvernementale',
       nav_home: 'Accueil',
+      nav_ong: "L'ONG",
       nav_about: 'À propos',
+      nav_recog: 'Reconnaissances',
       nav_real: 'Projets',
       nav_actions: 'Nos actions',
       nav_news: 'Actualités',
@@ -56,6 +58,10 @@
       hero_lead: "L'ONG Vision Citoyenne agit pour un accès durable à l'eau potable, à des latrines dignes et à de bonnes pratiques d'hygiène dans les écoles et les communautés de Côte d'Ivoire.",
       hero_cta1: 'Soutenir nos actions',
       hero_cta2: 'Découvrir la mission',
+      stat1: "Années d'engagement",
+      stat2: 'Projets menés',
+      stat3: 'Bénéficiaires touchés',
+      stat4: 'Partenaires privilégiés',
       about_tag: 'À propos',
       about_title: 'Notre mission',
       about_sub: "Une vision claire : garantir l'eau, l'hygiène et l'assainissement pour tous, à l'école comme dans la communauté.",
@@ -64,10 +70,17 @@
       real_tag: 'Projets',
       real_title: 'Les projets auxquels nous avons participé',
       real_sub: 'Des engagements concrets, menés avec nos partenaires, au service de l\'eau, de l\'hygiène et de l\'assainissement.',
-      real1_t: 'Participation au projet PASEA',
-      real1_d: "L'ONG Vision Citoyenne a participé au projet PASEA.",
-      real2_t: "Reconnue à l'ONU",
-      real2_d: "L'ONG Vision Citoyenne est reconnue à l'ONU.",
+      real1_year: '2026',
+      real1_status: 'En cours',
+      real1_t: 'Projet PASEA — Eau & Assainissement',
+      real1_d: "L'ONG Vision Citoyenne participe au Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA). Ce projet renforce l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés rurales de Côte d'Ivoire, en renforçant la gouvernance du secteur et l'engagement communautaire.",
+      recog_tag: 'Reconnaissances',
+      recog_title: 'Accréditations & partenariats institutionnels',
+      recog_sub: "L'ONG Vision Citoyenne est officiellement reconnue par les Nations Unies et collabore avec des institutions nationales et internationales engagées pour l'eau, l'hygiène et l'assainissement.",
+      recog_un_t: "Reconnaissance à l'ONU",
+      recog_un_d: "L'ONG Vision Citoyenne est officiellement enregistrée auprès des Nations Unies et alignée sur les Objectifs de Développement Durable, notamment l'ODD 6 (Eau propre et assainissement).",
+      recog_pasea_t: 'Partenaire du projet PASEA',
+      recog_pasea_d: "Engagement au sein du Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA) pour améliorer l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés.",
       nav_partners: 'Partenaires',
       partners_tag: 'Partenaires',
       partners_title: 'Nos partenaires',
@@ -76,8 +89,6 @@
       partner1_d: "Institution internationale de référence, avec laquelle l'ONG est engagée pour les Objectifs de Développement Durable, notamment l'ODD 6.",
       partner2_t: "Ministère de l'Hydraulique, de l'Assainissement et de la Salubrité",
       partner2_d: "Ministère de Côte d'Ivoire chargé de la politique nationale en matière d'hydraulique, d'accès à l'eau potable, d'assainissement et de salubrité.",
-      partner3_t: "Direction de l'Assainissement en Milieu Rural",
-      partner3_d: "Direction technique du MINHAS en charge de l'assainissement rural, notamment la certification des localités « Fin de défécation à l'air libre » (FDAL).",
       partner4_t: 'Institute of Public Policy & Diplomacy Research',
       partner4_d: "Institut international basé à New York, engagé pour la paix, la sécurité, les droits humains et le développement durable.",
       odd1: 'ODD 6',
@@ -149,7 +160,9 @@
       meta_desc: "Vision Citoyenne NGO - Water, Sanitation and Hygiene in schools and communities in Côte d'Ivoire. Access to safe drinking water, dignified latrines and hygiene promotion.",
       brand_sub: 'Non-Governmental Organization',
       nav_home: 'Home',
+      nav_ong: 'The NGO',
       nav_about: 'About',
+      nav_recog: 'Recognitions',
       nav_actions: 'Our work',
       nav_news: 'News',
       nav_volunteer: 'Volunteer',
@@ -185,6 +198,10 @@
       hero_lead: 'Vision Citoyenne NGO works for sustainable access to safe drinking water, dignified latrines and good hygiene practices in schools and communities in Côte d\'Ivoire.',
       hero_cta1: 'Support our work',
       hero_cta2: 'Discover our mission',
+      stat1: 'Years of commitment',
+      stat2: 'Projects completed',
+      stat3: 'Beneficiaries reached',
+      stat4: 'Key partners',
       about_tag: 'About',
       about_title: 'Our mission',
       about_sub: 'A clear vision: ensuring water, hygiene and sanitation for all, at school and in the community.',
@@ -216,12 +233,19 @@
       proj6_t: 'Community mobilization',
       proj6_d: 'Training water management committees and sustaining facilities through communities.',
       real_tag: 'Projects',
-      real_title: 'The projects we have taken part in',
+      real_title: 'Projects & achievements',
       real_sub: 'Concrete commitments, carried out with our partners, for water, hygiene and sanitation.',
-      real1_t: 'Participation in the PASEA project',
-      real1_d: 'Vision Citoyenne NGO took part in the PASEA project.',
-      real2_t: 'Recognized at the UN',
-      real2_d: 'Vision Citoyenne NGO is recognized at the United Nations.',
+      real1_year: '2026',
+      real1_status: 'Ongoing',
+      real1_t: 'PASEA Project — Water & Sanitation',
+      real1_d: "Vision Citoyenne NGO takes part in the PASEA Project (Water and Sanitation Sector Support Program). This project strengthens access to safe drinking water and sanitation in schools and rural communities in Côte d'Ivoire, by reinforcing sector governance and community engagement.",
+      recog_tag: 'Recognitions',
+      recog_title: 'Accreditations & institutional partnerships',
+      recog_sub: 'Vision Citoyenne NGO is officially recognized by the United Nations and works with national and international institutions committed to water, hygiene and sanitation.',
+      recog_un_t: 'Recognition by the UN',
+      recog_un_d: 'Vision Citoyenne NGO is officially registered with the United Nations and aligned with the Sustainable Development Goals, in particular SDG 6 (Clean Water and Sanitation).',
+      recog_pasea_t: 'PASEA Project partner',
+      recog_pasea_d: "Engaged in the PASEA Project (Water and Sanitation Sector Support Program) to improve access to safe drinking water and sanitation in schools and communities.",
       nav_partners: 'Partners',
       partners_tag: 'Partners',
       partners_title: 'Our partners',
@@ -230,8 +254,6 @@
       partner1_d: 'International reference institution, with which the NGO is engaged for the Sustainable Development Goals, in particular SDG 6.',
       partner2_t: 'Ministry of Hydraulics, Sanitation and Salubrity',
       partner2_d: "Côte d'Ivoire ministry in charge of national policy on water, sanitation and salubrity.",
-      partner3_t: 'Rural Sanitation Directorate (DAR)',
-      partner3_d: 'Technical directorate of MINHAS in charge of rural sanitation, including the certification of communities achieving Open Defecation Free (ODF) status.',
       partner4_t: 'Institute of Public Policy & Diplomacy Research',
       partner4_d: 'International institute based in New York, committed to peace, security, human rights and sustainable development.',
       news_tag: 'News',
@@ -258,6 +280,7 @@
       form_name: 'Full name',
       form_email: 'Email',
       form_msg: 'Your motivations',
+      form_msg_contact: 'Message',
       vol_btn: 'I commit',
       contact_tag: 'Contact',
       contact_title: 'Write to us',
@@ -306,6 +329,38 @@
   }
 
   /* ---------------------------------------------------------------
+     2 bis. MENUS DÉROULANTS DE LA NAVIGATION
+     --------------------------------------------------------------- */
+  function initDropdowns() {
+    const toggles = Array.from(document.querySelectorAll('.drop-toggle'));
+    if (!toggles.length) return;
+
+    function closeAll() {
+      toggles.forEach(function (t) {
+        t.closest('.has-dropdown').classList.remove('open');
+        t.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    toggles.forEach(function (t) {
+      t.addEventListener('click', function () {
+        const li = t.closest('.has-dropdown');
+        const willOpen = !li.classList.contains('open');
+        closeAll();
+        if (willOpen) {
+          li.classList.add('open');
+          t.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Ferme les menus déroulants au clic en dehors
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.has-dropdown')) closeAll();
+    });
+  }
+
+  /* ---------------------------------------------------------------
      3. HEADER SCOLLED + SCROLLSPY + BOUTON RETOUR EN HAUT + WHATSAPP
      --------------------------------------------------------------- */
   function initHeaderScroll() {
@@ -315,7 +370,8 @@
     const links = Array.from(document.querySelectorAll('.nav ul a'));
     const sections = links
       .map(function (a) { return document.querySelector(a.getAttribute('href')); })
-      .filter(Boolean);
+      .filter(Boolean)
+      .sort(function (a, b) { return a.offsetTop - b.offsetTop; });
 
     function onScroll() {
       const y = window.scrollY;
@@ -331,6 +387,10 @@
       });
       links.forEach(function (a) {
         a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+      // Met en surbrillance le parent du menu déroulant
+      document.querySelectorAll('.has-dropdown').forEach(function (li) {
+        li.classList.toggle('active', Boolean(li.querySelector('a.active')));
       });
     }
     onScroll();
@@ -554,7 +614,7 @@
   function initReveal() {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    document.querySelectorAll('.card, .values li, .section-head, .testi-card, .about-media figure, .donate-card, .vol-form, .contact-form, .fb-embed').forEach(function (el) {
+    document.querySelectorAll('.card, .values li, .section-head, .testi-card, .about-media figure, .donate-card, .vol-form, .contact-form, .fb-embed, .real-card, .recog-card').forEach(function (el) {
       el.classList.add('reveal');
     });
 
@@ -673,6 +733,7 @@
      --------------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', function () {
     initMobileMenu();
+    initDropdowns();
     initHeaderScroll();
     initScrollProgress();
     initYear();

@@ -5,18 +5,29 @@ l'**Eau, l'Hygiène et l'Assainissement (WASH) en milieu scolaire et communautai
 
 ## Contenu
 
-- `index.html` — structure et contenu du site (6 sections)
+- `index.html` — structure et contenu du site (11 sections)
 - `css/style.css` — design moderne, responsive (mobile / tablette / bureau)
-- `js/main.js` — menu mobile, langue FR/EN, animations, formulaires
+- `js/main.js` — menu mobile + menus déroulants, langue FR/EN, animations, formulaires
+
+> **Logos partenaires** — un logo image remplace automatiquement le badge texte
+> lorsqu'un fichier `assets/partenaires/<code>.<png|jpg|webp>` (fond blanc,
+> format paysage ~600×330) est lié par une balise `<img class="partner-logo" …>`
+> dans la carte du partenaire (`onu.jpg`, `minhas.png`, `ippdr.webp`).
 
 ## Sections
 
-1. Accueil
-2. À propos / Mission
-3. Nos actions (Eau, Assainissement, Hygiène, WASH scolaire, hygiène menstruelle, mobilisation)
-4. Faire un don
-5. Devenir bénévole
-6. Contact
+1. Accueil (hero, stats animées, scroll)
+2. À propos / Mission (valeurs, ODD 6)
+3. Reconnaissances & partenaires institutionnels (ONG, PASEA)
+4. Projets & réalisations (PASEA — Eau & Assainissement)
+5. Partenaires (ONU, MINHAS, IPPDR)
+6. Nos actions (Eau, Assainissement, Hygiène, WASH scolaire, hygiène menstruelle, mobilisation)
+7. Actualités (fil Facebook embarqué)
+8. Galerie photos
+9. Témoignages
+10. Faire un Don
+11. Devenir bénévole
+12. Contact
 
 ## Galerie — ajouter des photos
 
@@ -59,7 +70,10 @@ Remplacez les valeurs entre crochets et coordonnées :
 - **Adresse / téléphone / e-mail** : dans `index.html`, section `#contact`
   (`ongvisioncitoyenne@gmail.com`, `(+225) 27 23 25 87 65`, Yopougon Niangon Sud, Abidjan).
 - **Réseaux sociaux** : liens `Facebook / Instagram / LinkedIn` dans `#contact`.
-- **Statistiques du hero** : chiffres dans la section `#accueil`.
+- **Statistiques du hero** : les 4 compteurs animés dans la section `#accueil`
+  (`.hero-stats`). Pour modifier les chiffres, ajustez les attributs
+  `data-count` et `data-suffix` dans `index.html` (ex : `data-count="2"`).
+  Les libellés sont traduits via les clés `stat1` à `stat4` dans `js/main.js`.
 - **Traductions** : si vous modifiez un texte dans `index.html`, mettez à jour
   la clé correspondante (`data-i18n`) dans `js/main.js` (objets `fr` et `en`).
 
