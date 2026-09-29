@@ -1,25 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" data-i18n="meta_desc" content="ONG Vision Citoyenne - Eau, Hygiene et Assainissement en milieu scolaire et communautaire. Acces a l'eau potable, latrines et promotion de l'hygiene." />
-  <meta name="theme-color" content="#0a4f8a" />
-  <title>ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)</title>
+  <meta name="description" data-i18n="meta_desc" content="ONG Vision Citoyenne - Eau, Hygiène et Assainissement en milieu scolaire et communautaire. Accès à l'eau potable, latrines dignes et promotion de l'hygiène en Côte d'Ivoire." />
+  <meta name="theme-color" content="#1E88E5" />
+  <title data-i18n="page_title">ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)</title>
+
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
   <link rel="apple-touch-icon" href="assets/logo.jpeg" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Vision Citoyenne" />
+
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ONG Vision Citoyenne" />
+  <meta property="og:locale" content="fr_CI" />
   <meta property="og:title" content="ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)" />
   <meta property="og:description" content="L'eau potable, des latrines dignes et la promotion de l'hygiène en milieu scolaire et communautaire en Côte d'Ivoire." />
   <meta property="og:image" content="assets/img/enfants.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)" />
+  <meta name="twitter:description" content="L'eau potable, des latrines dignes et la promotion de l'hygiène en milieu scolaire et communautaire en Côte d'Ivoire." />
+  <meta name="twitter:image" content="assets/img/enfants.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css?v=12" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "NGO",
     "name": "ONG Vision Citoyenne",
     "alternateName": "Vision Citoyenne",
+    "url": "https://www.visioncitoyenne.org",
+    "logo": "assets/logo.jpeg",
     "description": "Eau, Hygiène et Assainissement (WASH) en milieu scolaire et communautaire en Côte d'Ivoire.",
     "email": "ongvisioncitoyenne@gmail.com",
     "telephone": "+2252723258765",
@@ -32,99 +52,39 @@
     "sameAs": ["https://www.facebook.com/ongvisioncitoyenne"]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#accueil" data-i18n="skip">Aller au contenu</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <!-- HEADER -->
-  <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#accueil" class="brand" aria-label="ONG Vision Citoyenne - accueil">
-        <img class="brand-logo" src="assets/logo.jpeg" alt="Logo ONG Vision Citoyenne" width="48" height="48" />
-        <span class="brand-text">
-          <strong>Vision Citoyenne</strong>
-          <small data-i18n="brand_sub">Organisation Non Gouvernementale</small>
-        </span>
-      </a>
+  <!-- Header injecté par layout.js -->
+  <div id="site-header"></div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
-        <span></span><span></span><span></span>
-      </button>
+  <main id="main">
 
-      <nav class="nav" id="navMenu" aria-label="Navigation principale">
-        <ul>
-          <li><a href="#accueil" data-i18n="nav_home">Accueil</a></li>
-          <li class="has-dropdown">
-            <button class="drop-toggle" type="button" aria-expanded="false" data-i18n="nav_ong">L'ONG</button>
-            <ul class="dropdown">
-              <li><a href="#apropos" data-i18n="nav_about">À propos</a></li>
-              <li><a href="#reconnaissances" data-i18n="nav_recog">Reconnaissances</a></li>
-              <li><a href="#realisations" data-i18n="nav_real">Projets</a></li>
-              <li><a href="#partenaires" data-i18n="nav_partners">Partenaires</a></li>
-            </ul>
-          </li>
-          <li class="has-dropdown">
-            <button class="drop-toggle" type="button" aria-expanded="false" data-i18n="nav_actions">Nos actions</button>
-            <ul class="dropdown">
-              <li><a href="#actions" data-i18n="actions_title">Nos domaines d'intervention</a></li>
-              <li><a href="#actus" data-i18n="nav_news">Actualités</a></li>
-              <li><a href="#galerie" data-i18n="nav_gal">Galerie</a></li>
-              <li><a href="#benevole" data-i18n="nav_volunteer">Bénévolat</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-         </ul>
-         <div class="nav-cta">
-          <button class="lang-switch" id="langSwitch" aria-label="Changer de langue">
-            <span class="lang-chip lang-active">FR</span><span class="lang-sep" aria-hidden="true">/</span><span class="lang-chip lang-inactive">EN</span>
-          </button>
-          <a href="#don" class="btn btn-primary" data-i18n="nav_donate">Faire un don</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
     <!-- HERO / ACCUEIL -->
     <section class="hero" id="accueil">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
       <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
-      <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#ffffff" d="M0,48 C240,96 480,0 720,32 C960,64 1200,96 1440,48 L1440,90 L0,90 Z"></path></svg>
+      <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#f2f7fd" d="M0,48 C240,96 480,0 720,32 C960,64 1200,96 1440,48 L1440,90 L0,90 Z"></path></svg>
+
       <div class="container hero-inner">
-        <p class="hero-eyebrow"><span class="hero-pulse" aria-hidden="true"></span><span data-i18n="hero_eyebrow">Eau, Hygiène et Assainissement</span></p>
-        <h1 class="hero-title"><span data-i18n="hero_title_1">L'eau, l'hygiène et l'assainissement en milieu</span> <span class="grad-text" data-i18n="hero_title_2">scolaire</span> <span data-i18n="hero_title_3">et</span> <span class="grad-text" data-i18n="hero_title_4">communautaire</span></h1>
-        <p class="hero-lead" data-i18n="hero_lead">L'ONG Vision Citoyenne agit pour un accès durable à l'eau potable, à des latrines dignes et à de bonnes pratiques d'hygiène dans les écoles et les communautés de Côte d'Ivoire.</p>
+        <p class="hero-eyebrow"><span class="hero-pulse" aria-hidden="true"></span><span data-i18n="hero_eyebrow">Eau • Hygiène • Assainissement</span></p>
+        <h1 class="hero-title"><span data-i18n="hero_title_1">L'eau change tout.</span> <span class="grad-text" data-i18n="hero_title_2">Ensemble,</span> <span data-i18n="hero_title_3">bâtissons un avenir</span> <span class="grad-text" data-i18n="hero_title_4">digne et durable</span></h1>
+        <p class="hero-lead" data-i18n="hero_lead">Parce que l'accès à l'eau potable et à l'hygiène est un droit fondamental, l'ONG Vision Citoyenne agit chaque jour aux côtés des écoles et des communautés de Côte d'Ivoire.</p>
+
         <div class="hero-actions">
-          <a href="#don" class="btn btn-primary btn-lg" data-i18n="hero_cta1">Soutenir nos actions</a>
+          <a href="don.html" class="btn btn-primary btn-lg" data-i18n="hero_cta1">Soutenir nos actions</a>
           <a href="#apropos" class="btn btn-ghost btn-lg" data-i18n="hero_cta2">Découvrir la mission</a>
         </div>
+
         <ul class="hero-stats">
-          <li>
-            <strong class="count" data-count="2" data-suffix="+" aria-hidden="true">0</strong>
-            <span data-i18n="stat1">Années d'engagement</span>
-          </li>
-          <li>
-            <strong class="count" data-count="4" data-suffix="+" aria-hidden="true">0</strong>
-            <span data-i18n="stat2">Projets menés</span>
-          </li>
-          <li>
-            <strong class="count" data-count="2" data-suffix="K+" aria-hidden="true">0</strong>
-            <span data-i18n="stat3">Bénéficiaires touchés</span>
-          </li>
-          <li>
-            <strong class="count" data-count="4" data-suffix="" aria-hidden="true">0</strong>
-            <span data-i18n="stat4">Partenaires privilégiés</span>
-          </li>
+          <li><strong class="count" data-count="8" data-suffix="+" aria-hidden="true">0</strong><span data-i18n="stat1">Années d'engagement</span></li>
+          <li><strong class="count" data-count="4" data-suffix="+" aria-hidden="true">0</strong><span data-i18n="stat2">Projets menés</span></li>
+          <li><strong class="count" data-count="2" data-suffix="K+" aria-hidden="true">0</strong><span data-i18n="stat3">Bénéficiaires touchés</span></li>
+          <li><strong class="count" data-count="12" data-suffix="" aria-hidden="true">0</strong><span data-i18n="stat4">Partenaires engagés</span></li>
         </ul>
       </div>
-      <a class="hero-scroll" href="#apropos" aria-label="Faire défiler la page" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></a>
     </section>
 
     <!-- BANDEAU DÉFILANT -->
@@ -142,8 +102,9 @@
       </div>
     </div>
 
-    <!-- À PROPOS -->
-    <section class="section" id="apropos">
+    <!-- À PROPOS / MISSION — layout riche (photo + texte + valeurs) -->
+    <section class="section about-section" id="apropos">
+      <div class="about-bg-pattern" aria-hidden="true"></div>
       <div class="container">
         <div class="section-head">
           <span class="section-tag" data-i18n="about_tag">À propos</span>
@@ -151,119 +112,126 @@
           <p class="section-sub" data-i18n="about_sub">Une vision claire : garantir l'eau, l'hygiène et l'assainissement pour tous, à l'école comme dans la communauté.</p>
         </div>
 
-        <div class="about-media">
-          <figure><img src="assets/img/ecole.jpg" alt="Élèves d'une école primaire" loading="lazy" /></figure>
-          <figure><img src="assets/img/eau.jpg" alt="Accès à l'eau potable" loading="lazy" /></figure>
-        </div>
+        <div class="about-rich">
+          <!-- Colonne visuelle : photo montage avec badges flottants -->
+          <div class="about-visual">
+            <figure class="about-photo-main">
+              <img src="assets/img/equipe-ceremonie.jpg" alt="L'équipe Vision Citoyenne avec les enfants et partenaires lors de la cérémonie de rénovation EPP SICOGI" loading="lazy" width="600" height="420" />
+              <figcaption data-i18n="about_caption1">Éducation et eau, les piliers de l'avenir</figcaption>
+            </figure>
+            <figure class="about-photo-sub about-photo-president">
+              <img src="assets/img/hero-ceremony.jpg" alt="Wassia MADOU, Présidente de l'ONG Vision Citoyenne" loading="lazy" width="240" height="280" />
+              <figcaption data-i18n="president_caption">Wassia MADOU — Présidente</figcaption>
+            </figure>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <p data-i18n="about_p1">L'ONG Vision Citoyenne œuvre pour que chaque enfant et chaque famille dispose d'un accès sûr à l'eau potable, à des latrines dignes et aux bonnes pratiques d'hygiène. Nous croyons que l'eau et l'assainissement sont la base de la santé, de la dignité et de la réussite scolaire.</p>
-            <p data-i18n="about_p2">Nous construisons des points d'eau et des latrines, formons les comités de gestion et menons des campagnes de sensibilisation à l'hygiène dans les écoles et les communautés, avec transparence et proximité.</p>
-            <div class="odd" role="note">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7s6.5 7.2 6.5 11.6a6.5 6.5 0 1 1-13 0C5.5 9.9 12 2.7 12 2.7z"/></svg>
-              <div><strong data-i18n="odd1">ODD 6</strong><span data-i18n="odd2">Eau propre et assainissement — alignés sur les Objectifs de Développement Durable des Nations Unies</span></div>
+            <!-- Badge ODD 6 flottant -->
+            <div class="about-badge about-badge--odd" role="note">
+              <div class="badge-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7.2 6.5 11.6a6.5 6.5 0 1 1-13 0C5.5 9.9 12 2.7 12 2.7z"/></svg>
+              </div>
+              <div>
+                <strong data-i18n="odd1">ODD 6</strong>
+                <small data-i18n="odd2">Eau propre et assainissement</small>
+              </div>
+            </div>
+
+            <!-- Badge "Depuis" flottant -->
+            <div class="about-badge about-badge--since">
+              <span data-i18n="since_label">Depuis</span>
+              <strong>2018</strong>
+              <small data-i18n="years_engaged">8+ années d'engagement</small>
             </div>
           </div>
-          <ul class="values">
-            <li>
-              <h3 data-i18n="value1_t">Vision</h3>
-              <p data-i18n="value1_d">Un monde où chaque école et chaque communauté dispose d'eau potable et d'un assainissement digne.</p>
-            </li>
-            <li>
-              <h3 data-i18n="value2_t">Mission</h3>
-              <p data-i18n="value2_d">Améliorer durablement l'accès à l'eau, à l'hygiène et à l'assainissement (WASH) au service de la santé et de l'éducation.</p>
-            </li>
-            <li>
-              <h3 data-i18n="value4_t">Latrines scolaires</h3>
-              <p data-i18n="value4_d">Construire des latrines dignes et séparées dans les écoles pour offrir aux élèves un cadre sain et sûr.</p>
-            </li>
-            <li>
-              <h3 data-i18n="value3_t">Valeurs</h3>
-              <p data-i18n="value3_d">Dignité, durabilité, transparence et engagement des communautés.</p>
-            </li>
-          </ul>
+
+          <!-- Colonne texte : mission + 3 valeurs -->
+          <div class="about-story">
+            <p class="founded-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span data-i18n="founded_since">Fondée le 6 juin 2018</span>
+            </p>
+
+            <p class="about-lead" data-i18n="about_p1">L'ONG Vision Citoyenne œuvre pour que chaque enfant et chaque famille dispose d'un accès sûr à l'eau potable, à des latrines dignes et aux bonnes pratiques d'hygiène.</p>
+            <p class="about-desc" data-i18n="about_p2">Nous construisons des points d'eau et des latrines, formons les comités de gestion et menons des campagnes de sensibilisation à l'hygiène dans les écoles et les communautés, avec transparence et proximité.</p>
+
+            <div class="about-values">
+              <div class="about-value-card">
+                <div class="about-value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div><h4 data-i18n="value1_t">Vision</h4><p data-i18n="value1_d">Un monde où chaque école et communauté dispose d'eau potable et d'assainissement digne.</p></div>
+              </div>
+              <div class="about-value-card">
+                <div class="about-value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                <div><h4 data-i18n="value2_t">Mission</h4><p data-i18n="value2_d">Améliorer durablement l'accès à l'eau, l'hygiène et l'assainissement au service de la santé et de l'éducation.</p></div>
+              </div>
+              <div class="about-value-card">
+                <div class="about-value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div><h4 data-i18n="value3_t">Valeurs</h4><p data-i18n="value3_d">Dignité, durabilité, transparence et engagement communautaire.</p></div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
 
-    <!-- RECONNAISSANCES -->
-    <section class="section section-alt" id="reconnaissances">
+    <!-- NOS VALEURS — 5 piliers -->
+    <section class="section values-section" id="valeurs">
       <div class="container">
-        <div class="section-head">
-          <span class="section-tag light" data-i18n="recog_tag">Reconnaissances</span>
-          <h2 data-i18n="recog_title">Accréditations &amp; partenariats institutionnels</h2>
-          <p class="section-sub" data-i18n="recog_sub">L'ONG Vision Citoyenne est officiellement reconnue par les Nations Unies et collabore avec des institutions nationales et internationales engagées pour l'eau, l'hygiène et l'assainissement.</p>
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="values_tag">Nos valeurs</span>
+          <h2 data-i18n="values_title">Les principes qui nous guident</h2>
+          <p class="section-sub" data-i18n="values_sub">Cinq engagements fondamentaux au cœur de notre action, chaque jour et dans chaque projet.</p>
         </div>
-        <div class="recog-grid">
-          <article class="recog-card reveal">
-            <div class="recog-badge" aria-hidden="true">ONU</div>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-            <h3 data-i18n="recog_un_t">Reconnaissance à l'ONU</h3>
-            <p data-i18n="recog_un_d">L'ONG Vision Citoyenne est officiellement enregistrée auprès des Nations Unies et alignée sur les Objectifs de Développement Durable, notamment l'ODD 6 (Eau propre et assainissement).</p>
+
+        <div class="values-grid">
+          <article class="value-pillar reveal">
+            <div class="value-pillar-num">01</div>
+            <div class="value-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L2 7 v6 c0 5 4 9 10 9 s10-4 10-9 V7 z"/><path d="M9 12 l2 2 l4-4"/></svg>
+            </div>
+            <h3 data-i18n="value_p1_t">Transparence &amp; Égalité</h3>
+            <p data-i18n="value_p1_d">Une gestion ouverte et responsable, avec un accès équitable aux services pour toutes et tous.</p>
           </article>
-          <article class="recog-card reveal">
-            <div class="recog-badge" aria-hidden="true">PASEA</div>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><line x1="13" y1="11" x2="13" y2="11"/><line x1="12" y1="15" x2="12" y2="15"/></svg></div>
-            <h3 data-i18n="recog_pasea_t">Partenaire du projet PASEA</h3>
-            <p data-i18n="recog_pasea_d">Engagement au sein du Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA) pour améliorer l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés.</p>
+
+          <article class="value-pillar reveal">
+            <div class="value-pillar-num">02</div>
+            <div class="value-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2 H6 a2 2 0 0 0-2 2 v16 a2 2 0 0 0 2 2 h12 a2 2 0 0 0 2-2 V8 z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="18" x2="13" y2="18"/></svg>
+            </div>
+            <h3 data-i18n="value_p2_t">Redevabilité</h3>
+            <p data-i18n="value_p2_d">Nous rendons des comptes à nos communautés, à nos partenaires et à nos bénéficiaires.</p>
+          </article>
+
+          <article class="value-pillar value-pillar--featured reveal">
+            <div class="value-pillar-num">03</div>
+            <div class="value-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61 a5.5 5.5 0 0 0-7.78 0 L12 5.67 l-1.06-1.06 a5.5 5.5 0 0 0-7.78 7.78 l1.06 1.06 L12 21.23 l7.78-7.78 1.06-1.06 a5.5 5.5 0 0 0 0-7.78 z"/></svg>
+            </div>
+            <h3 data-i18n="value_p3_t">Humanité</h3>
+            <p data-i18n="value_p3_d">La dignité de chaque personne est la boussole de nos interventions et de nos choix.</p>
+          </article>
+
+          <article class="value-pillar reveal">
+            <div class="value-pillar-num">04</div>
+            <div class="value-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L6 8 v6 a6 6 0 0 0 12 0 V8 z"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+            </div>
+            <h3 data-i18n="value_p4_t">Impartialité</h3>
+            <p data-i18n="value_p4_d">Nous agissons selon les besoins, sans distinction d'origine, de croyance ou d'appartenance.</p>
+          </article>
+
+          <article class="value-pillar reveal">
+            <div class="value-pillar-num">05</div>
+            <div class="value-pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.5 13 7 22 12 19 17 22 15.5 13"/></svg>
+            </div>
+            <h3 data-i18n="value_p5_t">Professionnalisme</h3>
+            <p data-i18n="value_p5_d">Compétence, rigueur et qualité — de la conception au suivi de chaque projet sur le terrain.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROJETS -->
-    <section class="section" id="realisations">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag" data-i18n="real_tag">Projets</span>
-          <h2 data-i18n="real_title">Projets &amp; réalisations</h2>
-          <p class="section-sub" data-i18n="real_sub">Des engagements concrets, menés avec nos partenaires, au service de l'eau, de l'hygiène et de l'assainissement.</p>
-        </div>
-        <div class="real-grid">
-          <article class="real-card reveal">
-            <span class="real-year" data-i18n="real1_year">2026</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
-            <h3 data-i18n="real1_t">Projet PASEA — Eau &amp; Assainissement</h3>
-            <p data-i18n="real1_d">L'ONG Vision Citoyenne participe au Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA). Ce projet renforce l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés rurales de Côte d'Ivoire, en renforçant la gouvernance du secteur et l'engagement communautaire.</p>
-            <span class="real-status" data-i18n="real1_status">En cours</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTENAIRES -->
-    <section class="section" id="partenaires">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag" data-i18n="partners_tag">Partenaires</span>
-          <h2 data-i18n="partners_title">Nos partenaires</h2>
-          <p class="section-sub" data-i18n="partners_sub">L'ONG Vision Citoyenne agit aux côtés d'institutions nationales et internationales, engagées pour l'eau, l'hygiène et l'assainissement.</p>
-        </div>
-        <div class="partner-grid">
-          <article class="partner-card">
-            <img class="partner-logo" src="assets/partenaires/onu.jpg" alt="Logo ONU" loading="lazy" />
-            <div class="partner-badge" aria-hidden="true">ONU</div>
-            <h3 data-i18n="partner1_t">Organisation des Nations Unies</h3>
-            <p data-i18n="partner1_d">Institution internationale de référence, avec laquelle l'ONG est engagée pour les Objectifs de Développement Durable, notamment l'ODD 6.</p>
-          </article>
-          <article class="partner-card">
-            <img class="partner-logo" src="assets/partenaires/minhas.png" alt="Logo MINHAS" loading="lazy" />
-            <div class="partner-badge" aria-hidden="true">MINHAS</div>
-            <h3 data-i18n="partner2_t">Ministère de l'Hydraulique, de l'Assainissement et de la Salubrité</h3>
-            <p data-i18n="partner2_d">Ministère de Côte d'Ivoire chargé de la politique nationale en matière d'hydraulique, d'accès à l'eau potable, d'assainissement et de salubrité.</p>
-          </article>
-          <article class="partner-card">
-            <img class="partner-logo" src="assets/partenaires/ippdr.webp" alt="Logo IPPDR" loading="lazy" />
-            <div class="partner-badge" aria-hidden="true">IPPDR</div>
-            <h3 data-i18n="partner4_t">Institute of Public Policy &amp; Diplomacy Research</h3>
-            <p data-i18n="partner4_d">Institut international basé à New York, engagé pour la paix, la sécurité, les droits humains et le développement durable.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- NOS ACTIONS -->
+    <!-- NOS ACTIONS (6 DOMAINES WASH) -->
     <section class="section section-alt" id="actions">
       <div class="container">
         <div class="section-head">
@@ -274,448 +242,183 @@
 
         <div class="cards">
           <article class="card">
-            <span class="card-num">1</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
-            <h3 data-i18n="proj1_t">Accès à l'eau potable</h3>
-            <p data-i18n="proj1_d">Forages, puits, réseaux et points d'eau pour approvisionner écoles et communautés en eau saine.</p>
+            <div class="card-visual"><span class="card-num-bg">1</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj1_t">Accès à l'eau potable</h3><p data-i18n="proj1_d">Forages, puits, réseaux et points d'eau pour approvisionner écoles et communautés en eau saine.</p></div>
           </article>
           <article class="card">
-            <span class="card-num">2</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16M4 14h16M6 4v16M18 4v16"/></svg></div>
-            <h3 data-i18n="proj2_t">Assainissement & Latrines</h3>
-            <p data-i18n="proj2_d">Construction de latrines dignes et séparées dans les écoles et gestion des eaux usées.</p>
+            <div class="card-visual"><span class="card-num-bg">2</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16M4 14h16M6 4v16M18 4v16"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj2_t">Assainissement &amp; Latrines</h3><p data-i18n="proj2_d">Construction de latrines dignes et séparées dans les écoles et gestion des eaux usées.</p></div>
           </article>
           <article class="card">
-            <span class="card-num">3</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 0 1 8-8 8 8 0 0 1 8 8 M7 12v6 M17 12v6 M4 18h16"/></svg></div>
-            <h3 data-i18n="proj3_t">Promotion de l'hygiène</h3>
-            <p data-i18n="proj3_d">Sensibilisation au lavage des mains, dispositifs de lavage et éducation à l'hygiène.</p>
+            <div class="card-visual"><span class="card-num-bg">3</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 8-8 8 8 0 0 1 8 8 M7 12v6 M17 12v6 M4 18h16"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj3_t">Promotion de l'hygiène</h3><p data-i18n="proj3_d">Sensibilisation au lavage des mains, dispositifs de lavage et éducation à l'hygiène.</p></div>
           </article>
           <article class="card">
-            <span class="card-num">4</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18 M4 21V9l8-5 8 5v12 M9 21v-6h6v6"/></svg></div>
-            <h3 data-i18n="proj4_t">WASH en milieu scolaire</h3>
-            <p data-i18n="proj4_d">Programmes eau-hygiène-assainissement dans les écoles pour la santé et la réussite des élèves.</p>
+            <div class="card-visual"><span class="card-num-bg">4</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18 M4 21V9l8-5 8 5v12 M9 21v-6h6v6"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj4_t">WASH en milieu scolaire</h3><p data-i18n="proj4_d">Programmes eau-hygiène-assainissement dans les écoles pour la santé et la réussite des élèves.</p></div>
           </article>
           <article class="card">
-            <span class="card-num">5</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
-            <h3 data-i18n="proj5_t">Hygiène menstruelle</h3>
-            <p data-i18n="proj5_d">Accompagnement des filles : sensibilisation, kits et installations adaptées pour rester à l'école.</p>
+            <div class="card-visual"><span class="card-num-bg">5</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj5_t">Hygiène menstruelle</h3><p data-i18n="proj5_d">Accompagnement des filles : sensibilisation, kits et installations adaptées pour rester à l'école.</p></div>
           </article>
           <article class="card">
-            <span class="card-num">6</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3 data-i18n="proj6_t">Mobilisation communautaire</h3>
-            <p data-i18n="proj6_d">Formation des comités de gestion de l'eau et pérennisation des ouvrages par les communautés.</p>
+            <div class="card-visual"><span class="card-num-bg">6</span><div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M23 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75"/></svg></div></div>
+            <div class="card-body"><h3 data-i18n="proj6_t">Mobilisation communautaire</h3><p data-i18n="proj6_d">Formation des comités de gestion de l'eau et pérennisation des ouvrages par les communautés.</p></div>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- GALERIE -->
-    <section class="section" id="galerie">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag" data-i18n="gal_tag">Galerie</span>
-          <h2 data-i18n="gal_title">Nos photos</h2>
-          <p class="section-sub" data-i18n="gal_sub">Images de nos actions et de nos partenaires sur le terrain. Cliquez sur une photo pour l'agrandir.</p>
-        </div>
-        <div class="gal-grid" id="galerieGrid"></div>
-      </div>
-    </section>
-
-    <!-- VISIONNEUSE PLEIN ÉCRAN -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images" hidden>
-      <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-      <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Image précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-      <figure class="lb-figure">
-        <img id="lbImg" src="" alt="" />
-        <figcaption id="lbCaption"></figcaption>
-      </figure>
-      <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Image suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
-    </div>
-
-    <!-- FAIRE UN DON -->
-    <section class="section donate" id="don">
-      <div class="container donate-inner">
-        <div class="donate-text">
-          <span class="section-tag light" data-i18n="donate_tag">Faire un don</span>
-          <h2 data-i18n="donate_title">Votre don donne accès à l'eau</h2>
-          <p data-i18n="donate_sub">Chaque contribution finance directement nos ouvrages d'eau et d'assainissement sur le terrain. Ensemble, allons plus loin.</p>
-          <ul class="donate-impact">
-            <li><strong>15€</strong> <span data-i18n="impact1">offrent un kit d'hygiène et de lavage des mains</span></li>
-            <li><strong>50€</strong> <span data-i18n="impact2">financent une campagne d'hygiène dans une école</span></li>
-            <li><strong>100€</strong> <span data-i18n="impact3">contribuent à un point d'eau communautaire</span></li>
+        <!-- Champs d'engagement élargis (au-delà du WASH) -->
+        <div class="fields-extended reveal">
+          <div class="fields-extended-head">
+            <span class="fields-tag" data-i18n="fields_ext_tag">Notre horizon</span>
+            <h3 data-i18n="fields_ext_title">Au-delà du WASH, un engagement global</h3>
+            <p data-i18n="fields_ext_sub">Vision Citoyenne intervient aussi sur les enjeux transversaux qui touchent les mêmes communautés.</p>
+          </div>
+          <ul class="fields-chips">
+            <li><span class="chip-dot" style="background:var(--gold)"></span><span data-i18n="field_a">Genre &amp; inclusion sociale</span></li>
+            <li><span class="chip-dot" style="background:var(--yellow)"></span><span data-i18n="field_b">Autonomisation de la femme en milieu rural</span></li>
+            <li><span class="chip-dot" style="background:var(--red)"></span><span data-i18n="field_c">Lutte contre les violences basées sur le genre</span></li>
+            <li><span class="chip-dot" style="background:var(--green)"></span><span data-i18n="field_d">Lutte contre le changement climatique</span></li>
+            <li><span class="chip-dot" style="background:var(--blue-600)"></span><span data-i18n="field_e">Santé &amp; nutrition</span></li>
+            <li><span class="chip-dot" style="background:var(--blue-900)"></span><span data-i18n="field_f">Paix &amp; cohésion sociale</span></li>
           </ul>
         </div>
-        <div class="donate-card">
-          <h3 data-i18n="donate_card_t">Soutenir maintenant</h3>
-          <div class="amount-grid" role="group" aria-label="Montant du don">
-            <button class="amount" type="button">15€</button>
-            <button class="amount" type="button">50€</button>
-            <button class="amount active" type="button">100€</button>
-            <button class="amount" type="button" data-i18n="amount_custom">Autre</button>
-          </div>
-          <a href="mailto:ongvisioncitoyenne@gmail.com?subject=Faire%20un%20don" class="btn btn-primary btn-block" data-i18n="donate_btn">Faire un don</a>
-          <p class="donate-note" data-i18n="donate_note">Paiement sécurisé. Reçu fiscal sur demande.</p>
+      </div>
+    </section>
+
+    <!-- NOS ACTIONS PASSÉES — showcase historique -->
+    <section class="section history-section" id="historique">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="history_tag">Nos réalisations</span>
+          <h2 data-i18n="history_title">Sur le terrain depuis 2018</h2>
+          <p class="section-sub" data-i18n="history_sub">Un aperçu de nos actions passées auprès des écoles et des communautés — dons, sensibilisations et interventions concrètes.</p>
+        </div>
+
+        <div class="history-mosaic reveal">
+          <figure class="history-card history-card--large">
+            <img src="assets/img/historique/unicef-san-pedro.jpg" alt="Don de l'UNICEF à l'ONG Vision Citoyenne, remis au Lycée Moderne Inagohi de San Pedro" loading="lazy" />
+            <figcaption>
+              <span class="history-tag" data-i18n="history_partner">Partenariat UNICEF</span>
+              <strong data-i18n="history_c1_t">Don remis au Lycée Moderne de San Pedro</strong>
+              <span class="history-year">2022</span>
+            </figcaption>
+          </figure>
+          <figure class="history-card">
+            <img src="assets/img/historique/engagement-citoyen-nord.jpg" alt="Sensibilisation citoyenne dans une école primaire" loading="lazy" />
+            <figcaption>
+              <span class="history-tag" data-i18n="history_field">Sensibilisation</span>
+              <strong data-i18n="history_c2_t">Engagement citoyen en milieu scolaire</strong>
+              <span class="history-year">2022</span>
+            </figcaption>
+          </figure>
+          <figure class="history-card">
+            <img src="assets/img/historique/sensibilisation-scolaire.jpg" alt="Rassemblement d'élèves lors d'une action de sensibilisation" loading="lazy" />
+            <figcaption>
+              <span class="history-tag" data-i18n="history_field">Mobilisation</span>
+              <strong data-i18n="history_c3_t">Grande mobilisation scolaire</strong>
+              <span class="history-year">2022</span>
+            </figcaption>
+          </figure>
+          <figure class="history-card">
+            <img src="assets/img/historique/action-terrain.jpg" alt="Formation des bénéficiaires sur le terrain" loading="lazy" />
+            <figcaption>
+              <span class="history-tag" data-i18n="history_field">Terrain</span>
+              <strong data-i18n="history_c4_t">Formation des bénéficiaires</strong>
+              <span class="history-year">2022</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="history-cta reveal">
+          <a href="actualites.html#galerie" class="btn btn-ghost btn-sm" data-i18n="history_more">Voir la galerie complète →</a>
         </div>
       </div>
     </section>
 
-    <!-- ACTUALITÉS / FACEBOOK -->
-    <section class="section section-alt" id="actus">
+    <!-- APERÇU PARTENAIRES (LOGOS SEULEMENT) -->
+    <section class="section" id="partenaires-preview">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag" data-i18n="news_tag">Actualités</span>
-          <h2 data-i18n="news_title">Nos actualités sur Facebook</h2>
-          <p class="section-sub" data-i18n="news_sub">Retrouvez ici les activités et publications de notre ONG, publiées en direct sur notre page Facebook officielle.</p>
+          <span class="section-tag" data-i18n="partners_tag">Partenaires</span>
+          <h2 data-i18n="partners_title">Nos partenaires &amp; alliés</h2>
         </div>
-        <div class="fb-grid">
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02HkF6ZjYjYh48Pt3cb7CXdjE4W2XRX2pZHs1ToVK5XEnmydqWZXtqFMH6Ziur9uSSl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0mz4wxNCyjf69JsyA1eAxzXY6Cv98tcxYkhXrnBPdYo884uhPD54VNsfbtk6hU6tQl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0iWgi4eUZpgiXMvj548G6XRgdHWhuaS4DD5Xq8g5XJ5iME9u6sYGDXv1jF957drL3l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02QZarKPgtFCBCjMdkPccHC7jQuXzpojBSMm2HgGVP4H3utc2x2ve9d7cVqxNWvCpnl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed fb-video">
-            <iframe title="Vidéo Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4270191083247417%2F&show_text=true&width=350&t=0"
-              width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0SxpyRnEbWP1mYoLwU6ACUxyfuEQix5KadhzsyWECUihk1S1jyzZqp7qqou4ydEFvl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02he1ZY9jsnemLdcjhKuAHjYREndUix6Y7u2JJzSaDd2hP6qzcfiP3guEPGkWoZ7HDl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed fb-video">
-            <iframe title="Vidéo Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1437997591033554%2F&show_text=true&width=350&height=620&t=0"
-              width="321" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02PnUonTLrzEnRQ3fKfD5a2BmnqicZkRHpVxRFASsKvic15saeD4oUTVMjQekJmwMgl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0M9og6M86ZHsQLVu7ZGdCQsds4ephQbWntofPTFVrDZimqGrNu1q4Hsid3PNAyESGl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Vidéo Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1915839285968575%2F&show_text=true&width=350&t=0"
-              width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed fb-video">
-            <iframe title="Vidéo Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1254348475631352%2F&show_text=false&width=350&t=0"
-              width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0AkXev3cA5pV2wwbCHjrHiVBntsgTQKWEjNKuVoZKzKRvjfzP3v43XFjQMMkoiWo8l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0MTiWJpYEenqwubCx7xx7UM8oQdkRBDm54fTiecPpnroSYUg3hSUywJ6vidXr261Ul&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0Fza2eGnifUnFPcS8aj6ThWDivcVhskpf3FhKhSqxwgSKWmCKnN1pFZAeanBpU44Xl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0qB52zT66ZDdhvTZ7MsK3g613EgdSA3FnB1aF1sHGkN81rVapjwNdQHZxZcxAzPzxl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02gYfjWbzbLDTXMvr6fxpWzswT9xTdkV9m2B5qpVbCitacodsQqX5pnkQyEJNuBre6l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0YCygYDAw1vXQHoydrvKFbPNJ2KNdoG7Y3uStqDiKmLFTyFBdUSN8EJR3nYdn2dA6l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid033r45ERCGtZZaLaM814bBZRTiiiXtuZSE2L8fckz7JpAKT7BinS9XoEaQGZhmHxH2l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0gKtidMEDz9efh4bg8mZ8oWdsoZouatcfooxMvewuPvq2S4rwisBgEGqvz2STD7V5l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0BUuJ1SocTDMmLZFwjqFjQrd5qm1pGU9NPQHGYsqpnDn7ueZTNDVQ7XfrVN4SG3Yul&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0fi574sg9UndX4eDqT3FETSb8o4Fm4NRSPatHgnFdgeLhHp1RQmETN1fbSSHkCpaol&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0atbu31fmwkoeRNuVSsK5Gd866wLdbGz1sCWG8JtNeWrxqsYqECuWBYQciBuYpT1Ul&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0rzMC1peqW8PDn4N2851GagJB6zW1jh1a7BBrP1HYqP7nPrN3bEHsQ4LerKaubcE5l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02MGo2ZLAcP8fYAC5HebFQpC7yQarxjxvGHSCP763MZNWkgisZrmXJcbqvmdJ4X9czl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02uqFkadQMunHAhN5GAhyjDVJudqd7C9Vg1ksmCbWyaXMj6REnwxhDrVHSWNmS3836l&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid0RzhCfcJSKvDsMsyU6HL9ri3oCiTUsYgZG64fvtxBPczqav8WVzLzm2T7ZvurC3Efl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
-          <div class="fb-embed">
-            <iframe title="Publication Facebook ONG Vision Citoyenne"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fongvisioncitoyenne%2Fposts%2Fpfbid02LMVvKCDVVmsBVT7FwvaCG8zd5yJPzNhBLhxJ6tB7FaL6ZDeG49ubtS1SmsJ3t11jl&show_text=true&width=350"
-              width="350" height="640" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
-          </div>
+
+        <div class="partners-strip">
+          <img src="assets/partenaires/onu.jpg" alt="ONU" loading="lazy" />
+          <img src="assets/partenaires/unicef.png" alt="UNICEF" loading="lazy" />
+          <img src="assets/partenaires/ecosoc.jpg" alt="ECOSOC — Economic and Social Council" loading="lazy" />
+          <img src="assets/partenaires/banque-mondiale.jpg" alt="Banque Mondiale" loading="lazy" />
+          <img src="assets/partenaires/iom.jpg" alt="OIM — Organisation Internationale pour les Migrations" loading="lazy" />
+          <img src="assets/partenaires/usaid.svg" alt="USAID" loading="lazy" />
+          <img src="assets/partenaires/minhas.png" alt="MINHAS" loading="lazy" />
+          <img src="assets/partenaires/ippdr.webp" alt="IPPDR" loading="lazy" />
+          <img src="assets/partenaires/piducas.png" alt="PIDUCAS" loading="lazy" />
+          <img src="assets/partenaires/eicf.jpg" alt="EICF" loading="lazy" />
+          <img src="assets/partenaires/verdis.png" alt="Government of Verdis" loading="lazy" />
+          <img src="assets/partenaires/hff.jpeg" alt="Humanitarian Focus Foundation" loading="lazy" style="border-radius:50%; padding:2px; background:#fff" />
         </div>
-        <p class="fb-cta">
-          <a href="https://www.facebook.com/ongvisioncitoyenne" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="news_btn">Suivre notre page Facebook</a>
-        </p>
+
+        <div style="text-align:center; margin-top:22px">
+          <a href="partenaires.html" class="btn btn-outline" data-i18n="see_all_partners">Voir tous nos partenaires &amp; reconnaissances</a>
+        </div>
       </div>
     </section>
 
-    <!-- TÉMOIGNAGES -->
-    <section class="section testi" id="temoignages">
+    <!-- CTA DON RAPIDE -->
+    <section class="section donate-teaser">
       <div class="container">
-        <div class="section-head">
-          <span class="section-tag light" data-i18n="testi_tag">Témoignages</span>
-          <h2 data-i18n="testi_title">Ils nous accompagnent</h2>
-          <p class="section-sub" data-i18n="testi_sub">Communautés, enseignants et partenaires racontent l'impact de l'eau et de l'hygiène au quotidien.</p>
-        </div>
-        <div class="testi-grid">
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi1">Depuis l'installation du point d'eau, les enfants ne manquent plus l'école pour aller chercher de l'eau.</p>
-            <div class="testi-who"><div class="testi-avatar">AK</div><div><div class="testi-name" data-i18n="testi1_name">M. Kouamé</div><div class="testi-role" data-i18n="testi1_role">Directeur d'école, Yopougon</div></div></div>
-          </article>
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi2">Les latrines séparées ont redonné confiance aux filles, qui restent en classe toute la journée.</p>
-            <div class="testi-who"><div class="testi-avatar">AM</div><div><div class="testi-name" data-i18n="testi2_name">Mme Traoré</div><div class="testi-role" data-i18n="testi2_role">Enseignante, Abidjan</div></div></div>
-          </article>
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi3">Notre comité gère l'ouvrage ensemble : c'est notre santé, c'est notre fierté.</p>
-            <div class="testi-who"><div class="testi-avatar">SD</div><div><div class="testi-name" data-i18n="testi3_name">Mme Sidibé</div><div class="testi-role" data-i18n="testi3_role">Membre du comité de gestion</div></div></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BÉNÉVOLAT -->
-    <section class="section" id="benevole">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-tag" data-i18n="vol_tag">Bénévolat</span>
-          <h2 data-i18n="vol_title">Devenez bénévole</h2>
-          <p class="section-sub" data-i18n="vol_sub">Donnez de votre temps et de vos compétences pour l'eau, l'hygiène et l'assainissement.</p>
-        </div>
-        <div class="vol-grid">
-          <div class="vol-side">
-            <img class="vol-img" src="assets/img/mains.jpg" alt="Sensibilisation au lavage des mains" loading="lazy" />
-            <ul class="vol-list">
-              <li data-i18n="vol1">Participer aux campagnes de sensibilisation à l'hygiène</li>
-              <li data-i18n="vol2">Partager vos compétences (eau, génie civil, santé, communication...)</li>
-              <li data-i18n="vol3">Appuyer nos projets WASH dans les écoles et les communautés</li>
-              <li data-i18n="vol4">Contribuer à un impact réel et mesurable sur la santé</li>
-            </ul>
+        <div class="donate-teaser-inner">
+          <div>
+            <span class="section-tag" data-i18n="donate_tag">Faire un don</span>
+            <h2 data-i18n="donate_title">Votre don donne accès à l'eau</h2>
+            <p data-i18n="donate_teaser_sub">Chaque contribution finance directement nos ouvrages et nos formations sur le terrain. Ensemble, transformons des vies.</p>
           </div>
-          <form class="vol-form" id="volForm" novalidate>
-            <div class="field">
-              <label for="vn" data-i18n="form_name">Nom complet</label>
-              <input id="vn" name="name" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="ve" data-i18n="form_email">E-mail</label>
-              <input id="ve" name="email" type="email" required autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="vm" data-i18n="form_msg">Vos motivations</label>
-              <textarea id="vm" name="message" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block" data-i18n="vol_btn">Je m'engage</button>
-            <p class="form-status" id="volStatus" role="status"></p>
-          </form>
+          <div class="donate-teaser-actions">
+            <a href="don.html" class="btn btn-primary btn-lg" data-i18n="donate_btn">Faire un don maintenant</a>
+            <a href="https://wa.me/2250707597457?text=Bonjour%20ONG%20Vision%20Citoyenne,%20je%20souhaite%20faire%20un%20don" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-i18n="donate_wa_btn">Don via WhatsApp</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section section-alt" id="contact">
+    <!-- CONTACT EXPRESS -->
+    <section class="section section-alt" id="contact-teaser">
       <div class="container">
         <div class="section-head">
           <span class="section-tag" data-i18n="contact_tag">Contact</span>
-          <h2 data-i18n="contact_title">Écrivez-nous</h2>
-          <p class="section-sub" data-i18n="contact_sub">Une question, un partenariat ? Nous vous répondrons rapidement.</p>
+          <h2 data-i18n="contact_title">Contactez notre équipe</h2>
+          <p class="section-sub" data-i18n="contact_sub">Un projet, un partenariat ou une question ? Nous vous répondons sous 24h à 48h.</p>
         </div>
-        <div class="contact-grid">
-          <ul class="contact-info">
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg></span> <span data-i18n="contact_addr">Yopougon Niangon Sud à gauche, route de la centrale d'Azito – Rue première carrière de sable, Abidjan, Côte d'Ivoire</span></li>
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z M4 4l8 6 8-6"/></svg></span> <a href="mailto:ongvisioncitoyenne@gmail.com">ongvisioncitoyenne@gmail.com</a></li>
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> <a href="tel:+2252723258765">(+225) 27 23 25 87 65</a></li>
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> <a href="tel:+2250707597457">(+225) 07 07 59 74 57</a> · <a href="tel:+2250140175271">01 40 17 52 71</a></li>
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2 M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></span> <span data-i18n="contact_rep">Représentée par Madame Kpagby épouse Madou Wassia Sidonie</span></li>
-            <li><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6"/></svg></span> <span data-i18n="contact_receipt">Récépissé N° 0373/MIS DGAT/SDVA</span></li>
-            <li class="contact-social">
-              <a href="https://www.facebook.com/ongvisioncitoyenne" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-            </li>
-          </ul>
-          <form class="contact-form" id="contactForm" novalidate>
-            <div class="field">
-              <label for="cn" data-i18n="form_name">Nom complet</label>
-              <input id="cn" name="name" type="text" required autocomplete="name" />
-            </div>
-            <div class="field">
-              <label for="ce" data-i18n="form_email">E-mail</label>
-              <input id="ce" name="email" type="email" required autocomplete="email" />
-            </div>
-            <div class="field">
-              <label for="cm" data-i18n="form_msg_contact">Message</label>
-              <textarea id="cm" name="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block" data-i18n="contact_btn">Envoyer</button>
-            <p class="form-status" id="contactStatus" role="status"></p>
-          </form>
+        <div class="contact-express">
+          <a href="tel:+2250707597457" class="contact-express-card">
+            <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><strong>Téléphone</strong><span>(+225) 07 07 59 74 57</span></div>
+          </a>
+          <a href="mailto:ongvisioncitoyenne@gmail.com" class="contact-express-card">
+            <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z M4 4l8 6 8-6"/></svg></div>
+            <div><strong>E-mail</strong><span>ongvisioncitoyenne@gmail.com</span></div>
+          </a>
+          <a href="https://wa.me/2250707597457" target="_blank" rel="noopener" class="contact-express-card">
+            <div class="contact-icon" aria-hidden="true" style="background:#dcfce7;color:#128c7e"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg></div>
+            <div><strong>WhatsApp</strong><span>+225 07 07 59 74 57</span></div>
+          </a>
+          <a href="contact.html" class="contact-express-card">
+            <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong data-i18n="see_contact_page">Formulaire &amp; carte</strong><span data-i18n="see_contact_page_sub">Voir la page contact complète →</span></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <a class="wa-float" id="waFloat" href="https://wa.me/2250707597457" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg></a>
-    <button class="to-top" id="toTop" aria-label="Retour en haut" title="Retour en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
   </main>
 
-  <!-- BANDEAU CTA -->
-  <section class="section cta-band">
-    <div class="container">
-      <h2 data-i18n="cta_title">Ensemble, portons l'eau à tous</h2>
-      <p data-i18n="cta_sub">Soutenez nos actions WASH ou rejoignez nos équipes de bénévoles sur le terrain.</p>
-      <div class="hero-actions" style="justify-content:center">
-        <a href="#don" class="btn btn-primary btn-lg" data-i18n="cta_btn1">Faire un don</a>
-        <a href="#benevole" class="btn btn-ghost btn-lg" data-i18n="cta_btn2">Devenir bénévole</a>
-      </div>
-    </div>
-  </section>
+  <!-- Footer + Boutons flottants injectés par layout.js -->
+  <div id="site-footer"></div>
+  <div id="site-floating"></div>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img class="brand-logo footer-logo" src="assets/logo.jpeg" alt="Logo ONG Vision Citoyenne" width="52" height="52" />
-        <div>
-          <strong>ONG Vision Citoyenne</strong>
-          <p data-i18n="footer_tag">Eau, Hygiène et Assainissement en milieu scolaire et communautaire.</p>
-          <div class="social-row">
-            <a class="social-btn" href="https://www.facebook.com/ongvisioncitoyenne" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.93.26-1.56 1.6-1.56h1.66V4.3c-.29-.04-1.27-.12-2.42-.12-2.4 0-4.04 1.46-4.04 4.15v2.32H7.6V14h2.69v8h3.21z"/></svg></a>
-            <a class="social-btn" href="https://wa.me/2250707597457" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm4.52 13.99c-.25.12-1.47.72-1.69.81-.23.08-.39.12-.56.13-.16.01-.29.02-.54-.1-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg></a>
-            <a class="social-btn" href="mailto:ongvisioncitoyenne@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z M4 4l8 6 8-6"/></svg></a>
-            <a class="social-btn" href="tel:+2250707597457" aria-label="Téléphone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-          </div>
-        </div>
-      </div>
-      <nav class="footer-col" aria-label="Liens de navigation">
-        <h4 class="footer-title" data-i18n="footer_nav">Navigation</h4>
-        <ul>
-          <li><a href="#apropos" data-i18n="nav_about">À propos</a></li>
-          <li><a href="#reconnaissances" data-i18n="nav_recog">Reconnaissances</a></li>
-          <li><a href="#realisations" data-i18n="nav_real">Projets</a></li>
-          <li><a href="#partenaires" data-i18n="nav_partners">Partenaires</a></li>
-          <li><a href="#actions" data-i18n="nav_actions">Nos actions</a></li>
-          <li><a href="#actus" data-i18n="nav_news">Actualités</a></li>
-          <li><a href="#galerie" data-i18n="nav_gal">Galerie</a></li>
-          <li><a href="#don" data-i18n="nav_donate">Faire un don</a></li>
-          <li><a href="#benevole" data-i18n="nav_volunteer">Bénévolat</a></li>
-          <li><a href="#temoignages" data-i18n="nav_testi">Témoignages</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer-col">
-        <h4 class="footer-title" data-i18n="footer_contact">Contact</h4>
-        <ul class="footer-contact">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg><a href="mailto:ongvisioncitoyenne@gmail.com">ongvisioncitoyenne@gmail.com</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+2252723258765">(+225) 27 23 25 87 65</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg><span data-i18n="contact_addr">Yopougon Niangon Sud à gauche, route de la centrale d'Azito – Rue première carrière de sable, Abidjan, Côte d'Ivoire</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p><span data-i18n="footer_legal">Récépissé N° 0373/MIS DGAT/SDVA — Yopougon Niangon Sud, Abidjan, Côte d'Ivoire</span></p>
-        <p>&copy; <span id="year"></span> ONG Vision Citoyenne. <span data-i18n="rights">Tous droits réservés.</span></p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/galerie.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/layout.js?v=12"></script>
+  <script src="js/content-renderer.js?v=12"></script>
+  <script src="js/main.js?v=12"></script>
 </body>
 </html>

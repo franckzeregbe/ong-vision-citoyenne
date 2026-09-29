@@ -1,0 +1,33 @@
+# Backups and temporary files
+*.bak
+*.backup*
+*.original
+*.tmp
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code local session data
+.claude/
+
+# Source material folder (not part of the deployed site)
+My_Projects/
+
+# Local dev helper scripts
+fix_encoding.py
+fix_encoding.sh
+
+# Loose logo copies at repo root (kept in assets/ instead)
+Coat_of_arms_of_Verdis.png
+LOGO IPPDR.png
+LOGO MINHAS.jpg
+LOGO ONG EICF.jpg
+

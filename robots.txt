@@ -1,0 +1,14 @@
+# robots.txt — ONG Vision Citoyenne
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Bloquer les fichiers internes / outils de développement
+Disallow: /fix_encoding.py
+Disallow: /fix_encoding.sh
+Disallow: /.git/
+
+# REMPLACEZ la ligne ci-dessous par votre vrai nom de domaine
+# (ex. https://votre-domaine.org/sitemap.xml)
+Sitemap: https://www.visioncitoyenne.org/sitemap.xml

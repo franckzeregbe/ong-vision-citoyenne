@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — ONG Vision Citoyenne
+  REMPLACEZ https://www.visioncitoyenne.org/ par votre vrai nom de domaine
+  au moment du déploiement (Netlify, Vercel, GitHub Pages, etc.).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.visioncitoyenne.org/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

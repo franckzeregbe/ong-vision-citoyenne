@@ -89,9 +89,45 @@ Pour recevoir les messages par e-mail sans backend, utilisez un service comme
 
 ### Activer les dons
 
-Le bouton « Faire un don » ouvre un e-mail. Pour de vrais paiements, remplacez
-le lien `mailto:` (section `#don` dans `index.html`) par un lien vers votre
-plateforme (HelloAsso, Stripe, PayPal, etc.).
+Le bouton « Faire un don » ouvre un e-mail par défaut. Pour de vrais paiements
+en ligne, ouvrez `js/main.js` et renseignez l'URL de votre plateforme dans la
+configuration en haut du fichier :
+
+```js
+const SITE_CONFIG = {
+  DONATION_URL: 'https://www.helloasso.com/...', // HelloAsso, Stripe, PayPal, Donorbox...
+  NEWSLETTER_ENDPOINT: ''                        // voir ci-dessous
+};
+```
+
+Dès qu'une `DONATION_URL` est définie, le bouton de don (montants prédéfinis ou
+personnalisés) pointe dessus. Sinon, un e-mail pré-rempli est généré.
+
+### Activer la newsletter
+
+Un formulaire d'abonnement se trouve dans le pied de page. Par défaut, il ouvre
+un e-mail de confirmation. Pour une vraie collecte d'adresses, renseignez
+`NEWSLETTER_ENDPOINT` (URL Formspree, Mailchimp, …) dans `SITE_CONFIG` :
+l'inscription sera alors envoyée par `fetch` (JSON `{ email: "..." }`).
+
+### Référencement (SEO)
+
+Le site embarque déjà les balises Open Graph / Twitter Card, la donnée
+structurée (`application/ld+json`), une carte de localisation (Google Maps,
+sans clé API) dans la section Contact, ainsi que :
+
+- `robots.txt` — autorise le référencement et pointe vers le sitemap
+  (remplacez l'URL placeholder par votre vrai domaine).
+- `sitemap.xml` — déclare la page d'accueil (remplacez l'URL placeholder).
+
+### Encodage
+
+Si des caractères apparaissent cassés (ex. `Å“uvre` au lieu de `œuvre`),
+relancez le correcteur depuis le dossier du site :
+
+```powershell
+python fix_encoding.py
+```
 
 ## Mise en ligne (hébergement gratuit)
 
