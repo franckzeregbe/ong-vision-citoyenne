@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  sitemap.xml — ONG Vision Citoyenne
-  REMPLACEZ https://www.visioncitoyenne.org/ par votre vrai nom de domaine
-  au moment du déploiement (Netlify, Vercel, GitHub Pages, etc.).
--->
+<!-- sitemap.xml — ONG Vision Citoyenne (à mettre à jour si un nom de domaine personnalisé est ajouté) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.visioncitoyenne.org/</loc>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/projets.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/actualites.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/partenaires.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/don.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

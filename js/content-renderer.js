@@ -85,14 +85,21 @@
     }).join('');
   }
 
-  /* ---- Rendu de la bandeau logos (index.html) ---- */
+  /* ---- Rendu du bandeau logos défilant (index.html) ---- */
   function renderPartnersStrip(partners) {
-    const strip = document.querySelector('.partners-strip');
-    if (!strip || !partners || !partners.length) return;
+    const track = document.querySelector('.trust-track');
+    if (!track || !partners || !partners.length) return;
 
-    strip.innerHTML = partners.map(function (p) {
-      return '<img src="' + escapeAttr(partnerLogoSrc(p.logo)) + '" alt="' + escapeAttr(p.name) + '" loading="lazy" />';
-    }).join('');
+    function items(withAlt) {
+      return partners.map(function (p) {
+        const logo = String(p.logo || '');
+        const cls = /onu/i.test(logo) ? ' class="is-inverse"' : (/hff/i.test(logo) ? ' class="is-round"' : '');
+        return '<li><img src="' + escapeAttr(partnerLogoSrc(logo)) + '" alt="' + (withAlt ? escapeAttr(p.name) : '') + '" height="44"' + cls + ' /></li>';
+      }).join('');
+    }
+    // Deux groupes identiques : l'animation CSS défile de -50 %
+    track.innerHTML = '<ul class="trust-group">' + items(true) + '</ul>' +
+      '<ul class="trust-group" aria-hidden="true">' + items(false) + '</ul>';
   }
 
   /* ---- Rendu des témoignages (partenaires.html) ---- */

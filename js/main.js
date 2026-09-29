@@ -69,7 +69,7 @@
       about_p2: "Nous construisons des points d'eau et des latrines, formons les comités de gestion et menons des campagnes de sensibilisation à l'hygiène dans les écoles et les communautés, avec transparence et proximité.",
       about_caption1: "Éducation et eau, les piliers de l'avenir",
       impact_years: "Années d'engagement",
-      impact_projects: "Projets WASH menés",
+      impact_projects: "Projets menés",
       impact_benef: "Bénéficiaires touchés",
       impact_schools: "Écoles accompagnées",
       odd1: "ODD 6",
@@ -97,16 +97,56 @@
       value_p5_d: 'Compétence, rigueur et qualité — de la conception au suivi de chaque projet sur le terrain.',
 
       // Historique / Réalisations
-      history_tag: 'Nos réalisations',
       history_title: 'Sur le terrain depuis 2018',
-      history_sub: "Un aperçu de nos actions passées auprès des écoles et des communautés — dons, sensibilisations et interventions concrètes.",
       history_partner: 'Partenariat UNICEF',
-      history_field: 'Terrain',
-      history_c1_t: 'Don remis au Lycée Moderne de San Pedro',
-      history_c2_t: 'Engagement citoyen en milieu scolaire',
-      history_c3_t: 'Grande mobilisation scolaire',
-      history_c4_t: 'Formation des bénéficiaires',
       history_more: 'Voir la galerie complète →',
+
+      president_caption: 'Wassia MADOU — Présidente',
+      since_label: 'Depuis',
+      years_engaged: "8+ années d'engagement",
+      donate_teaser_sub: 'Chaque contribution finance directement nos ouvrages et nos formations sur le terrain. Ensemble, transformons des vies.',
+      see_contact_page: 'Formulaire & carte',
+      see_contact_page_sub: 'Voir la page contact complète →',
+      partners_all_title: 'Tous nos partenaires',
+
+      // Bandeau partenaires
+      trust_label: 'Ils nous accompagnent',
+      trust_link: 'Tous nos partenaires →',
+
+      // Projet phare
+      fp_tag: 'Projet phare 2026',
+      fp_title: 'Une école transformée à Yopougon',
+      fp_lead: "À l'École Primaire Publique SICOGI 1, nous avons réhabilité les sanitaires et redonné aux élèves un cadre digne, sûr et joyeux pour apprendre.",
+      fp_li1: 'Sanitaires rénovés et assainis',
+      fp_li2: 'Bâtiments entièrement repeints',
+      fp_li3: 'Aire de jeux avec fresque éducative',
+      fp_li4: 'Toboggans et mobilier pour enfants',
+      fp_partners: "Inaugurée aux côtés de l'IPPDR, de la République Libre de Verdis et de la communauté locale.",
+      fp_cta1: 'Découvrir le projet',
+      fp_cta2: 'Voir les photos',
+      fp_after: 'Après',
+      fp_before: 'Avant',
+      fp_date: 'Inaugurée le 9 septembre 2026',
+
+      // Chronologie
+      tl_tag: 'Notre parcours',
+      tl_sub: "De la fondation de l'ONG à nos chantiers d'aujourd'hui : les étapes qui ont construit notre action.",
+      tl_cta: 'Tous nos projets',
+      tl1_tag: 'Fondation',
+      tl1_t: 'Naissance de Vision Citoyenne',
+      tl1_d: "L'ONG est fondée le 6 juin 2018 à Abidjan avec une mission claire : l'eau, l'hygiène et l'assainissement pour tous.",
+      tl2_tag: 'WASH scolaire',
+      tl2_d: "Points d'eau et latrines construits ou réhabilités dans les écoles, comités de gestion formés à l'hygiène.",
+      tl3_tag: 'Genre & inclusion',
+      tl3_d: 'Formation aux activités génératrices de revenus et accompagnement de coopératives agricoles féminines.',
+      tl4_t: 'Don UNICEF à San Pedro',
+      tl4_d: "Matériel d'hygiène remis au Lycée Moderne Inagohi, avec les enseignants et les élèves.",
+      tl5_tag: 'Sensibilisation',
+      tl5_t: 'Campagne « Engagement Citoyen »',
+      tl5_d: "Sessions sur l'hygiène, le lavage des mains et la citoyenneté dans les écoles de San Pedro et du Nord.",
+      tl6_t: 'Programme PASEA',
+      tl6_d: "Participation au Programme d'Appui au Secteur de l'Eau et de l'Assainissement dans les écoles et communautés rurales.",
+      tl7_d: 'École rénovée et inaugurée le 9 septembre 2026 : sanitaires, peinture, aire de jeux et fresque éducative.',
 
       // Champs élargis
       fields_ext_tag: 'Notre horizon',
@@ -362,7 +402,7 @@
       about_p2: 'We build water points and latrines, train local management committees and run school and community hygiene awareness campaigns with transparency and local proximity.',
       about_caption1: 'Education and water, pillars of the future',
       impact_years: 'Years of action',
-      impact_projects: 'WASH projects carried out',
+      impact_projects: 'Projects carried out',
       impact_benef: 'Beneficiaries reached',
       impact_schools: 'Schools supported',
       odd1: 'SDG 6',
@@ -390,15 +430,55 @@
       value_p5_d: 'Competence, rigour and quality — from design to on-the-ground follow-up of every project.',
 
       // History / Achievements
-      history_tag: 'Our achievements',
       history_title: 'On the ground since 2018',
-      history_sub: 'A glimpse at our past work with schools and communities — donations, awareness campaigns and concrete field interventions.',
       history_partner: 'UNICEF Partnership',
-      history_field: 'Field work',
-      history_c1_t: 'Donation delivered to Lycée Moderne San Pedro',
-      history_c2_t: 'Citizen engagement in schools',
-      history_c3_t: 'Large-scale school mobilisation',
-      history_c4_t: 'Beneficiary training',
+
+      president_caption: 'Wassia MADOU — President',
+      since_label: 'Since',
+      years_engaged: '8+ years of commitment',
+      donate_teaser_sub: 'Every contribution directly funds our facilities and field training. Together, let us transform lives.',
+      see_contact_page: 'Form & map',
+      see_contact_page_sub: 'See the full contact page →',
+      partners_all_title: 'All our partners',
+
+      // Partner strip
+      trust_label: 'They support us',
+      trust_link: 'All our partners →',
+
+      // Flagship project
+      fp_tag: 'Flagship project 2026',
+      fp_title: 'A school transformed in Yopougon',
+      fp_lead: 'At EPP SICOGI 1 primary school, we rehabilitated the sanitation facilities and gave pupils a dignified, safe and joyful place to learn.',
+      fp_li1: 'Renovated, sanitised toilets',
+      fp_li2: 'Buildings fully repainted',
+      fp_li3: 'Playground with educational mural',
+      fp_li4: "Slides and children's furniture",
+      fp_partners: 'Inaugurated alongside IPPDR, the Free Republic of Verdis and the local community.',
+      fp_cta1: 'Discover the project',
+      fp_cta2: 'See the photos',
+      fp_after: 'After',
+      fp_before: 'Before',
+      fp_date: 'Inaugurated on 9 September 2026',
+
+      // Timeline
+      tl_tag: 'Our journey',
+      tl_sub: "From the NGO's founding to today's projects: the milestones that shaped our work.",
+      tl_cta: 'All our projects',
+      tl1_tag: 'Founding',
+      tl1_t: 'Vision Citoyenne is born',
+      tl1_d: 'The NGO was founded on 6 June 2018 in Abidjan with a clear mission: water, hygiene and sanitation for all.',
+      tl2_tag: 'School WASH',
+      tl2_d: 'Water points and latrines built or rehabilitated in schools, management committees trained in hygiene.',
+      tl3_tag: 'Gender & inclusion',
+      tl3_d: "Training in income-generating activities and support for women's farming cooperatives.",
+      tl4_t: 'UNICEF donation in San Pedro',
+      tl4_d: 'Hygiene supplies delivered to Lycée Moderne Inagohi, together with teachers and students.',
+      tl5_tag: 'Awareness',
+      tl5_t: '"Citizen Engagement" campaign',
+      tl5_d: 'Sessions on hygiene, handwashing and citizenship in schools in San Pedro and the North.',
+      tl6_t: 'PASEA Programme',
+      tl6_d: 'Participation in the Water and Sanitation Sector Support Programme in rural schools and communities.',
+      tl7_d: 'School renovated and inaugurated on 9 September 2026: toilets, painting, playground and educational mural.',
       history_more: 'See the full gallery →',
 
       // Extended fields
@@ -1200,13 +1280,14 @@
      10. BANDEAU DÉFILANT (MARQUEE)
      --------------------------------------------------------------- */
   function initMarquee() {
-    const track = document.getElementById('marqueeTrack');
-    if (!track) return;
-    const group = track.querySelector('.marquee-group');
-    if (!group) return;
-    const clone = group.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
+    document.querySelectorAll('#marqueeTrack, [data-marquee]').forEach(function (track) {
+      const group = track.firstElementChild;
+      if (!group) return;
+      const clone = group.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      clone.querySelectorAll('img').forEach(function (img) { img.alt = ''; });
+      track.appendChild(clone);
+    });
   }
 
   /* ---------------------------------------------------------------

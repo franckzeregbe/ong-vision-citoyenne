@@ -492,6 +492,18 @@ button, input, textarea, select {
   pointer-events: none;
 }
 
+/* Desktop : la photo occupe la gauche et se fond dans le bleu nuit derrière le texte */
+@media (min-width: 1024px) {
+  .hero-bg {
+    right: auto;
+    width: min(70%, 1120px);
+    background-position: 50% 8%;
+  }
+  .hero-bg::before {
+    background: linear-gradient(90deg, rgba(5,29,61,.04) 0%, rgba(5,29,61,.16) 50%, rgba(5,29,61,.7) 82%, #051d3d 100%);
+  }
+}
+
 .hero-grid {
   position: absolute;
   inset: 0;
