@@ -89,63 +89,24 @@
   align-items: center;
 }
 .fp-visual {
-  position: relative;
-  padding-bottom: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 16px;
 }
-.fp-shot {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-}
-.fp-shot img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.fp-shot--after {
-  margin-left: 18%;
-  aspect-ratio: 4 / 3;
-}
-.fp-shot--before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 36%;
-  aspect-ratio: 3 / 4;
-  border: 5px solid #fff;
-  transform: rotate(-3deg);
-  transition: transform .4s var(--ease);
-}
-.fp-visual:hover .fp-shot--before { transform: rotate(0) translateY(-6px); }
-.fp-label {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-family: var(--head);
-  font-size: .7rem;
-  font-weight: 800;
-  letter-spacing: .9px;
-  text-transform: uppercase;
-}
-.fp-label--after { background: var(--yellow); color: var(--blue-950); }
-.fp-label--before { background: rgba(10, 25, 41, .8); color: #fff; }
+.fp-visual .ba { flex: 1 1 100%; }
+.fp-visual .ba-hint { margin: 0; }
 .fp-date {
-  position: absolute;
-  right: 12px;
-  bottom: 14px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin: 0;
-  padding: 10px 16px;
+  padding: 9px 16px;
   background: #fff;
+  border: 1px solid rgba(197, 211, 228, .8);
   border-radius: 999px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
   font-family: var(--head);
   font-size: .82rem;
   font-weight: 700;
@@ -376,9 +337,8 @@
   .trust-group img { height: 34px; max-width: 110px; }
 
   .featured-project { padding: 44px 0; }
-  .fp-visual { padding-bottom: 44px; }
-  .fp-shot--after { margin-left: 12%; }
-  .fp-date { right: 6px; bottom: 6px; padding: 8px 12px; font-size: .74rem; }
+  .fp-visual { justify-content: center; }
+  .fp-date { padding: 8px 12px; font-size: .76rem; }
 }
 
 @media (max-width: 560px) {
@@ -388,7 +348,6 @@
 
 @media (max-width: 480px) {
   .fp-list { grid-template-columns: 1fr; gap: 10px; }
-  .fp-shot--before { width: 40%; border-width: 4px; }
   .fp-actions .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
   .tl-card, .tl-body { padding: 16px 16px 18px; }
   .tl-card--media { padding: 0; }

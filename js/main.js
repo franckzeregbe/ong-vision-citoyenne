@@ -291,7 +291,30 @@
       gal_sensib: 'Sensibilisation',
       gal_terrain: 'Terrain',
       gal_reno: 'Rénovation',
-      gal_cere: 'Cérémonie',
+      gal_cere: 'Inauguration',
+      gal_avant: 'Avant',
+      gal_travaux: 'Travaux',
+      gal_apres: 'Après',
+      gal_full: 'Voir toute la galerie',
+
+      // Comparateur & chantier EPP SICOGI 1
+      ba_hint: 'Faites glisser pour comparer avant / après',
+      chantier_tag: 'Rénovation EPP SICOGI 1',
+      chantier_title: 'Le chantier en images',
+      chantier_sub: "De juillet à septembre 2026 : l'état des lieux, les travaux, puis l'école transformée et inaugurée le 9 septembre.",
+      st1_d: 'Juillet 2026', st1: 'État des lieux',
+      st2_d: 'Juillet – août 2026', st2: 'Travaux',
+      st3_d: 'Août 2026', st3: 'Finitions & fresques',
+      st4_d: '9 septembre 2026', st4: 'Inauguration',
+      ba_bloc_t: 'Le bloc sanitaire',
+      ba_bloc_d: 'Façades repeintes, sol pavé et bordures neuves',
+      ba_allee_t: "L'allée de la cour",
+      ba_allee_d: 'Murs repeints et fresque au fond de la cour',
+      ba_accueil_t: "Le mur d'accueil",
+      ba_accueil_d: 'Nouvelle fresque « Bienvenue au Préscolaire SICOGI 1 »',
+      chantier_gal: 'Toutes les photos du chantier',
+      chantier_cta: 'Soutenir le prochain chantier',
+      real_reno_more: 'Voir le chantier en images ↓',
 
       // Don
       donate_tag: 'Faire un don',
@@ -624,7 +647,30 @@
       gal_sensib: 'Awareness',
       gal_terrain: 'Field',
       gal_reno: 'Renovation',
-      gal_cere: 'Ceremony',
+      gal_cere: 'Inauguration',
+      gal_avant: 'Before',
+      gal_travaux: 'Works',
+      gal_apres: 'After',
+      gal_full: 'See the full gallery',
+
+      // Before/after slider & EPP SICOGI 1 works
+      ba_hint: 'Drag to compare before / after',
+      chantier_tag: 'EPP SICOGI 1 renovation',
+      chantier_title: 'The project in pictures',
+      chantier_sub: 'From July to September 2026: the initial assessment, the works, then the transformed school, inaugurated on 9 September.',
+      st1_d: 'July 2026', st1: 'Initial assessment',
+      st2_d: 'July – August 2026', st2: 'Works',
+      st3_d: 'August 2026', st3: 'Finishing & murals',
+      st4_d: '9 September 2026', st4: 'Inauguration',
+      ba_bloc_t: 'The toilet block',
+      ba_bloc_d: 'Repainted walls, paved floor and new borders',
+      ba_allee_t: 'The courtyard alley',
+      ba_allee_d: 'Repainted walls and a mural at the end of the yard',
+      ba_accueil_t: 'The welcome wall',
+      ba_accueil_d: 'New "Welcome to SICOGI 1 Pre-school" mural',
+      chantier_gal: 'All the project photos',
+      chantier_cta: 'Support the next project',
+      real_reno_more: 'See the project in pictures ↓',
 
       // Donate
       donate_tag: 'Donate',
@@ -1421,6 +1467,8 @@
     // Reset : évite les doublons si init est appelée deux fois (override admin)
     grid.innerHTML = '';
 
+    // data-cats="avant,travaux" limite la grille à certaines catégories (page Projets)
+    const allowedCats = (grid.dataset.cats || '').split(',').filter(Boolean);
     const images = source.map(function (item) {
       var rawSrc = Array.isArray(item) ? item[0] : item.image;
       var caption = Array.isArray(item) ? (item[1] || '') : (item.caption || '');
@@ -1429,9 +1477,13 @@
         ? rawSrc
         : 'assets/img/galerie/' + rawSrc;
       return { src: src, caption: caption, cat: cat };
+    }).filter(function (img) {
+      return !allowedCats.length || allowedCats.indexOf(img.cat) !== -1;
     });
 
-    var activeCat = 'all';
+    var filtersWrap = document.getElementById('galFilters');
+    var preset = filtersWrap && filtersWrap.querySelector('.gal-filter.active');
+    var activeCat = (preset && preset.dataset.cat) || 'all';
     var visibleImages = images.slice();
     var current = -1;
     var trigger = null;
@@ -1495,7 +1547,6 @@
       if (typeof initReveal === 'function') initReveal();
     }
 
-    var filtersWrap = document.getElementById('galFilters');
     if (filtersWrap) {
       filtersWrap.addEventListener('click', function (e) {
         var btn = e.target.closest('.gal-filter');
@@ -1548,6 +1599,43 @@
   }
 
   /* ---------------------------------------------------------------
+     12b. COMPARATEUR AVANT / APRÈS (glisser à la souris, au doigt ou au clavier)
+     --------------------------------------------------------------- */
+  function initCompare() {
+    document.querySelectorAll('.ba').forEach(function (fig) {
+      const range = fig.querySelector('.ba-range');
+      if (!range) return;
+      let dragging = false;
+
+      function setPos(value) {
+        const v = Math.max(0, Math.min(100, value));
+        fig.style.setProperty('--pos', v + '%');
+        range.value = String(Math.round(v));
+      }
+      function fromPointer(e) {
+        const rect = fig.getBoundingClientRect();
+        setPos(((e.clientX - rect.left) / rect.width) * 100);
+      }
+
+      range.addEventListener('input', function () { setPos(parseFloat(range.value)); });
+
+      fig.addEventListener('pointerdown', function (e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        fromPointer(e);
+        dragging = true;
+        fig.classList.add('is-dragging');
+        fig.setPointerCapture(e.pointerId);
+      });
+      fig.addEventListener('pointermove', function (e) { if (dragging) fromPointer(e); });
+      function stop() { dragging = false; fig.classList.remove('is-dragging'); }
+      fig.addEventListener('pointerup', stop);
+      fig.addEventListener('pointercancel', stop);
+
+      setPos(parseFloat(range.value) || 50);
+    });
+  }
+
+  /* ---------------------------------------------------------------
      13. ANIMATIONS AU SCROLL (IntersectionObserver)
      --------------------------------------------------------------- */
   function initReveal() {
@@ -1596,6 +1684,7 @@
     initMarquee();
     initFacebookNews();
     initGalerie();
+    initCompare();
     initReveal();
 
     // Exposé pour permettre au content-renderer de relancer après changement dynamique

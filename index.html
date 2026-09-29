@@ -21,20 +21,23 @@
   <meta property="og:title" content="ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)" />
   <meta property="og:description" content="L'eau potable, des latrines dignes et la promotion de l'hygiène en milieu scolaire et communautaire en Côte d'Ivoire." />
   <meta property="og:url" content="https://franckzeregbe.github.io/ong-vision-citoyenne/" />
-  <meta property="og:image" content="https://franckzeregbe.github.io/ong-vision-citoyenne/assets/img/equipe-ceremonie.jpg" />
-  <meta property="og:image:alt" content="L'équipe Vision Citoyenne avec les élèves de l'EPP SICOGI 1" />
+  <meta property="og:image" content="https://franckzeregbe.github.io/ong-vision-citoyenne/assets/img/og-cover.jpg" />
+  <meta property="og:image:alt" content="Élèves, enseignants et partenaires devant les toilettes rénovées de l'EPP SICOGI 1" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <link rel="canonical" href="https://franckzeregbe.github.io/ong-vision-citoyenne/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)" />
   <meta name="twitter:description" content="L'eau potable, des latrines dignes et la promotion de l'hygiène en milieu scolaire et communautaire en Côte d'Ivoire." />
-  <meta name="twitter:image" content="https://franckzeregbe.github.io/ong-vision-citoyenne/assets/img/equipe-ceremonie.jpg" />
+  <meta name="twitter:image" content="https://franckzeregbe.github.io/ong-vision-citoyenne/assets/img/og-cover.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=14" />
-  <link rel="stylesheet" href="css/home.css?v=14" />
+  <link rel="stylesheet" href="css/style.css?v=15" />
+  <link rel="stylesheet" href="css/home.css?v=15" />
+  <link rel="stylesheet" href="css/renovation.css?v=15" />
 
   <script type="application/ld+json">
   {
@@ -193,14 +196,15 @@
     <section class="section featured-project" id="projet-phare" aria-labelledby="fpTitle">
       <div class="container fp-grid">
         <div class="fp-visual reveal">
-          <figure class="fp-shot fp-shot--after">
-            <img src="assets/img/projets/renovation-epp/apres-cour.jpg" alt="Cour de l'EPP SICOGI 1 après rénovation : aire de jeux et fresque éducative" loading="lazy" width="1200" height="675" />
-            <figcaption class="fp-label fp-label--after" data-i18n="fp_after">Après</figcaption>
+          <figure class="ba">
+            <img class="ba-img" src="assets/img/projets/renovation-epp/ba-bloc-apres.jpg" alt="Le bloc sanitaire de l'EPP SICOGI 1 après rénovation" loading="lazy" width="1020" height="765" />
+            <img class="ba-img ba-before" src="assets/img/projets/renovation-epp/ba-bloc-avant.jpg" alt="Le même bloc sanitaire avant les travaux" loading="lazy" width="1020" height="765" />
+            <span class="ba-tag ba-tag--before" data-i18n="fp_before">Avant</span>
+            <span class="ba-tag ba-tag--after" data-i18n="fp_after">Après</span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Comparer avant et après" />
+            <span class="ba-handle" aria-hidden="true"></span>
           </figure>
-          <figure class="fp-shot fp-shot--before">
-            <img src="assets/img/projets/renovation-epp/avant-sanitaires.jpg" alt="Sanitaires de l'EPP SICOGI 1 avant les travaux" loading="lazy" width="768" height="1020" />
-            <figcaption class="fp-label fp-label--before" data-i18n="fp_before">Avant</figcaption>
-          </figure>
+          <p class="ba-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg><span data-i18n="ba_hint">Faites glisser pour comparer avant / après</span></p>
           <p class="fp-date">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
             <span data-i18n="fp_date">Inaugurée le 9 septembre 2026</span>
@@ -405,7 +409,7 @@
           </li>
           <li class="tl-item tl-item--now reveal">
             <div class="tl-card tl-card--media">
-              <img src="assets/img/projets/renovation-epp/ceremonie-equipe.jpg" alt="L'équipe Vision Citoyenne lors de l'inauguration de l'EPP SICOGI 1" loading="lazy" width="480" height="270" />
+              <img src="assets/img/projets/renovation-epp/inauguration-ruban.jpg" alt="Coupure du ruban devant le bloc sanitaire rénové de l'EPP SICOGI 1" loading="lazy" width="480" height="320" />
               <div class="tl-body">
                 <span class="tl-year">2026</span>
                 <span class="tl-tag" data-i18n="gal_reno">Rénovation</span>
@@ -475,8 +479,8 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=14"></script>
-  <script src="js/content-renderer.js?v=14"></script>
-  <script src="js/main.js?v=14"></script>
+  <script src="js/layout.js?v=15"></script>
+  <script src="js/content-renderer.js?v=15"></script>
+  <script src="js/main.js?v=15"></script>
 </body>
 </html>

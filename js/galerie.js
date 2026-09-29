@@ -8,11 +8,69 @@
         [ "nom-du-fichier.jpg", "Légende de la photo", "catégorie" ]
    3. Enregistrez le fichier et rechargez la page. C'est tout !
 
-   Catégories disponibles : "don", "sensibilisation", "terrain",
-   "renovation", "ceremonie"
+   Catégories disponibles : "avant", "travaux", "apres", "ceremonie",
+   "don", "sensibilisation", "terrain"
+   (avant / travaux / apres alimentent aussi la page Projets)
    ================================================================ */
 
+const EPP = "../projets/renovation-epp/";
+
 const GALERIE = [
+  // EPP SICOGI 1 — Inauguration (9 septembre 2026)
+  [EPP + "inauguration-ruban.jpg", "EPP SICOGI 1 — Coupure du ruban devant le bloc sanitaire rénové, 9 septembre 2026", "ceremonie"],
+  [EPP + "inauguration-groupe.jpg", "EPP SICOGI 1 — Élèves, enseignants et partenaires devant les nouvelles toilettes", "ceremonie"],
+  [EPP + "inauguration-discours.jpg", "EPP SICOGI 1 — Discours de la Présidente Wassia MADOU lors de l'inauguration", "ceremonie"],
+  [EPP + "inauguration-visite.jpg", "EPP SICOGI 1 — Les invités visitent les sanitaires rénovés", "ceremonie"],
+  [EPP + "inauguration-eleves.jpg", "EPP SICOGI 1 — Les élèves réunis sous le chapiteau pour la cérémonie", "ceremonie"],
+  [EPP + "inauguration-officiels.jpg", "EPP SICOGI 1 — Photo officielle avec les élèves et les autorités", "ceremonie"],
+  [EPP + "inauguration-animation.jpg", "EPP SICOGI 1 — Animation présentée par les élèves pendant la cérémonie", "ceremonie"],
+  [EPP + "ceremonie-officiel.jpg", "Accueil des officiels lors de l'inauguration — 9 septembre 2026", "ceremonie"],
+  [EPP + "ceremonie-equipe.jpg", "Cérémonie d'inauguration — Bénévoles avec le drapeau de Verdis", "ceremonie"],
+  [EPP + "ceremonie-vc.jpg", "Membre de l'ONG devant la bannière Vision Citoyenne", "ceremonie"],
+  [EPP + "ceremonie-ippdr.jpg", "Bannière IPPDR lors de la cérémonie d'inauguration de l'EPP SICOGI 1", "ceremonie"],
+  [EPP + "don-kits-hygiene.jpg", "EPP SICOGI 1 — Kits d'hygiène offerts à l'école : seaux, balais et savon liquide", "don"],
+  [EPP + "don-kits-scolaires.jpg", "EPP SICOGI 1 — Remise de kits scolaires aux élèves", "don"],
+
+  // EPP SICOGI 1 — Après rénovation (août – septembre 2026)
+  [EPP + "apres-toilettes.jpg", "EPP SICOGI 1 — Le bloc « Toilettes » repeint, sol pavé et regards neufs", "apres"],
+  [EPP + "apres-mur-accueil.jpg", "EPP SICOGI 1 — Nouveau mur d'accueil « Bienvenue au Préscolaire SICOGI 1 »", "apres"],
+  [EPP + "apres-aire-jeux-vue.jpg", "EPP SICOGI 1 — L'aire de jeux terminée : balançoires, toboggan et fresque des chiffres", "apres"],
+  [EPP + "apres-bloc-toilettes.jpg", "EPP SICOGI 1 — Bloc sanitaire rénové et bordures en pneus recyclés", "apres"],
+  [EPP + "apres-manege.jpg", "EPP SICOGI 1 — Manège et balançoires installés pour les plus petits", "apres"],
+  [EPP + "apres-toboggan.jpg", "EPP SICOGI 1 — Toboggan neuf devant la fresque éducative", "apres"],
+  [EPP + "apres-fresque-alphabet.jpg", "EPP SICOGI 1 — Fresque éducative « abcd 1234 » terminée", "apres"],
+  [EPP + "apres-cour-ensemble.jpg", "EPP SICOGI 1 — Vue d'ensemble de la cour rénovée", "apres"],
+  [EPP + "apres-cour-regards.jpg", "EPP SICOGI 1 — Cour assainie : regards neufs et espaces délimités", "apres"],
+  [EPP + "apres-aire-jeux.jpg", "EPP SICOGI 1 — Mobilier de jeux neuf pour les enfants", "apres"],
+  [EPP + "apres-cour.jpg", "EPP SICOGI 1 — Aire de jeux avec fresque murale éducative", "apres"],
+  [EPP + "apres-batiment.jpg", "EPP SICOGI 1 — Bâtiments et espaces rénovés", "apres"],
+
+  // EPP SICOGI 1 — Pendant les travaux (juillet – août 2026)
+  [EPP + "travaux-fosse.jpg", "EPP SICOGI 1 — Construction d'une nouvelle fosse : pose des parpaings", "travaux"],
+  [EPP + "travaux-fosse-maconnerie.jpg", "EPP SICOGI 1 — Maçonnerie de la fosse septique", "travaux"],
+  [EPP + "travaux-regard.jpg", "EPP SICOGI 1 — Regard de filtration rempli de gravier", "travaux"],
+  [EPP + "travaux-bloc.jpg", "EPP SICOGI 1 — Terrassement autour du bloc sanitaire", "travaux"],
+  [EPP + "travaux-bordures.jpg", "EPP SICOGI 1 — Pose des bordures de la cour", "travaux"],
+  [EPP + "travaux-cabines-carrelees.jpg", "EPP SICOGI 1 — Cabines de toilettes entièrement carrelées", "travaux"],
+  [EPP + "travaux-carrelage.jpg", "EPP SICOGI 1 — Carrelage neuf dans les sanitaires", "travaux"],
+  [EPP + "travaux-peinture-bloc.jpg", "EPP SICOGI 1 — Mise en peinture du bloc « Toilettes »", "travaux"],
+  [EPP + "travaux-mur-accueil.jpg", "EPP SICOGI 1 — Préparation du nouveau mur d'accueil", "travaux"],
+  [EPP + "travaux-fresque-debut.jpg", "EPP SICOGI 1 — Début de la fresque : le ciel et le soleil", "travaux"],
+  [EPP + "travaux-fresque.jpg", "EPP SICOGI 1 — La fresque prend forme", "travaux"],
+  [EPP + "travaux-fresque-alphabet.jpg", "EPP SICOGI 1 — Finitions de la fresque éducative", "travaux"],
+
+  // EPP SICOGI 1 — Avant les travaux (juillet 2026)
+  [EPP + "avant-sanitaires.jpg", "EPP SICOGI 1 — État des sanitaires avant rénovation, juillet 2026", "avant"],
+  [EPP + "avant-cabine.jpg", "EPP SICOGI 1 — Cabine de toilettes vétuste avant les travaux", "avant"],
+  [EPP + "avant-ecole.jpg", "EPP SICOGI 1 — Salle d'eau dégradée : murs tachés, carrelage abîmé", "avant"],
+  [EPP + "avant-cabine-2.jpg", "EPP SICOGI 1 — Toilettes sans porte ni revêtement", "avant"],
+  [EPP + "avant-evacuation.jpg", "EPP SICOGI 1 — Évacuation dégradée et sol souillé", "avant"],
+  [EPP + "avant-cabine-exterieur.jpg", "EPP SICOGI 1 — Ancienne cabine extérieure, peinture écaillée", "avant"],
+  [EPP + "avant-mur-bloc.jpg", "EPP SICOGI 1 — L'ancien mur « Bienvenue » et le bloc sanitaire", "avant"],
+  [EPP + "avant-cour.jpg", "EPP SICOGI 1 — Sol de terre et déchets au pied du mur d'accueil", "avant"],
+  [EPP + "avant-dechets.jpg", "EPP SICOGI 1 — Déchets évacués lors du nettoyage du site", "avant"],
+
+  // Actions 2022
   ["don-unicef-materiel.jpg", "Don UNICEF : matériel d'hygiène remis au Lycée Moderne Inagohi — San Pedro", "don"],
   ["don-unicef-remise.jpg", "Remise officielle du don UNICEF aux élèves et au personnel du lycée", "don"],
   ["don-unicef-groupe.jpg", "Photo de groupe lors de la remise du don UNICEF — Mars 2022", "don"],
@@ -24,13 +82,5 @@ const GALERIE = [
   ["distribution-nord.jpg", "Remise de matériel dans une école du Nord — Mai 2022", "terrain"],
   ["equipe-terrain.jpg", "L'équipe Vision Citoyenne sur le terrain", "terrain"],
   ["action-terrain-ecole.jpg", "Action de terrain dans une école partenaire", "terrain"],
-  ["suivi-projet.jpg", "Suivi et évaluation de projet dans un établissement scolaire", "terrain"],
-  ["../projets/renovation-epp/avant-sanitaires.jpg", "EPP SICOGI 1 — État des sanitaires avant rénovation (Juillet 2026)", "renovation"],
-  ["../projets/renovation-epp/apres-aire-jeux.jpg", "EPP SICOGI 1 — Aire de jeux rénovée avec fresque murale éducative", "renovation"],
-  ["../projets/renovation-epp/apres-cour.jpg", "EPP SICOGI 1 — Cour de récréation et toboggan après rénovation", "renovation"],
-  ["../projets/renovation-epp/apres-batiment.jpg", "EPP SICOGI 1 — Bâtiments et espaces rénovés", "renovation"],
-  ["../projets/renovation-epp/ceremonie-equipe.jpg", "Cérémonie d'inauguration — Bénévoles avec le drapeau Verdis", "ceremonie"],
-  ["../projets/renovation-epp/ceremonie-vc.jpg", "Membre de l'ONG devant la bannière Vision Citoyenne", "ceremonie"],
-  ["../projets/renovation-epp/ceremonie-officiel.jpg", "Accueil des officiels lors de l'inauguration — 09 Septembre 2026", "ceremonie"],
-  ["../projets/renovation-epp/ceremonie-ippdr.jpg", "Bannière IPPDR lors de la cérémonie d'inauguration de l'EPP SICOGI 1", "ceremonie"]
+  ["suivi-projet.jpg", "Suivi et évaluation de projet dans un établissement scolaire", "terrain"]
 ];

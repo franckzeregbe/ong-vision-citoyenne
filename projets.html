@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=14" />
+  <link rel="stylesheet" href="css/style.css?v=15" />
+  <link rel="stylesheet" href="css/renovation.css?v=15" />
 </head>
 <body>
 
@@ -48,10 +49,12 @@
             <h3 data-i18n="real_reno_t">Rénovation EPP SICOGI 1 — Yopougon</h3>
             <p data-i18n="real_reno_d">Réhabilitation complète de l'École Primaire Publique SICOGI 1 à Yopougon : rénovation des sanitaires, peinture des bâtiments, création d'une aire de jeux avec fresque éducative, installation de toboggans et mobilier pour enfants. Inauguré le 09 septembre 2026 avec IPPDR, la République Libre de Verdis et la communauté locale.</p>
             <div class="real-gallery">
-              <img src="assets/img/projets/renovation-epp/avant-sanitaires.jpg" alt="Sanitaires avant rénovation" width="280" height="370" loading="lazy" />
-              <img src="assets/img/projets/renovation-epp/apres-aire-jeux.jpg" alt="Aire de jeux après rénovation" width="280" height="158" loading="lazy" />
-              <img src="assets/img/projets/renovation-epp/ceremonie-equipe.jpg" alt="Cérémonie d'inauguration" width="280" height="187" loading="lazy" />
+              <img src="assets/img/projets/renovation-epp/avant-cabine.jpg" alt="Cabine de toilettes avant rénovation" width="280" height="373" loading="lazy" />
+              <img src="assets/img/projets/renovation-epp/travaux-fosse-maconnerie.jpg" alt="Maçonnerie de la fosse septique pendant les travaux" width="280" height="210" loading="lazy" />
+              <img src="assets/img/projets/renovation-epp/apres-toilettes.jpg" alt="Bloc sanitaire après rénovation" width="280" height="158" loading="lazy" />
+              <img src="assets/img/projets/renovation-epp/inauguration-ruban.jpg" alt="Coupure du ruban lors de l'inauguration" width="280" height="187" loading="lazy" />
             </div>
+            <a class="real-more" href="#chantier" data-i18n="real_reno_more">Voir le chantier en images ↓</a>
             <span class="real-status real-status--done" data-i18n="real_reno_status">Terminé</span>
           </article>
 
@@ -109,9 +112,95 @@
           </article>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ===== LE CHANTIER EN IMAGES — EPP SICOGI 1 ===== -->
+    <section class="section chantier" id="chantier" aria-labelledby="chantierTitle">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="chantier_tag">Rénovation EPP SICOGI 1</span>
+          <h2 id="chantierTitle" data-i18n="chantier_title">Le chantier en images</h2>
+          <p class="section-sub" data-i18n="chantier_sub">De juillet à septembre 2026 : l'état des lieux, les travaux, puis l'école transformée et inaugurée le 9 septembre.</p>
+        </div>
+
+        <ol class="chantier-steps">
+          <li><b data-i18n="st1_d">Juillet 2026</b><span data-i18n="st1">État des lieux</span></li>
+          <li><b data-i18n="st2_d">Juillet – août 2026</b><span data-i18n="st2">Travaux</span></li>
+          <li><b data-i18n="st3_d">Août 2026</b><span data-i18n="st3">Finitions &amp; fresques</span></li>
+          <li><b data-i18n="st4_d">9 septembre 2026</b><span data-i18n="st4">Inauguration</span></li>
+        </ol>
+
+        <div class="ba-grid">
+          <figure class="ba-card">
+            <div class="ba">
+              <img class="ba-img" src="assets/img/projets/renovation-epp/ba-bloc-apres.jpg" alt="Le bloc sanitaire après rénovation" loading="lazy" width="1020" height="765" />
+              <img class="ba-img ba-before" src="assets/img/projets/renovation-epp/ba-bloc-avant.jpg" alt="Le bloc sanitaire avant les travaux" loading="lazy" width="1020" height="765" />
+              <span class="ba-tag ba-tag--before" data-i18n="fp_before">Avant</span>
+              <span class="ba-tag ba-tag--after" data-i18n="fp_after">Après</span>
+              <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Bloc sanitaire : comparer avant et après" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption><strong data-i18n="ba_bloc_t">Le bloc sanitaire</strong><span data-i18n="ba_bloc_d">Façades repeintes, sol pavé et bordures neuves</span></figcaption>
+          </figure>
+
+          <figure class="ba-card">
+            <div class="ba">
+              <img class="ba-img" src="assets/img/projets/renovation-epp/ba-allee-apres.jpg" alt="L'allée de la cour après rénovation" loading="lazy" width="960" height="720" />
+              <img class="ba-img ba-before" src="assets/img/projets/renovation-epp/ba-allee-avant.jpg" alt="L'allée de la cour avant les travaux" loading="lazy" width="960" height="720" />
+              <span class="ba-tag ba-tag--before" data-i18n="fp_before">Avant</span>
+              <span class="ba-tag ba-tag--after" data-i18n="fp_after">Après</span>
+              <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Allée de la cour : comparer avant et après" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption><strong data-i18n="ba_allee_t">L'allée de la cour</strong><span data-i18n="ba_allee_d">Murs repeints et fresque au fond de la cour</span></figcaption>
+          </figure>
+
+          <figure class="ba-card ba-card--wide">
+            <div class="ba ba--wide">
+              <img class="ba-img" src="assets/img/projets/renovation-epp/ba-accueil-apres.jpg" alt="Le mur d'accueil repeint : Bienvenue au Préscolaire SICOGI 1" loading="lazy" width="1020" height="574" />
+              <img class="ba-img ba-before" src="assets/img/projets/renovation-epp/ba-accueil-avant.jpg" alt="L'ancien mur d'accueil avant les travaux" loading="lazy" width="1020" height="574" />
+              <span class="ba-tag ba-tag--before" data-i18n="fp_before">Avant</span>
+              <span class="ba-tag ba-tag--after" data-i18n="fp_after">Après</span>
+              <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Mur d'accueil : comparer avant et après" />
+              <span class="ba-handle" aria-hidden="true"></span>
+            </div>
+            <figcaption><strong data-i18n="ba_accueil_t">Le mur d'accueil</strong><span data-i18n="ba_accueil_d">Nouvelle fresque « Bienvenue au Préscolaire SICOGI 1 »</span></figcaption>
+          </figure>
+        </div>
+
+        <h3 class="chantier-gallery-head" data-i18n="chantier_gal">Toutes les photos du chantier</h3>
+        <div class="gal-filters" id="galFilters" role="toolbar" aria-label="Étapes du chantier">
+          <button class="gal-filter active" data-cat="avant" data-i18n="gal_avant">Avant</button>
+          <button class="gal-filter" data-cat="travaux" data-i18n="gal_travaux">Travaux</button>
+          <button class="gal-filter" data-cat="apres" data-i18n="gal_apres">Après</button>
+          <button class="gal-filter" data-cat="ceremonie" data-i18n="gal_cere">Inauguration</button>
+        </div>
+        <div class="gal-grid" id="galerieGrid" data-cats="avant,travaux,apres,ceremonie"></div>
+
+        <div class="chantier-cta">
+          <a href="don.html" class="btn btn-primary" data-i18n="chantier_cta">Soutenir le prochain chantier</a>
+          <a href="actualites.html#galerie" class="btn btn-outline" data-i18n="gal_full">Voir toute la galerie</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images" hidden>
+      <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Image précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <figure class="lb-figure">
+        <img id="lbImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="" />
+        <figcaption id="lbCaption"></figcaption>
+      </figure>
+      <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Image suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+
+    <section class="section" id="domaines">
+      <div class="container">
 
         <!-- ===== DOMAINES D'INTERVENTION ===== -->
-        <div class="section-head" style="margin-top:56px">
+        <div class="section-head">
           <span class="section-tag" data-i18n="domains_tag">Domaines</span>
           <h2 data-i18n="domains_title">Nos domaines d'intervention</h2>
         </div>
@@ -154,7 +243,8 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=14"></script>
-  <script src="js/main.js?v=14"></script>
+  <script src="js/galerie.js?v=15"></script>
+  <script src="js/layout.js?v=15"></script>
+  <script src="js/main.js?v=15"></script>
 </body>
 </html>
