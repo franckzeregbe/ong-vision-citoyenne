@@ -1,7 +1,7 @@
 // Service Worker pour ONG Vision Citoyenne
 // Améliore le fonctionnement hors-ligne et la vitesse de chargement des ressources locales.
 
-const CACHE_NAME = 'ong-vision-citoyenne-v6';
+const CACHE_NAME = 'ong-vision-citoyenne-v7';
 
 // Ressources essentielles mises en cache à l'installation
 const CORE_ASSETS = [
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   './css/style.css',
   './js/main.js',
   './js/layout.js',
+  './js/galerie.js',
   './js/content-renderer.js',
   './manifest.json',
   './assets/logo.jpeg',
@@ -26,7 +27,33 @@ const CORE_ASSETS = [
   './assets/partenaires/piducas.png',
   './assets/partenaires/eicf.jpg',
   './assets/partenaires/verdis.png',
-  './assets/partenaires/hff.jpeg'
+  './assets/partenaires/hff.jpeg',
+  './assets/img/galerie/don-unicef-materiel.jpg',
+  './assets/img/galerie/don-unicef-remise.jpg',
+  './assets/img/galerie/don-unicef-groupe.jpg',
+  './assets/img/galerie/engagement-citoyen-ecole.jpg',
+  './assets/img/galerie/sensibilisation-classe.jpg',
+  './assets/img/galerie/mobilisation-scolaire.jpg',
+  './assets/img/galerie/sensibilisation-eleves.jpg',
+  './assets/img/galerie/distribution-hygiene.jpg',
+  './assets/img/galerie/distribution-nord.jpg',
+  './assets/img/galerie/equipe-terrain.jpg',
+  './assets/img/galerie/action-terrain-ecole.jpg',
+  './assets/img/galerie/suivi-projet.jpg',
+  './assets/img/projets/renovation-epp/avant-sanitaires.jpg',
+  './assets/img/projets/renovation-epp/apres-aire-jeux.jpg',
+  './assets/img/projets/renovation-epp/apres-cour.jpg',
+  './assets/img/projets/renovation-epp/apres-batiment.jpg',
+  './assets/img/projets/renovation-epp/ceremonie-equipe.jpg',
+  './assets/img/projets/renovation-epp/ceremonie-vc.jpg',
+  './assets/img/projets/renovation-epp/ceremonie-officiel.jpg',
+  './assets/img/projets/renovation-epp/ceremonie-ippdr.jpg',
+  './assets/img/domaines/autonomisation.jpg',
+  './assets/img/domaines/climat.jpg',
+  './assets/img/domaines/genre.jpg',
+  './assets/img/domaines/sante.jpg',
+  './assets/img/domaines/paix.jpg',
+  './assets/img/domaines/inclusion.jpg'
 ];
 
 // Installation : mise en cache des ressources principales

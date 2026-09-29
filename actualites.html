@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
 </head>
 <body>
 
@@ -71,6 +71,14 @@
           <h2 data-i18n="gal_title">Nos photos de terrain</h2>
           <p class="section-sub" data-i18n="gal_sub">Images de nos réalisations, chantiers et sensibilisations. Cliquez sur une photo pour l'agrandir.</p>
         </div>
+        <div class="gal-filters" id="galFilters">
+          <button class="gal-filter active" data-cat="all" data-i18n="gal_all">Toutes</button>
+          <button class="gal-filter" data-cat="don" data-i18n="gal_don">Dons</button>
+          <button class="gal-filter" data-cat="sensibilisation" data-i18n="gal_sensib">Sensibilisation</button>
+          <button class="gal-filter" data-cat="terrain" data-i18n="gal_terrain">Terrain</button>
+          <button class="gal-filter" data-cat="renovation" data-i18n="gal_reno">Rénovation</button>
+          <button class="gal-filter" data-cat="ceremonie" data-i18n="gal_cere">Cérémonie</button>
+        </div>
         <div class="gal-grid" id="galerieGrid"></div>
       </div>
     </section>
@@ -91,9 +99,9 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/galerie.js"></script>
-  <script src="js/layout.js"></script>
-  <script src="js/content-renderer.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/galerie.js?v=13"></script>
+  <script src="js/layout.js?v=13"></script>
+  <script src="js/content-renderer.js?v=13"></script>
+  <script src="js/main.js?v=13"></script>
 </body>
 </html>

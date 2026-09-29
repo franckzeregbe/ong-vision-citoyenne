@@ -140,10 +140,34 @@
       real_tag: 'Projets',
       real_title: 'Projets & réalisations',
       real_sub: "Des engagements concrets, menés avec nos partenaires, au service de l'eau, de l'hygiène et de l'assainissement.",
-      real1_year: '2026',
+      real1_year: '2024 – 2026',
       real1_status: 'En cours',
       real1_t: 'Projet PASEA — Eau & Assainissement',
-      real1_d: "L'ONG Vision Citoyenne participe au Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA). Ce projet renforce l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés rurales de Côte d'Ivoire, en renforçant la gouvernance du secteur et l'engagement communautaire.",
+      real1_d: "Participation au Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA). Ce projet renforce l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés rurales, en renforçant la gouvernance du secteur et l'engagement communautaire.",
+      real_reno_t: 'Rénovation EPP SICOGI 1 — Yopougon',
+      real_reno_d: "Réhabilitation complète de l'École Primaire Publique SICOGI 1 à Yopougon : rénovation des sanitaires, peinture des bâtiments, création d'une aire de jeux avec fresque éducative, installation de toboggans et mobilier pour enfants. Inauguré le 09 septembre 2026.",
+      real_reno_status: 'Terminé',
+      real_don_t: 'Don UNICEF — Lycée Moderne Inagohi, San Pedro',
+      real_don_d: "Distribution de matériel d'hygiène offert par l'UNICEF au Lycée Moderne Inagohi de San Pedro. Action menée avec le corps enseignant et les élèves pour promouvoir l'hygiène en milieu scolaire.",
+      real_don_status: 'Terminé',
+      real_ec_t: 'Sensibilisation « Engagement Citoyen »',
+      real_ec_d: "Campagnes de sensibilisation dans les écoles primaires de San Pedro et du Nord de la Côte d'Ivoire. Sessions éducatives sur l'hygiène, le lavage des mains, l'assainissement et la citoyenneté responsable.",
+      real_ec_status: 'Terminé',
+      real_wash_t: 'Programme WASH Scolaire',
+      real_wash_d: "Construction et réhabilitation de points d'eau et de latrines dans les écoles. Formation des comités de gestion scolaires aux bonnes pratiques d'hygiène.",
+      real_wash_status: 'Terminé',
+      real_auto_t: 'Autonomisation de la femme en milieu rural',
+      real_auto_d: "Renforcement des capacités économiques des femmes rurales. Formation aux activités génératrices de revenus, accès au microcrédit et accompagnement dans la création de coopératives agricoles.",
+      real_auto_status: 'Terminé',
+      domains_tag: 'Domaines',
+      domains_title: "Nos domaines d'intervention",
+      dom_eha: 'Eau, Hygiène & Assainissement',
+      dom_genre: 'Genre & Lutte contre les VBG',
+      dom_auto: 'Autonomisation de la femme',
+      dom_sante: 'Santé & Nutrition',
+      dom_paix: 'Paix & Cohésion sociale',
+      dom_incl: 'Inclusion sociale',
+      see_news: 'Voir les actualités terrain',
 
       // Reconnaissances
       recog_tag: 'Reconnaissances',
@@ -222,6 +246,12 @@
       gal_tag: 'Galerie',
       gal_title: 'Nos photos de terrain',
       gal_sub: 'Images de nos réalisations, chantiers et sensibilisations. Cliquez sur une photo pour l\'agrandir.',
+      gal_all: 'Toutes',
+      gal_don: 'Dons',
+      gal_sensib: 'Sensibilisation',
+      gal_terrain: 'Terrain',
+      gal_reno: 'Rénovation',
+      gal_cere: 'Cérémonie',
 
       // Don
       donate_tag: 'Faire un don',
@@ -403,10 +433,34 @@
       real_tag: 'Projects',
       real_title: 'Projects & Achievements',
       real_sub: 'Concrete initiatives conducted with our partners to advance water, hygiene and sanitation.',
-      real1_year: '2026',
+      real1_year: '2024 – 2026',
       real1_status: 'Ongoing',
       real1_t: 'PASEA Project — Water & Sanitation',
-      real1_d: 'Vision Citoyenne NGO takes part in the Water and Sanitation Sector Support Program (PASEA). This program strengthens access to safe water and sanitation in rural schools and communities in Ivory Coast through better sector governance and community participation.',
+      real1_d: 'Participation in the Water and Sanitation Sector Support Program (PASEA). This project strengthens access to safe water and sanitation in rural schools and communities through better sector governance and community engagement.',
+      real_reno_t: 'EPP SICOGI 1 Renovation — Yopougon',
+      real_reno_d: 'Complete rehabilitation of EPP SICOGI 1 primary school in Yopougon: bathroom renovation, building painting, creation of a playground with educational mural, installation of slides and children\'s furniture. Inaugurated on September 9, 2026.',
+      real_reno_status: 'Completed',
+      real_don_t: 'UNICEF Donation — Lycée Moderne Inagohi, San Pedro',
+      real_don_d: 'Distribution of hygiene supplies donated by UNICEF to Lycée Moderne Inagohi in San Pedro. Action carried out with school staff and students to promote hygiene.',
+      real_don_status: 'Completed',
+      real_ec_t: '"Citizen Engagement" Awareness Campaign',
+      real_ec_d: 'Awareness campaigns in primary schools of San Pedro and Northern Ivory Coast. Educational sessions on hygiene, handwashing, sanitation and responsible citizenship.',
+      real_ec_status: 'Completed',
+      real_wash_t: 'School WASH Program',
+      real_wash_d: 'Construction and rehabilitation of water points and latrines in schools. Training school management committees in hygiene best practices.',
+      real_wash_status: 'Completed',
+      real_auto_t: 'Rural Women Empowerment',
+      real_auto_d: 'Strengthening the economic capacities of rural women. Training in income-generating activities, microcredit access and support for creating agricultural cooperatives.',
+      real_auto_status: 'Completed',
+      domains_tag: 'Domains',
+      domains_title: 'Our Areas of Intervention',
+      dom_eha: 'Water, Hygiene & Sanitation',
+      dom_genre: 'Gender & GBV Prevention',
+      dom_auto: 'Women Empowerment',
+      dom_sante: 'Health & Nutrition',
+      dom_paix: 'Peace & Social Cohesion',
+      dom_incl: 'Social Inclusion',
+      see_news: 'View field updates',
 
       // Recognitions
       recog_tag: 'Recognitions',
@@ -485,6 +539,12 @@
       gal_tag: 'Gallery',
       gal_title: 'Field Photographs',
       gal_sub: 'Images of our achievements, construction works and community outreach. Click any image to enlarge.',
+      gal_all: 'All',
+      gal_don: 'Donations',
+      gal_sensib: 'Awareness',
+      gal_terrain: 'Field',
+      gal_reno: 'Renovation',
+      gal_cere: 'Ceremony',
 
       // Donate
       donate_tag: 'Donate',
@@ -1281,24 +1341,25 @@
     grid.innerHTML = '';
 
     const images = source.map(function (item) {
-      // Supporte : [filename, caption] OU { image, caption }
-      const rawSrc = Array.isArray(item) ? item[0] : item.image;
-      const caption = Array.isArray(item) ? (item[1] || '') : (item.caption || '');
-      // Si src est déjà une URL absolue ou data:, l'utiliser tel quel
-      const src = (rawSrc && (rawSrc.indexOf('data:') === 0 || rawSrc.indexOf('http') === 0))
+      var rawSrc = Array.isArray(item) ? item[0] : item.image;
+      var caption = Array.isArray(item) ? (item[1] || '') : (item.caption || '');
+      var cat = Array.isArray(item) ? (item[2] || '') : (item.category || '');
+      var src = (rawSrc && (rawSrc.indexOf('data:') === 0 || rawSrc.indexOf('http') === 0))
         ? rawSrc
-        : 'assets/galerie/' + rawSrc;
-      return { src: src, caption: caption };
+        : 'assets/img/galerie/' + rawSrc;
+      return { src: src, caption: caption, cat: cat };
     });
 
-    let current = -1;
-    let trigger = null;
+    var activeCat = 'all';
+    var visibleImages = images.slice();
+    var current = -1;
+    var trigger = null;
 
     function show(index) {
-      current = (index + images.length) % images.length;
-      lbImg.src = images[current].src;
-      lbImg.alt = images[current].caption;
-      lbCaption.textContent = images[current].caption;
+      current = (index + visibleImages.length) % visibleImages.length;
+      lbImg.src = visibleImages[current].src;
+      lbImg.alt = visibleImages[current].caption;
+      lbCaption.textContent = visibleImages[current].caption;
       lightbox.classList.add('open');
       lightbox.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
@@ -1312,38 +1373,60 @@
       if (trigger) trigger.focus();
     }
 
-    grid.innerHTML = '';
-    images.forEach(function (img, i) {
-      const figure = document.createElement('figure');
-      figure.className = 'gal-item reveal';
-      figure.setAttribute('role', 'button');
-      figure.tabIndex = 0;
-      figure.setAttribute('aria-label', img.caption || 'Photo ' + (i + 1));
+    function renderGrid() {
+      grid.innerHTML = '';
+      visibleImages = activeCat === 'all'
+        ? images.slice()
+        : images.filter(function (img) { return img.cat === activeCat; });
 
-      const el = document.createElement('img');
-      el.src = img.src;
-      el.alt = img.caption;
-      el.loading = 'lazy';
-      figure.appendChild(el);
+      visibleImages.forEach(function (img, i) {
+        var figure = document.createElement('figure');
+        figure.className = 'gal-item reveal';
+        figure.setAttribute('role', 'button');
+        figure.tabIndex = 0;
+        figure.setAttribute('aria-label', img.caption || 'Photo ' + (i + 1));
 
-      const cap = document.createElement('figcaption');
-      cap.textContent = img.caption;
-      figure.appendChild(cap);
+        var el = document.createElement('img');
+        el.src = img.src;
+        el.alt = img.caption;
+        el.loading = 'lazy';
+        figure.appendChild(el);
 
-      figure.addEventListener('click', function () {
-        trigger = figure;
-        show(i);
-      });
-      figure.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
+        var cap = document.createElement('figcaption');
+        cap.textContent = img.caption;
+        figure.appendChild(cap);
+
+        figure.addEventListener('click', function () {
           trigger = figure;
           show(i);
-        }
+        });
+        figure.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            trigger = figure;
+            show(i);
+          }
+        });
+
+        grid.appendChild(figure);
       });
 
-      grid.appendChild(figure);
-    });
+      if (typeof initReveal === 'function') initReveal();
+    }
+
+    var filtersWrap = document.getElementById('galFilters');
+    if (filtersWrap) {
+      filtersWrap.addEventListener('click', function (e) {
+        var btn = e.target.closest('.gal-filter');
+        if (!btn) return;
+        activeCat = btn.dataset.cat || 'all';
+        filtersWrap.querySelectorAll('.gal-filter').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        renderGrid();
+      });
+    }
+
+    renderGrid();
 
     if (lbClose) lbClose.addEventListener('click', close);
     if (lbPrev) lbPrev.addEventListener('click', function () { show(current - 1); });

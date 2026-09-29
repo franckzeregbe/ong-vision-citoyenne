@@ -1020,6 +1020,92 @@ button, input, textarea, select {
   background: var(--green);
   border-radius: 50%;
 }
+.real-status--done {
+  color: var(--blue-700);
+}
+.real-status--done::before {
+  background: var(--blue-700);
+}
+
+.real-card--featured {
+  border: 2px solid var(--blue-500);
+  background: linear-gradient(135deg, var(--blue-50) 0%, var(--card-bg) 60%);
+  box-shadow: var(--shadow);
+}
+.real-card .card-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--blue-600);
+}
+.real-card--featured .card-icon {
+  color: var(--logo-navy);
+}
+
+.real-gallery {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+.real-gallery img {
+  width: 240px;
+  height: auto;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s var(--ease);
+}
+.real-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+}
+.domain-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.domain-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+.domain-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.domain-card h4 {
+  font-family: var(--head);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--ink);
+  padding: 14px 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .real-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .real-card--featured {
+    grid-column: 1 / -1;
+  }
+  .real-gallery img {
+    width: 280px;
+  }
+}
 
 /* ===== RECONNAISSANCES ===== */
 .recog-grid {
@@ -1309,6 +1395,35 @@ button, input, textarea, select {
 }
 
 /* ===== GALERIE PHOTOS ===== */
+.gal-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.gal-filter {
+  font-family: var(--head);
+  font-size: .82rem;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: var(--card-bg);
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .25s var(--ease);
+}
+.gal-filter:hover {
+  border-color: var(--blue-500);
+  color: var(--blue-600);
+}
+.gal-filter.active {
+  background: var(--blue-600);
+  color: #fff;
+  border-color: var(--blue-600);
+  box-shadow: var(--shadow-blue);
+}
 .gal-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
