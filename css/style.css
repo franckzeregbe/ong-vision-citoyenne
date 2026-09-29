@@ -981,6 +981,8 @@ button, input, textarea, select {
   border-radius: var(--radius);
   padding: 24px 22px;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+  overflow: hidden;
 }
 .real-year {
   display: inline-block;
@@ -998,12 +1000,16 @@ button, input, textarea, select {
   font-size: 1.25rem;
   color: var(--ink);
   margin-bottom: 8px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 .real-card p {
   font-size: .92rem;
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 12px;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 .real-status {
   display: inline-flex;
@@ -2786,7 +2792,58 @@ button, input, textarea, select {
   .fb-controls { display: flex; flex-direction: column; gap: 10px; align-items: center; }
   .fb-controls .btn { margin-right: 0 !important; width: 100%; max-width: 320px; }
 
+  /* ===== PROJETS — MOBILE ===== */
+  .real-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .real-card {
+    padding: 18px 16px;
+    overflow: hidden;
+  }
+  .real-card h3 {
+    font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+  .real-card p {
+    font-size: .86rem;
+  }
+  .real-card--featured {
+    border-width: 1.5px;
+  }
+  .real-gallery {
+    gap: 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .real-gallery img {
+    width: 200px;
+    border-radius: var(--radius-xs);
+  }
+  .domains-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .domain-card img {
+    height: 120px;
+  }
+  .domain-card h4 {
+    font-size: .82rem;
+    padding: 10px 10px;
+  }
+
   /* ===== GALERIE ===== */
+  .gal-filters {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .gal-filter {
+    font-size: .74rem;
+    padding: 6px 12px;
+  }
   .gal-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -2880,6 +2937,13 @@ button, input, textarea, select {
   .partner-tag { font-size: .65rem; }
 
   .fb-embed { min-height: 360px; }
+
+  .real-card h3 { font-size: 1rem; }
+  .real-gallery img { width: 180px; }
+  .domains-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .domain-card img { height: 100px; }
+  .domain-card h4 { font-size: .78rem; padding: 8px; }
+  .gal-filter { font-size: .7rem; padding: 5px 10px; }
 
   .mob-btn { font-size: .62rem; }
   .mob-btn.mob-btn--donate { padding: 5px 10px; }
