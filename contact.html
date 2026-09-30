@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.facebook.com https://www.google.com; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://www.facebook.com https://www.google.com; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" content="Contactez l'ONG Vision Citoyenne. Devenez bénévole, écrivez-nous ou trouvez notre siège à Yopougon Niangon Sud, Abidjan." />
   <meta name="theme-color" content="#1E88E5" />
@@ -11,10 +11,10 @@
 
   <link rel="icon" type="image/jpeg" href="assets/logo.jpeg" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=18" />
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/fonts.css?v=19" />
+  <link rel="stylesheet" href="css/style.css?v=19" />
 </head>
 <body>
 
@@ -32,8 +32,8 @@
 
     <section class="section" id="contact">
       <div class="container">
-        <div class="contact-map" aria-label="Localisation de l'ONG">
-          <iframe title="Localisation — Yopougon Niangon Sud, Abidjan" src="https://www.google.com/maps?q=Yopougon%20Niangon%20Sud%2C%20route%20de%20la%20centrale%20d'Azito%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire&output=embed" loading="lazy"></iframe>
+        <div class="contact-map" aria-label="Localisation de l'ONG" data-consent="maps" data-link="https://www.google.com/maps/search/?api=1&amp;query=Yopougon%20Niangon%20Sud%2C%20Abidjan%2C%20C%C3%B4te%20d%27Ivoire">
+          <iframe title="Localisation — Yopougon Niangon Sud, Abidjan" data-src="https://www.google.com/maps?q=Yopougon%20Niangon%20Sud%2C%20route%20de%20la%20centrale%20d'Azito%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire&amp;output=embed" loading="lazy" hidden></iframe>
         </div>
 
         <div class="contact-grid">
@@ -126,7 +126,7 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=18"></script>
-  <script src="js/main.js?v=18"></script>
+  <script src="js/layout.js?v=19"></script>
+  <script src="js/main.js?v=19"></script>
 </body>
 </html>

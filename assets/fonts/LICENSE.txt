@@ -1,0 +1,11 @@
+Polices utilisées sur ce site — hébergées localement
+
+Inter
+Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+Plus Jakarta Sans
+Copyright 2020 The Plus Jakarta Sans Project Authors (https://github.com/tokotype/PlusJakartaSans)
+
+Ces polices sont distribuées sous licence SIL Open Font License, version 1.1.
+Texte complet de la licence : https://openfontlicense.org/open-font-license-official-text/
+Fichiers obtenus via Google Fonts (https://fonts.google.com).

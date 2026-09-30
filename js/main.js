@@ -293,6 +293,17 @@
       news_less: 'Afficher moins',
       news_btn: 'Suivre notre page Facebook',
       news_fallback: 'Voir cette publication sur Facebook',
+      fb_consent_txt: "Pour protéger votre vie privée, les publications Facebook ne se chargent qu'avec votre accord : Facebook peut alors collecter des données de navigation. Votre choix est mémorisé sur cet appareil.",
+      fb_consent_btn: 'Afficher les publications Facebook',
+      fb_ph_title: 'Publication Facebook',
+      fb_ph_title_video: 'Vidéo Facebook',
+      fb_ph_text: 'Contenu masqué pour protéger votre vie privée.',
+      fb_ph_link: 'Voir sur Facebook ↗',
+      ph_show: 'Afficher',
+      map_ph_title: 'Carte Google Maps',
+      map_ph_text: "La carte ne se charge qu'avec votre accord : Google peut alors collecter des données de navigation.",
+      map_ph_btn: 'Afficher la carte',
+      map_ph_link: 'Ouvrir dans Google Maps ↗',
 
       // Galerie
       gal_tag: 'Galerie',
@@ -657,6 +668,17 @@
       news_less: 'Show less',
       news_btn: 'Follow our Facebook page',
       news_fallback: 'View this post on Facebook',
+      fb_consent_txt: 'To protect your privacy, Facebook posts only load with your consent: Facebook may then collect browsing data. Your choice is saved on this device.',
+      fb_consent_btn: 'Show Facebook posts',
+      fb_ph_title: 'Facebook post',
+      fb_ph_title_video: 'Facebook video',
+      fb_ph_text: 'Content hidden to protect your privacy.',
+      fb_ph_link: 'View on Facebook ↗',
+      ph_show: 'Show',
+      map_ph_title: 'Google Maps',
+      map_ph_text: 'The map only loads with your consent: Google may then collect browsing data.',
+      map_ph_btn: 'Show the map',
+      map_ph_link: 'Open in Google Maps ↗',
 
       // Gallery
       gal_tag: 'Gallery',
@@ -1363,13 +1385,86 @@
   }
 
   /* ---------------------------------------------------------------
+     11a. CONTENUS EXTERNES SUR ACCORD (Facebook, Google Maps)
+     Rien n'est chargé depuis Facebook ou Google avant un clic du visiteur.
+     --------------------------------------------------------------- */
+  const CONSENT_PREFIX = 'vc_consent_';
+  function hasConsent(service) {
+    try { return localStorage.getItem(CONSENT_PREFIX + service) === '1'; } catch (e) { return false; }
+  }
+  function grantConsent(service) {
+    try { localStorage.setItem(CONSENT_PREFIX + service, '1'); } catch (e) { /* choix non mémorisé */ }
+  }
+
+  function i18nNode(tag, key, className) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    node.setAttribute('data-i18n', key);
+    node.textContent = translations[getLang()][key] || '';
+    return node;
+  }
+
+  function buildPlaceholder(opts) {
+    const box = document.createElement('div');
+    box.className = 'embed-placeholder';
+    const btn = i18nNode('button', opts.btnKey, 'btn btn-primary btn-sm');
+    btn.type = 'button';
+    btn.addEventListener('click', opts.onAllow);
+    const link = i18nNode('a', opts.linkKey, 'embed-link');
+    link.href = opts.href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    const actions = document.createElement('div');
+    actions.className = 'embed-actions';
+    actions.append(btn, link);
+    box.append(i18nNode('strong', opts.titleKey), i18nNode('p', opts.textKey), actions);
+    return box;
+  }
+
+  function initMapConsent() {
+    const map = document.querySelector('.contact-map[data-consent="maps"]');
+    const iframe = map && map.querySelector('iframe[data-src]');
+    if (!iframe) return;
+    function load() {
+      iframe.src = iframe.getAttribute('data-src');
+      iframe.removeAttribute('data-src');
+      iframe.hidden = false;
+      const ph = map.querySelector('.embed-placeholder');
+      if (ph) ph.remove();
+    }
+    if (hasConsent('maps')) { load(); return; }
+    map.appendChild(buildPlaceholder({
+      titleKey: 'map_ph_title', textKey: 'map_ph_text', btnKey: 'map_ph_btn', linkKey: 'map_ph_link',
+      href: map.getAttribute('data-link'),
+      onAllow: function () { grantConsent('maps'); load(); }
+    }));
+  }
+
+  /* ---------------------------------------------------------------
      11. ACTUALITÉS FACEBOOK OPTIMISÉES (FILTRES + VOIR PLUS + LAZY)
      --------------------------------------------------------------- */
   function initFacebookNews() {
     const embeds = Array.from(document.querySelectorAll('.fb-embed'));
     const filterTabs = document.querySelectorAll('.news-tab');
     const moreBtn = document.getElementById('fbMoreBtn');
+    const consentBar = document.getElementById('fbConsent');
     if (!embeds.length) return;
+
+    function allowFacebook() {
+      grantConsent('facebook');
+      if (consentBar) consentBar.hidden = true;
+      embeds.forEach(function (wrap) {
+        wrap.classList.remove('fb-embed--blocked');
+        const ph = wrap.querySelector('.embed-placeholder');
+        if (ph) ph.remove();
+      });
+      applyFilterAndVisibility();
+    }
+    if (consentBar) {
+      consentBar.hidden = hasConsent('facebook');
+      const barBtn = consentBar.querySelector('button');
+      if (barBtn) barBtn.addEventListener('click', allowFacebook);
+    }
 
     let currentFilter = 'all';
     let isExpanded = false;
@@ -1427,6 +1522,18 @@
         const href = u.searchParams.get('href');
         if (href) directUrl = decodeURIComponent(href);
       } catch (e) {}
+
+      if (!hasConsent('facebook')) {
+        if (!wrap.querySelector('.embed-placeholder')) {
+          wrap.classList.add('fb-embed--blocked');
+          wrap.appendChild(buildPlaceholder({
+            titleKey: wrap.classList.contains('fb-video') ? 'fb_ph_title_video' : 'fb_ph_title',
+            textKey: 'fb_ph_text', btnKey: 'ph_show', linkKey: 'fb_ph_link',
+            href: directUrl, onAllow: allowFacebook
+          }));
+        }
+        return;
+      }
 
       if (!wrap.querySelector('.fb-fallback')) {
         const fallback = document.createElement('a');
@@ -1708,6 +1815,7 @@
     initCounters();
     initMarquee();
     initFacebookNews();
+    initMapConsent();
     initGalerie();
     initCompare();
     initReveal();

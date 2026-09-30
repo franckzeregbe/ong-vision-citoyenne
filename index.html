@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.facebook.com https://www.google.com; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src https://www.facebook.com https://www.google.com; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" data-i18n="meta_desc" content="ONG Vision Citoyenne - Eau, Hygiène et Assainissement en milieu scolaire et communautaire. Accès à l'eau potable, latrines dignes et promotion de l'hygiène en Côte d'Ivoire." />
   <meta name="theme-color" content="#1E88E5" />
@@ -32,15 +32,13 @@
   <meta name="twitter:title" content="ONG Vision Citoyenne — Eau, Hygiène et Assainissement (WASH)" />
   <meta name="twitter:description" content="L'eau potable, des latrines dignes et la promotion de l'hygiène en milieu scolaire et communautaire en Côte d'Ivoire." />
   <meta name="twitter:image" content="https://franckzeregbe.github.io/ong-vision-citoyenne/assets/img/og-cover.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/style.css?v=18" />
-  <link rel="stylesheet" href="css/home.css?v=18" />
-  <link rel="stylesheet" href="css/renovation.css?v=18" />
-  <link rel="stylesheet" href="css/news.css?v=18" />
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/fonts.css?v=19" />
+  <link rel="stylesheet" href="css/style.css?v=19" />
+  <link rel="stylesheet" href="css/home.css?v=19" />
+  <link rel="stylesheet" href="css/renovation.css?v=19" />
+  <link rel="stylesheet" href="css/news.css?v=19" />
 
   <script type="application/ld+json">
   {
@@ -496,9 +494,9 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/news.js?v=18"></script>
-  <script src="js/news-render.js?v=18"></script>
-  <script src="js/layout.js?v=18"></script>
-  <script src="js/main.js?v=18"></script>
+  <script src="js/news.js?v=19"></script>
+  <script src="js/news-render.js?v=19"></script>
+  <script src="js/layout.js?v=19"></script>
+  <script src="js/main.js?v=19"></script>
 </body>
 </html>
