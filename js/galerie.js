@@ -10,7 +10,7 @@
 
    Catégories disponibles : "avant", "travaux", "apres", "ceremonie",
    "don", "sensibilisation", "terrain",
-   "pasea-mob", "pasea-form", "pasea-chantier", "pasea-remise"
+   "pasea-mob", "pasea-form", "pasea-lancement", "pasea-chantier"
    (les catégories EPP et PASEA alimentent aussi la page Projets)
    ================================================================ */
 
@@ -23,9 +23,7 @@ const GALERIE = [
   [EPP + "inauguration-groupe.jpg", "EPP SICOGI 1 — Élèves, enseignants et partenaires devant les nouvelles toilettes", "ceremonie"],
   [EPP + "inauguration-discours.jpg", "EPP SICOGI 1 — Discours de la Présidente Wassia MADOU lors de l'inauguration", "ceremonie"],
   [EPP + "inauguration-visite.jpg", "EPP SICOGI 1 — Les invités visitent les sanitaires rénovés", "ceremonie"],
-  [EPP + "inauguration-eleves.jpg", "EPP SICOGI 1 — Les élèves réunis sous le chapiteau pour la cérémonie", "ceremonie"],
   [EPP + "inauguration-officiels.jpg", "EPP SICOGI 1 — Photo officielle avec les élèves et les autorités", "ceremonie"],
-  [EPP + "inauguration-animation.jpg", "EPP SICOGI 1 — Animation présentée par les élèves pendant la cérémonie", "ceremonie"],
   [EPP + "ceremonie-officiel.jpg", "Accueil des officiels lors de l'inauguration — 9 septembre 2026", "ceremonie"],
   [EPP + "ceremonie-equipe.jpg", "Cérémonie d'inauguration — Bénévoles avec le drapeau de Verdis", "ceremonie"],
   [EPP + "ceremonie-vc.jpg", "Membre de l'ONG devant la bannière Vision Citoyenne", "ceremonie"],
@@ -72,15 +70,19 @@ const GALERIE = [
   [EPP + "avant-cour.jpg", "EPP SICOGI 1 — Sol de terre et déchets au pied du mur d'accueil", "avant"],
   [EPP + "avant-dechets.jpg", "EPP SICOGI 1 — Déchets évacués lors du nettoyage du site", "avant"],
 
-  // Projet pilote PASEA Hambol (2026)
+  // Projet pilote PASEA Hambol — formation du 1er au 10 juin 2026, lancement officiel le 13 juin 2026
+  [PASEA + "remise-kits-tpe.jpg", "PASEA Hambol — Lancement officiel à Katiola : les TPE et leurs équipements, 13 juin 2026", "pasea-lancement"],
+  [PASEA + "ceremonie-remise-kits.jpg", "PASEA Hambol — Cérémonie de lancement officiel au Conseil régional, Katiola, 13 juin 2026", "pasea-lancement"],
+  [PASEA + "lancement-autorites.jpg", "PASEA Hambol — Autorités et invités lors du lancement officiel, 13 juin 2026", "pasea-lancement"],
+  [PASEA + "lancement-equipements.jpg", "PASEA Hambol — Équipements remis aux TPE : brouettes, moules, cuvettes, protections", "pasea-lancement"],
+  [PASEA + "formation-artisans.jpg", "PASEA Hambol — Formation des artisans aux techniques de construction, juin 2026", "pasea-form"],
+  [PASEA + "formation-salle.jpg", "PASEA Hambol — Session de formation des membres des TPE, juin 2026", "pasea-form"],
+  [PASEA + "formation-echanges.jpg", "PASEA Hambol — Temps d'échange pendant la formation, juin 2026", "pasea-form"],
+  [PASEA + "formation-securite.jpg", "PASEA Hambol — Formation en tenue de sécurité, juin 2026", "pasea-form"],
+  [PASEA + "tpe-formees.jpg", "PASEA Hambol — Les artisans des TPE réunis après la formation", "pasea-form"],
   [PASEA + "mobilisation-village.jpg", "PASEA Hambol — Réunion de mobilisation communautaire dans un village", "pasea-mob"],
   [PASEA + "reunion-communautaire.jpg", "PASEA Hambol — Présentation du projet aux habitants", "pasea-mob"],
   [PASEA + "sensibilisation-menages.jpg", "PASEA Hambol — Échanges avec les ménages sur l'assainissement familial", "pasea-mob"],
-  [PASEA + "formation-artisans.jpg", "PASEA Hambol — Formation des artisans aux techniques de construction", "pasea-form"],
-  [PASEA + "formation-salle.jpg", "PASEA Hambol — Session de formation des membres des TPE", "pasea-form"],
-  [PASEA + "formation-echanges.jpg", "PASEA Hambol — Temps d'échange pendant la formation", "pasea-form"],
-  [PASEA + "formation-securite.jpg", "PASEA Hambol — Formation en tenue de sécurité", "pasea-form"],
-  [PASEA + "tpe-formees.jpg", "PASEA Hambol — Les artisans des TPE réunis après la formation", "pasea-form"],
   [PASEA + "equipe-tpe.jpg", "PASEA Hambol — Équipe d'une TPE avec ses équipements de protection", "pasea-chantier"],
   [PASEA + "tpe-chantier.jpg", "PASEA Hambol — Artisans des TPE réunis sur un chantier", "pasea-chantier"],
   [PASEA + "implantation-latrine.jpg", "PASEA Hambol — Implantation d'une latrine chez un ménage", "pasea-chantier"],
@@ -90,10 +92,8 @@ const GALERIE = [
   [PASEA + "construction-cabine.jpg", "PASEA Hambol — Construction de la cabine en parpaings", "pasea-chantier"],
   [PASEA + "construction-superstructure.jpg", "PASEA Hambol — Élévation de la superstructure", "pasea-chantier"],
   [PASEA + "finitions-latrine.jpg", "PASEA Hambol — Finitions et pose de la tuyauterie", "pasea-chantier"],
-  [PASEA + "latrine-livree.jpg", "PASEA Hambol — Une latrine familiale terminée", "pasea-remise"],
-  [PASEA + "remise-latrine-menage.jpg", "PASEA Hambol — Remise de la latrine au ménage bénéficiaire", "pasea-remise"],
-  [PASEA + "remise-kits-tpe.jpg", "PASEA Hambol — Remise officielle de kits de matériel aux TPE", "pasea-remise"],
-  [PASEA + "ceremonie-remise-kits.jpg", "PASEA Hambol — Cérémonie de remise des équipements", "pasea-remise"],
+  [PASEA + "latrine-livree.jpg", "PASEA Hambol — Une latrine familiale terminée", "pasea-chantier"],
+  [PASEA + "remise-latrine-menage.jpg", "PASEA Hambol — Remise de la latrine au ménage bénéficiaire", "pasea-chantier"],
 
   // Actions 2022
   ["don-unicef-materiel.jpg", "Don UNICEF : matériel d'hygiène remis au Lycée Moderne Inagohi — San Pedro", "don"],

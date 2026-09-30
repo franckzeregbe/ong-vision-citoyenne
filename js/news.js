@@ -118,30 +118,6 @@ const NEWS = [
   },
   {
     date: '2026-07',
-    cat: 'projet',
-    image: 'assets/img/projets/pasea/remise-kits-tpe.jpg',
-    link: 'projets.html#pasea',
-    fr: {
-      title: 'Lancement du projet pilote PASEA Hambol',
-      excerpt: 'Dans la région du Hambol, 57 très petites entreprises locales sont formées et équipées pour construire des latrines familiales à double fosse.',
-      body: [
-        'Après des réunions de mobilisation dans les villages, les artisans des TPE ont suivi des sessions de formation aux techniques de construction et aux règles de sécurité, puis ont reçu leurs kits de matériel.',
-        "L'ONG Vision Citoyenne facilite leur approvisionnement en matériaux grâce à une quincaillerie dédiée, dans cinq sous-préfectures : Katiola, Fronan, Niakaramandougou, Arikokaha et Timbé."
-      ],
-      cta: 'Découvrir le projet PASEA'
-    },
-    en: {
-      title: 'Launch of the PASEA Hambol pilot project',
-      excerpt: 'In the Hambol region, 57 local very small businesses are being trained and equipped to build double-pit family latrines.',
-      body: [
-        'After mobilisation meetings in the villages, the artisans took part in training sessions on building techniques and safety rules, then received their equipment kits.',
-        'ONG Vision Citoyenne makes it easier for them to source materials through a dedicated hardware supply, in five sub-prefectures: Katiola, Fronan, Niakaramandougou, Arikokaha and Timbé.'
-      ],
-      cta: 'Discover the PASEA project'
-    }
-  },
-  {
-    date: '2026-07',
     cat: 'chantier',
     image: 'assets/img/projets/renovation-epp/travaux-fosse.jpg',
     link: 'projets.html#chantier',
@@ -162,6 +138,30 @@ const NEWS = [
         'Teams then dug and built new pits, tiled the cubicles and prepared the yard.'
       ],
       cta: 'See the works photos'
+    }
+  },
+  {
+    date: '2026-06-13',
+    cat: 'projet',
+    image: 'assets/img/projets/pasea/remise-kits-tpe.jpg',
+    link: 'projets.html#pasea',
+    fr: {
+      title: 'Lancement officiel du PASEA Hambol à Katiola',
+      excerpt: "Le samedi 13 juin 2026, les activités de la composante assainissement rural du PASEA ont été lancées au Conseil régional, à Katiola, après dix jours de formation des artisans.",
+      body: [
+        'Du 1er au 10 juin 2026, les membres des très petites entreprises (TPE) de la région ont été formés à la construction de latrines familiales à double fosse et aux règles de sécurité.',
+        "Lors de la cérémonie, en présence des autorités, les TPE ont reçu leurs équipements : motos-tricycles, brouettes, moules, cuvettes et équipements de protection."
+      ],
+      cta: 'Découvrir le projet PASEA'
+    },
+    en: {
+      title: 'Official launch of PASEA Hambol in Katiola',
+      excerpt: 'On Saturday 13 June 2026, the activities of the PASEA rural sanitation component were launched at the Regional Council in Katiola, after ten days of artisan training.',
+      body: [
+        'From 1 to 10 June 2026, members of local very small businesses were trained to build double-pit family latrines and in safety rules.',
+        'During the ceremony, attended by the authorities, the businesses received their equipment: cargo tricycles, wheelbarrows, moulds, pans and protective gear.'
+      ],
+      cta: 'Discover the PASEA project'
     }
   },
   {
