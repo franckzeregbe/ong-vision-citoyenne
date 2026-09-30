@@ -14,12 +14,16 @@
      --------------------------------------------------------------- */
   const SITE_CONFIG = {
     DONATION_URL: '',        // Ex: 'https://www.helloasso.com/...' (laisser vide pour mailto)
-    NEWSLETTER_ENDPOINT: '', // Ex: 'https://formspree.io/f/...' (laisser vide pour mailto)
+    NEWSLETTER_ENDPOINT: '', // Ex: 'https://formspree.io/f/...' — ajouter aussi ce domaine à connect-src dans la CSP des pages
     WHATSAPP_NUMBER: '2250707597457',
     OFFICIAL_EMAIL: 'ongvisioncitoyenne@gmail.com'
   };
 
   const LANG_KEY = 'vc_lang';
+  // Valeur stockée normalisée : une valeur altérée ne doit pas casser les traductions
+  function getLang() {
+    try { return localStorage.getItem(LANG_KEY) === 'en' ? 'en' : 'fr'; } catch (e) { return 'fr'; }
+  }
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   /* ---------------------------------------------------------------
@@ -771,7 +775,13 @@
 
     const toast = document.createElement('div');
     toast.className = 'toast';
-    toast.innerHTML = '<span class="toast-icon">✓</span> <span class="toast-msg">' + message + '</span>';
+    const icon = document.createElement('span');
+    icon.className = 'toast-icon';
+    icon.textContent = '✓';
+    const msg = document.createElement('span');
+    msg.className = 'toast-msg';
+    msg.textContent = message;
+    toast.append(icon, ' ', msg);
     container.appendChild(toast);
 
     setTimeout(function () { toast.classList.add('show'); }, 20);
@@ -958,7 +968,7 @@
 
   function initLanguage() {
     const switchBtn = document.getElementById('langSwitch');
-    let current = localStorage.getItem(LANG_KEY) || 'fr';
+    let current = getLang();
     applyTranslations(current);
 
     if (switchBtn) {
@@ -1032,7 +1042,7 @@
       customBtn.type = 'button';
       customBtn.className = 'amount' + (isCustom ? ' active' : '');
       customBtn.setAttribute('data-value', 'custom');
-      const lang = localStorage.getItem(LANG_KEY) || 'fr';
+      const lang = getLang();
       customBtn.textContent = translations[lang].amount_custom || 'Autre montant';
       customBtn.addEventListener('click', function () {
         isCustom = true;
@@ -1044,7 +1054,7 @@
     }
 
     function updateUI() {
-      const lang = localStorage.getItem(LANG_KEY) || 'fr';
+      const lang = getLang();
       const conf = CURRENCY_CONFIG[currentCurrency];
 
       // Mise à jour des boutons actifs
@@ -1070,9 +1080,9 @@
       }
       if (impactText) {
         if (impactDesc) {
-          impactText.innerHTML = (lang === 'fr'
-            ? '<strong>' + formattedAmount + '</strong> ' + impactDesc
-            : '<strong>' + formattedAmount + '</strong> ' + impactDesc);
+          const amountEl = document.createElement('strong');
+          amountEl.textContent = formattedAmount;
+          impactText.replaceChildren(amountEl, ' ' + impactDesc);
           impactText.hidden = false;
         } else {
           impactText.hidden = true;
@@ -1142,7 +1152,7 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      const lang = localStorage.getItem(LANG_KEY) || 'fr';
+      const lang = getLang();
       const required = form.querySelectorAll('[required]');
       let valid = true;
       let errorKey = null;
@@ -1221,7 +1231,7 @@
       e.preventDefault();
       const input = form.querySelector('input[type="email"]');
       const email = input ? input.value.trim() : '';
-      const lang = localStorage.getItem(LANG_KEY) || 'fr';
+      const lang = getLang();
 
       if (!email || !EMAIL_RE.test(email)) {
         setFormStatus(statusEl, lang === 'fr' ? 'Adresse e-mail invalide.' : 'Invalid email address.', 'err');
@@ -1270,7 +1280,7 @@
 
         if (navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(textToCopy).then(function () {
-            const lang = localStorage.getItem(LANG_KEY) || 'fr';
+            const lang = getLang();
             showToast(translations[lang].copied_toast || 'Copié dans le presse-papier !');
           });
         } else {
@@ -1281,7 +1291,7 @@
           input.select();
           document.execCommand('copy');
           document.body.removeChild(input);
-          const lang = localStorage.getItem(LANG_KEY) || 'fr';
+          const lang = getLang();
           showToast(translations[lang].copied_toast || 'Copié !');
         }
       });
@@ -1398,7 +1408,7 @@
           moreBtn.style.display = 'none';
         } else {
           moreBtn.style.display = 'inline-flex';
-          const lang = localStorage.getItem(LANG_KEY) || 'fr';
+          const lang = getLang();
           moreBtn.textContent = isExpanded
             ? (translations[lang].news_less || 'Afficher moins')
             : (translations[lang].news_more || 'Afficher plus d\'actualités');
@@ -1424,8 +1434,13 @@
         fallback.href = directUrl;
         fallback.target = '_blank';
         fallback.rel = 'noopener';
-        const lang = localStorage.getItem(LANG_KEY) || 'fr';
-        fallback.innerHTML = '<span class="fb-icon">↗</span> <span>' + (translations[lang].news_fallback || 'Voir sur Facebook') + '</span>';
+        const lang = getLang();
+        const fbIcon = document.createElement('span');
+        fbIcon.className = 'fb-icon';
+        fbIcon.textContent = '↗';
+        const fbLabel = document.createElement('span');
+        fbLabel.textContent = translations[lang].news_fallback || 'Voir sur Facebook';
+        fallback.append(fbIcon, ' ', fbLabel);
         wrap.appendChild(fallback);
 
         iframe.addEventListener('load', function () {
@@ -1465,10 +1480,7 @@
      12. GALERIE PHOTOS & LIGHTBOX AVEC SWIPE TACTILE
      --------------------------------------------------------------- */
   function initGalerie() {
-    // Récupère la liste : override dynamique (admin) OU array par défaut
-    const source = (window.GALERIE_OVERRIDE && window.GALERIE_OVERRIDE.length)
-      ? window.GALERIE_OVERRIDE
-      : (typeof GALERIE !== 'undefined' ? GALERIE : null);
+    const source = typeof GALERIE !== 'undefined' ? GALERIE : null;
     if (!source) return;
 
     const grid = document.getElementById('galerieGrid');
@@ -1479,9 +1491,6 @@
     const lbPrev = document.getElementById('lbPrev');
     const lbNext = document.getElementById('lbNext');
     if (!grid || !lightbox || !lbImg || !lbCaption) return;
-
-    // Reset : évite les doublons si init est appelée deux fois (override admin)
-    grid.innerHTML = '';
 
     // data-cats="avant,travaux" limite la grille à certaines catégories (page Projets)
     const allowedCats = (grid.dataset.cats || '').split(',').filter(Boolean);
@@ -1702,12 +1711,6 @@
     initGalerie();
     initCompare();
     initReveal();
-
-    // Exposé pour permettre au content-renderer de relancer après changement dynamique
-    window.initFacebookNews = initFacebookNews;
-    window.initReveal = initReveal;
-    window.initCopyButtons = initCopyButtons;
-    window.initGalerie = initGalerie;
   });
 
   /* ---------------------------------------------------------------

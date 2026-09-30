@@ -1,12 +1,6 @@
 # robots.txt — ONG Vision Citoyenne
-# https://www.robotstxt.org/robotstxt.html
 
 User-agent: *
 Allow: /
-
-# Bloquer les fichiers internes / outils de développement
-Disallow: /fix_encoding.py
-Disallow: /fix_encoding.sh
-Disallow: /.git/
 
 Sitemap: https://franckzeregbe.github.io/ong-vision-citoyenne/sitemap.xml

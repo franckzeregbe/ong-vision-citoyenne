@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.facebook.com https://www.google.com; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" content="Contactez l'ONG Vision Citoyenne. Devenez bénévole, écrivez-nous ou trouvez notre siège à Yopougon Niangon Sud, Abidjan." />
   <meta name="theme-color" content="#1E88E5" />
   <title>Contact &amp; Bénévolat — ONG Vision Citoyenne</title>
@@ -12,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=16" />
+  <link rel="stylesheet" href="css/style.css?v=18" />
 </head>
 <body>
 
@@ -31,7 +33,7 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-map" aria-label="Localisation de l'ONG">
-          <iframe title="Localisation — Yopougon Niangon Sud, Abidjan" src="https://www.google.com/maps?q=Yopougon%20Niangon%20Sud%2C%20route%20de%20la%20centrale%20d'Azito%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="Localisation — Yopougon Niangon Sud, Abidjan" src="https://www.google.com/maps?q=Yopougon%20Niangon%20Sud%2C%20route%20de%20la%20centrale%20d'Azito%2C%20Abidjan%2C%20C%C3%B4te%20d'Ivoire&output=embed" loading="lazy"></iframe>
         </div>
 
         <div class="contact-grid">
@@ -76,10 +78,10 @@
           </ul>
 
           <form class="contact-form" id="contactForm" novalidate>
-            <div class="field"><label for="cn" data-i18n="form_name">Nom complet</label><input id="cn" name="name" type="text" required autocomplete="name" /></div>
-            <div class="field"><label for="ce" data-i18n="form_email">Adresse e-mail</label><input id="ce" name="email" type="email" required autocomplete="email" /></div>
-            <div class="field"><label for="cp" data-i18n="form_phone">Téléphone / WhatsApp</label><input id="cp" name="phone" type="tel" autocomplete="tel" /></div>
-            <div class="field"><label for="cm" data-i18n="form_msg_contact">Votre message</label><textarea id="cm" name="message" rows="4" required></textarea></div>
+            <div class="field"><label for="cn" data-i18n="form_name">Nom complet</label><input id="cn" name="name" type="text" required maxlength="100" autocomplete="name" /></div>
+            <div class="field"><label for="ce" data-i18n="form_email">Adresse e-mail</label><input id="ce" name="email" type="email" required maxlength="254" autocomplete="email" /></div>
+            <div class="field"><label for="cp" data-i18n="form_phone">Téléphone / WhatsApp</label><input id="cp" name="phone" type="tel" maxlength="30" autocomplete="tel" /></div>
+            <div class="field"><label for="cm" data-i18n="form_msg_contact">Votre message</label><textarea id="cm" name="message" rows="4" required maxlength="2000"></textarea></div>
             <button type="submit" class="btn btn-primary btn-block" data-i18n="contact_btn">Envoyer le message</button>
             <p class="form-status" id="contactStatus" role="status"></p>
           </form>
@@ -108,10 +110,10 @@
           </div>
 
           <form class="vol-form" id="volForm" novalidate>
-            <div class="field"><label for="vn" data-i18n="form_name">Nom complet</label><input id="vn" name="name" type="text" required autocomplete="name" /></div>
-            <div class="field"><label for="ve" data-i18n="form_email">Adresse e-mail</label><input id="ve" name="email" type="email" required autocomplete="email" /></div>
-            <div class="field"><label for="vp" data-i18n="form_phone">Téléphone / WhatsApp</label><input id="vp" name="phone" type="tel" autocomplete="tel" /></div>
-            <div class="field"><label for="vm" data-i18n="form_msg">Vos motivations ou compétences</label><textarea id="vm" name="message" rows="3" required></textarea></div>
+            <div class="field"><label for="vn" data-i18n="form_name">Nom complet</label><input id="vn" name="name" type="text" required maxlength="100" autocomplete="name" /></div>
+            <div class="field"><label for="ve" data-i18n="form_email">Adresse e-mail</label><input id="ve" name="email" type="email" required maxlength="254" autocomplete="email" /></div>
+            <div class="field"><label for="vp" data-i18n="form_phone">Téléphone / WhatsApp</label><input id="vp" name="phone" type="tel" maxlength="30" autocomplete="tel" /></div>
+            <div class="field"><label for="vm" data-i18n="form_msg">Vos motivations ou compétences</label><textarea id="vm" name="message" rows="3" required maxlength="2000"></textarea></div>
             <button type="submit" class="btn btn-primary btn-block" data-i18n="vol_btn">Je m'engage comme bénévole</button>
             <p class="form-status" id="volStatus" role="status"></p>
           </form>
@@ -124,7 +126,7 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=16"></script>
-  <script src="js/main.js?v=16"></script>
+  <script src="js/layout.js?v=18"></script>
+  <script src="js/main.js?v=18"></script>
 </body>
 </html>

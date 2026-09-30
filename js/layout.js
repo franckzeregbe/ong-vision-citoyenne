@@ -103,7 +103,7 @@
           <form class="news-form" id="newsForm" novalidate>
             <label for="newsEmail" class="sr-only">Votre e-mail pour la newsletter</label>
             <div class="news-row">
-              <input id="newsEmail" type="email" name="email" placeholder="votre@email.com" required autocomplete="email" />
+              <input id="newsEmail" type="email" name="email" placeholder="votre@email.com" required maxlength="254" autocomplete="email" />
               <button type="submit" class="btn btn-primary" data-i18n="news_btn2">S'abonner</button>
             </div>
             <p class="form-status" id="newsStatus" role="status"></p>
@@ -139,7 +139,7 @@
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <p><span data-i18n="footer_legal">Récépissé N° 0373/MIS DGAT/SDVA — Yopougon Niangon Sud, Abidjan, Côte d'Ivoire</span></p>
-          <p><span data-i18n="footer_founded">Fondée le 6 juin 2018</span> · &copy; <span id="year"></span> ONG Vision Citoyenne. <span data-i18n="rights">Tous droits réservés.</span> · <a href="admin.html" class="admin-link" style="opacity:.35; font-size:.75rem" title="Espace administration">·</a></p>
+          <p><span data-i18n="footer_founded">Fondée le 6 juin 2018</span> · &copy; <span id="year"></span> ONG Vision Citoyenne. <span data-i18n="rights">Tous droits réservés.</span> </p>
         </div>
       </div>
     </footer>
