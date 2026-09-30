@@ -35,9 +35,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=15" />
-  <link rel="stylesheet" href="css/home.css?v=15" />
-  <link rel="stylesheet" href="css/renovation.css?v=15" />
+  <link rel="stylesheet" href="css/style.css?v=16" />
+  <link rel="stylesheet" href="css/home.css?v=16" />
+  <link rel="stylesheet" href="css/renovation.css?v=16" />
+  <link rel="stylesheet" href="css/news.css?v=16" />
 
   <script type="application/ld+json">
   {
@@ -427,6 +428,20 @@
       </div>
     </section>
 
+    <!-- ACTUALITÉS — 4 dernières (js/news.js) -->
+    <section class="news-home" id="actualites-accueil" aria-labelledby="newsHomeTitle">
+      <div class="container">
+        <div class="news-head">
+          <div>
+            <span class="section-tag" data-i18n="nh_tag">Actualités</span>
+            <h2 id="newsHomeTitle" data-i18n="nh_title">Les dernières nouvelles</h2>
+          </div>
+          <a href="actualites.html" class="news-all" data-i18n="nh_all">Toutes les actualités →</a>
+        </div>
+        <div class="news-layout" data-news="home" data-limit="4"></div>
+      </div>
+    </section>
+
     <!-- CTA DON RAPIDE -->
     <section class="section donate-teaser">
       <div class="container">
@@ -479,8 +494,10 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=15"></script>
-  <script src="js/content-renderer.js?v=15"></script>
-  <script src="js/main.js?v=15"></script>
+  <script src="js/news.js?v=16"></script>
+  <script src="js/news-render.js?v=16"></script>
+  <script src="js/layout.js?v=16"></script>
+  <script src="js/content-renderer.js?v=16"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>

@@ -273,7 +273,15 @@
       // Actualités Facebook
       news_tag: 'Actualités',
       news_title: 'Nos actualités sur le terrain',
-      news_sub: 'Retrouvez nos dernières publications, interventions et vidéos en direct de notre page Facebook officielle.',
+      news_sub: 'Nos dernières actions, annonces et moments forts, nos publications Facebook et nos photos de terrain.',
+      nh_tag: 'Actualités',
+      nh_title: 'Les dernières nouvelles',
+      nh_all: 'Toutes les actualités →',
+      an_tag: 'À la une',
+      an_title: 'Nos dernières nouvelles',
+      fb_tag: 'Facebook',
+      fb_title: 'Sur notre page Facebook',
+      fb_sub: 'Publications et vidéos en direct de notre page officielle.',
       news_filter_all: 'Toutes',
       news_filter_posts: 'Publications',
       news_filter_videos: 'Vidéos & Reels',
@@ -629,7 +637,15 @@
       // News
       news_tag: 'News',
       news_title: 'Our Latest Field News',
-      news_sub: 'Catch up on our recent field interventions, events and updates directly from our official Facebook page.',
+      news_sub: 'Our latest actions, announcements and highlights, our Facebook posts and our field photos.',
+      nh_tag: 'News',
+      nh_title: 'Latest news',
+      nh_all: 'All news →',
+      an_tag: 'Featured',
+      an_title: 'Our latest news',
+      fb_tag: 'Facebook',
+      fb_title: 'On our Facebook page',
+      fb_sub: 'Posts and videos straight from our official page.',
       news_filter_all: 'All',
       news_filter_posts: 'Posts',
       news_filter_videos: 'Videos & Reels',
@@ -919,12 +935,12 @@
       if (dict[key] !== undefined) el.textContent = dict[key];
     });
 
-    if (dict.page_title) document.title = dict.page_title;
     document.documentElement.lang = lang;
     updateLangSwitch(lang);
 
     // Mettre à jour l'impact du don selon la langue
     if (window._updateDonationDisplay) window._updateDonationDisplay();
+    document.dispatchEvent(new CustomEvent('vc:lang', { detail: lang }));
   }
 
   function updateLangSwitch(lang) {

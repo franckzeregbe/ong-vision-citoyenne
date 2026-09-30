@@ -12,7 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=15" />
+  <link rel="stylesheet" href="css/style.css?v=16" />
+  <link rel="stylesheet" href="css/news.css?v=16" />
 </head>
 <body>
 
@@ -24,13 +25,31 @@
       <div class="container">
         <p class="page-eyebrow" data-i18n="news_tag">Actualités</p>
         <h1 data-i18n="news_title">Nos actualités sur le terrain</h1>
-        <p class="page-lead" data-i18n="news_sub">Retrouvez nos dernières publications, interventions et vidéos en direct de notre page Facebook officielle.</p>
+        <p class="page-lead" data-i18n="news_sub">Nos dernières actions, annonces et moments forts, nos publications Facebook et nos photos de terrain.</p>
+      </div>
+    </section>
+
+    <!-- ACTUALITÉS DU SITE (js/news.js) -->
+    <section class="section" id="a-la-une" aria-labelledby="alaUneTitle">
+      <div class="container">
+        <div class="news-head">
+          <div>
+            <span class="section-tag" data-i18n="an_tag">À la une</span>
+            <h2 id="alaUneTitle" data-i18n="an_title">Nos dernières nouvelles</h2>
+          </div>
+        </div>
+        <div class="news-layout" data-news="page"></div>
       </div>
     </section>
 
     <!-- ACTUALITÉS FACEBOOK -->
-    <section class="section" id="actus">
+    <section class="section section-alt" id="actus">
       <div class="container">
+        <div class="section-head fb-section-head">
+          <span class="section-tag" data-i18n="fb_tag">Facebook</span>
+          <h2 data-i18n="fb_title">Sur notre page Facebook</h2>
+          <p class="section-sub" data-i18n="fb_sub">Publications et vidéos en direct de notre page officielle.</p>
+        </div>
         <div class="news-tabs" role="tablist">
           <button class="news-tab active" data-filter="all" data-i18n="news_filter_all">Toutes</button>
           <button class="news-tab" data-filter="posts" data-i18n="news_filter_posts">Publications</button>
@@ -64,7 +83,7 @@
     </section>
 
     <!-- GALERIE -->
-    <section class="section section-alt" id="galerie">
+    <section class="section" id="galerie">
       <div class="container">
         <div class="section-head">
           <span class="section-tag" data-i18n="gal_tag">Galerie</span>
@@ -101,9 +120,11 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/galerie.js?v=15"></script>
-  <script src="js/layout.js?v=15"></script>
-  <script src="js/content-renderer.js?v=15"></script>
-  <script src="js/main.js?v=15"></script>
+  <script src="js/galerie.js?v=16"></script>
+  <script src="js/news.js?v=16"></script>
+  <script src="js/news-render.js?v=16"></script>
+  <script src="js/layout.js?v=16"></script>
+  <script src="js/content-renderer.js?v=16"></script>
+  <script src="js/main.js?v=16"></script>
 </body>
 </html>
