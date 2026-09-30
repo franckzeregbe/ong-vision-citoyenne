@@ -29,22 +29,6 @@
   ],
   "lang": "fr-CI",
   "dir": "ltr",
-  "screenshots": [
-    {
-      "src": "assets/img/ecole.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
-      "form_factor": "wide",
-      "label": "École avec accès à l'eau potable"
-    },
-    {
-      "src": "assets/img/eau.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpeg",
-      "form_factor": "narrow",
-      "label": "Point d'eau communautaire"
-    }
-  ],
   "related_applications": [],
   "prefer_related_applications": false
 }

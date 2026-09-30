@@ -13,9 +13,9 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="css/fonts.css?v=19" />
-  <link rel="stylesheet" href="css/style.css?v=19" />
-  <link rel="stylesheet" href="css/news.css?v=19" />
+  <link rel="stylesheet" href="css/fonts.css?v=20" />
+  <link rel="stylesheet" href="css/style.css?v=20" />
+  <link rel="stylesheet" href="css/news.css?v=20" />
 </head>
 <body>
 
@@ -97,17 +97,18 @@
           <h2 data-i18n="gal_title">Nos photos de terrain</h2>
           <p class="section-sub" data-i18n="gal_sub">Images de nos réalisations, chantiers et sensibilisations. Cliquez sur une photo pour l'agrandir.</p>
         </div>
-        <div class="gal-filters" id="galFilters">
+        <div class="gal-filters" id="galFilters" data-for="galerieGrid">
           <button class="gal-filter active" data-cat="all" data-i18n="gal_all">Toutes</button>
           <button class="gal-filter" data-cat="avant" data-i18n="gal_avant">Avant</button>
           <button class="gal-filter" data-cat="travaux" data-i18n="gal_travaux">Travaux</button>
           <button class="gal-filter" data-cat="apres" data-i18n="gal_apres">Après</button>
           <button class="gal-filter" data-cat="ceremonie" data-i18n="gal_cere">Inauguration</button>
+          <button class="gal-filter" data-cat="pasea-mob,pasea-form,pasea-chantier,pasea-remise">PASEA Hambol</button>
           <button class="gal-filter" data-cat="don" data-i18n="gal_don">Dons</button>
           <button class="gal-filter" data-cat="sensibilisation" data-i18n="gal_sensib">Sensibilisation</button>
           <button class="gal-filter" data-cat="terrain" data-i18n="gal_terrain">Terrain</button>
         </div>
-        <div class="gal-grid" id="galerieGrid"></div>
+        <div class="gal-grid" id="galerieGrid" data-gallery></div>
       </div>
     </section>
 
@@ -127,10 +128,10 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/galerie.js?v=19"></script>
-  <script src="js/news.js?v=19"></script>
-  <script src="js/news-render.js?v=19"></script>
-  <script src="js/layout.js?v=19"></script>
-  <script src="js/main.js?v=19"></script>
+  <script src="js/galerie.js?v=20"></script>
+  <script src="js/news.js?v=20"></script>
+  <script src="js/news-render.js?v=20"></script>
+  <script src="js/layout.js?v=20"></script>
+  <script src="js/main.js?v=20"></script>
 </body>
 </html>

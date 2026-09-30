@@ -148,8 +148,8 @@
       tl5_tag: 'Sensibilisation',
       tl5_t: 'Campagne « Engagement Citoyen »',
       tl5_d: "Sessions sur l'hygiène, le lavage des mains et la citoyenneté dans les écoles de San Pedro et du Nord.",
-      tl6_t: 'Programme PASEA',
-      tl6_d: "Participation au Programme d'Appui au Secteur de l'Eau et de l'Assainissement dans les écoles et communautés rurales.",
+      tl6_t: 'Projet pilote PASEA Hambol',
+      tl6_d: '57 TPE locales accompagnées pour construire des latrines familiales à double fosse dans la région du Hambol.',
       tl7_d: 'École rénovée et inaugurée le 9 septembre 2026 : sanitaires, peinture, aire de jeux et fresque éducative.',
 
       // Champs élargis
@@ -184,10 +184,10 @@
       real_tag: 'Projets',
       real_title: 'Projets & réalisations',
       real_sub: "Des engagements concrets, menés avec nos partenaires, au service de l'eau, de l'hygiène et de l'assainissement.",
-      real1_year: '2024 – 2026',
+      real1_year: '2026',
       real1_status: 'En cours',
-      real1_t: 'Projet PASEA — Eau & Assainissement',
-      real1_d: "Participation au Programme d'Appui au Secteur de l'Eau et de l'Assainissement (PASEA). Ce projet renforce l'accès à l'eau potable et à l'assainissement dans les écoles et les communautés rurales, en renforçant la gouvernance du secteur et l'engagement communautaire.",
+      real1_t: 'Projet pilote PASEA Hambol',
+      real1_d: "Dans la région du Hambol, l'ONG accompagne 57 très petites entreprises locales qui construisent des latrines familiales à double fosse, en facilitant leur approvisionnement en matériaux.",
       real_reno_t: 'Rénovation EPP SICOGI 1 — Yopougon',
       real_reno_d: "Réhabilitation complète de l'École Primaire Publique SICOGI 1 à Yopougon : rénovation des sanitaires, peinture des bâtiments, création d'une aire de jeux avec fresque éducative, installation de toboggans et mobilier pour enfants. Inauguré le 09 septembre 2026.",
       real_reno_status: 'Terminé',
@@ -338,6 +338,29 @@
       chantier_gal: 'Toutes les photos du chantier',
       chantier_cta: 'Soutenir le prochain chantier',
       real_reno_more: 'Voir le chantier en images ↓',
+      real_pasea_more: 'Découvrir le projet PASEA ↓',
+      pasea_tag: 'Projet pilote · En cours',
+      pasea_title: 'PASEA Hambol : des latrines familiales construites par des artisans locaux',
+      pasea_lead: "Dans la région du Hambol, l'ONG Vision Citoyenne accompagne 57 très petites entreprises (TPE) locales qui construisent des latrines familiales à double fosse chez les ménages.",
+      pasea_role: "Notre rôle : faciliter l'approvisionnement des TPE en matériaux de construction grâce à une quincaillerie dédiée, pour que les chantiers avancent sans rupture.",
+      pasea_s1: 'TPE locales accompagnées',
+      pasea_s2: 'sous-préfectures couvertes',
+      pasea_s3: 'fosses par latrine, utilisées en alternance',
+      pasea_cover: 'Une latrine familiale remise à un ménage bénéficiaire',
+      pasea_steps_title: 'Notre démarche en 4 étapes',
+      pasea_st1_t: 'Mobiliser les communautés',
+      pasea_st1_d: "Réunions dans les villages pour présenter le projet et l'intérêt d'une latrine familiale.",
+      pasea_st2_t: 'Former les artisans',
+      pasea_st2_d: 'Sessions de formation des membres des TPE aux techniques de construction et aux règles de sécurité.',
+      pasea_st3_t: 'Équiper les TPE',
+      pasea_st3_d: "Remise de kits de matériel et d'équipements de protection, puis approvisionnement continu en matériaux.",
+      pasea_st4_t: 'Construire chez les ménages',
+      pasea_st4_d: "Fosses, dalles, cuvette SaTo et cabine : les TPE réalisent chaque latrine sur place, jusqu'à sa remise.",
+      pasea_gal: 'Le projet en images',
+      pasea_f1: 'Mobilisation',
+      pasea_f2: 'Formation',
+      pasea_f3: 'Construction',
+      pasea_f4: 'Remises',
 
       // Don
       donate_tag: 'Faire un don',
@@ -522,8 +545,8 @@
       tl5_tag: 'Awareness',
       tl5_t: '"Citizen Engagement" campaign',
       tl5_d: 'Sessions on hygiene, handwashing and citizenship in schools in San Pedro and the North.',
-      tl6_t: 'PASEA Programme',
-      tl6_d: 'Participation in the Water and Sanitation Sector Support Programme in rural schools and communities.',
+      tl6_t: 'PASEA Hambol pilot project',
+      tl6_d: '57 local small businesses supported to build double-pit family latrines in the Hambol region.',
       tl7_d: 'School renovated and inaugurated on 9 September 2026: toilets, painting, playground and educational mural.',
       history_more: 'See the full gallery →',
 
@@ -559,10 +582,10 @@
       real_tag: 'Projects',
       real_title: 'Projects & Achievements',
       real_sub: 'Concrete initiatives conducted with our partners to advance water, hygiene and sanitation.',
-      real1_year: '2024 – 2026',
+      real1_year: '2026',
       real1_status: 'Ongoing',
-      real1_t: 'PASEA Project — Water & Sanitation',
-      real1_d: 'Participation in the Water and Sanitation Sector Support Program (PASEA). This project strengthens access to safe water and sanitation in rural schools and communities through better sector governance and community engagement.',
+      real1_t: 'PASEA Hambol pilot project',
+      real1_d: 'In the Hambol region, the NGO supports 57 local very small businesses that build double-pit family latrines, by making it easier for them to source building materials.',
       real_reno_t: 'EPP SICOGI 1 Renovation — Yopougon',
       real_reno_d: 'Complete rehabilitation of EPP SICOGI 1 primary school in Yopougon: bathroom renovation, building painting, creation of a playground with educational mural, installation of slides and children\'s furniture. Inaugurated on September 9, 2026.',
       real_reno_status: 'Completed',
@@ -713,6 +736,29 @@
       chantier_gal: 'All the project photos',
       chantier_cta: 'Support the next project',
       real_reno_more: 'See the project in pictures ↓',
+      real_pasea_more: 'Discover the PASEA project ↓',
+      pasea_tag: 'Pilot project · Ongoing',
+      pasea_title: 'PASEA Hambol: family latrines built by local artisans',
+      pasea_lead: 'In the Hambol region, ONG Vision Citoyenne supports 57 local very small businesses that build double-pit family latrines for households.',
+      pasea_role: 'Our role: making it easier for these businesses to source building materials through a dedicated hardware supply, so that work never stalls.',
+      pasea_s1: 'local small businesses supported',
+      pasea_s2: 'sub-prefectures covered',
+      pasea_s3: 'pits per latrine, used in alternation',
+      pasea_cover: 'A family latrine handed over to a beneficiary household',
+      pasea_steps_title: 'Our approach in 4 steps',
+      pasea_st1_t: 'Mobilising communities',
+      pasea_st1_d: 'Village meetings to present the project and the benefits of a family latrine.',
+      pasea_st2_t: 'Training artisans',
+      pasea_st2_d: 'Training sessions for members of the small businesses on building techniques and safety rules.',
+      pasea_st3_t: 'Equipping the businesses',
+      pasea_st3_d: 'Handover of equipment kits and protective gear, followed by a steady supply of materials.',
+      pasea_st4_t: 'Building for households',
+      pasea_st4_d: 'Pits, slabs, SaTo pan and cabin: the businesses build each latrine on site, right through to handover.',
+      pasea_gal: 'The project in pictures',
+      pasea_f1: 'Mobilisation',
+      pasea_f2: 'Training',
+      pasea_f3: 'Construction',
+      pasea_f4: 'Handovers',
 
       // Donate
       donate_tag: 'Donate',
@@ -1584,53 +1630,33 @@
   }
 
   /* ---------------------------------------------------------------
-     12. GALERIE PHOTOS & LIGHTBOX AVEC SWIPE TACTILE
+     12. GALERIES PHOTOS & LIGHTBOX PARTAGÉE (SWIPE TACTILE)
+     Chaque .gal-grid[data-gallery] est une galerie indépendante :
+     data-cats limite ses catégories, .gal-filters[data-for="<id>"] porte
+     ses filtres (data-cat peut lister plusieurs catégories : "a,b").
      --------------------------------------------------------------- */
-  function initGalerie() {
-    const source = typeof GALERIE !== 'undefined' ? GALERIE : null;
-    if (!source) return;
-
-    const grid = document.getElementById('galerieGrid');
+  function createLightbox() {
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lbImg');
     const lbCaption = document.getElementById('lbCaption');
+    if (!lightbox || !lbImg || !lbCaption) return null;
     const lbClose = document.getElementById('lbClose');
     const lbPrev = document.getElementById('lbPrev');
     const lbNext = document.getElementById('lbNext');
-    if (!grid || !lightbox || !lbImg || !lbCaption) return;
-
-    // data-cats="avant,travaux" limite la grille à certaines catégories (page Projets)
-    const allowedCats = (grid.dataset.cats || '').split(',').filter(Boolean);
-    const images = source.map(function (item) {
-      var rawSrc = Array.isArray(item) ? item[0] : item.image;
-      var caption = Array.isArray(item) ? (item[1] || '') : (item.caption || '');
-      var cat = Array.isArray(item) ? (item[2] || '') : (item.category || '');
-      var src = (rawSrc && (rawSrc.indexOf('data:') === 0 || rawSrc.indexOf('http') === 0))
-        ? rawSrc
-        : 'assets/img/galerie/' + rawSrc;
-      return { src: src, caption: caption, cat: cat };
-    }).filter(function (img) {
-      return !allowedCats.length || allowedCats.indexOf(img.cat) !== -1;
-    });
-
-    var filtersWrap = document.getElementById('galFilters');
-    var preset = filtersWrap && filtersWrap.querySelector('.gal-filter.active');
-    var activeCat = (preset && preset.dataset.cat) || 'all';
-    var visibleImages = images.slice();
-    var current = -1;
-    var trigger = null;
+    let list = [];
+    let current = -1;
+    let trigger = null;
 
     function show(index) {
-      current = (index + visibleImages.length) % visibleImages.length;
-      lbImg.src = visibleImages[current].src;
-      lbImg.alt = visibleImages[current].caption;
-      lbCaption.textContent = visibleImages[current].caption;
+      current = (index + list.length) % list.length;
+      lbImg.src = list[current].src;
+      lbImg.alt = list[current].caption;
+      lbCaption.textContent = list[current].caption;
       lightbox.classList.add('open');
       lightbox.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
       if (lbClose) lbClose.focus();
     }
-
     function close() {
       lightbox.classList.remove('open');
       lightbox.setAttribute('hidden', '');
@@ -1638,69 +1664,13 @@
       if (trigger) trigger.focus();
     }
 
-    function renderGrid() {
-      grid.innerHTML = '';
-      visibleImages = activeCat === 'all'
-        ? images.slice()
-        : images.filter(function (img) { return img.cat === activeCat; });
-
-      visibleImages.forEach(function (img, i) {
-        var figure = document.createElement('figure');
-        figure.className = 'gal-item reveal';
-        figure.setAttribute('role', 'button');
-        figure.tabIndex = 0;
-        figure.setAttribute('aria-label', img.caption || 'Photo ' + (i + 1));
-
-        var el = document.createElement('img');
-        el.src = img.src;
-        el.alt = img.caption;
-        el.loading = 'lazy';
-        figure.appendChild(el);
-
-        var cap = document.createElement('figcaption');
-        cap.textContent = img.caption;
-        figure.appendChild(cap);
-
-        figure.addEventListener('click', function () {
-          trigger = figure;
-          show(i);
-        });
-        figure.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            trigger = figure;
-            show(i);
-          }
-        });
-
-        grid.appendChild(figure);
-      });
-
-      if (typeof initReveal === 'function') initReveal();
-    }
-
-    if (filtersWrap) {
-      filtersWrap.addEventListener('click', function (e) {
-        var btn = e.target.closest('.gal-filter');
-        if (!btn) return;
-        activeCat = btn.dataset.cat || 'all';
-        filtersWrap.querySelectorAll('.gal-filter').forEach(function (b) { b.classList.remove('active'); });
-        btn.classList.add('active');
-        renderGrid();
-      });
-    }
-
-    renderGrid();
-
     if (lbClose) lbClose.addEventListener('click', close);
     if (lbPrev) lbPrev.addEventListener('click', function () { show(current - 1); });
     if (lbNext) lbNext.addEventListener('click', function () { show(current + 1); });
-
     lightbox.addEventListener('click', function (e) {
       const figure = lightbox.querySelector('.lb-figure');
       if (e.target === lightbox || (figure && e.target === figure)) close();
     });
-
     document.addEventListener('keydown', function (e) {
       if (!lightbox.classList.contains('open')) return;
       if (e.key === 'Escape') close();
@@ -1708,26 +1678,95 @@
       else if (e.key === 'ArrowRight') show(current + 1);
     });
 
-    // Support du geste de balayage tactile (swipe) sur mobile
+    // Balayage tactile : gauche = suivant, droite = précédent
     let touchStartX = 0;
-    let touchEndX = 0;
-
     lightbox.addEventListener('touchstart', function (e) {
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
-
     lightbox.addEventListener('touchend', function (e) {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 45) show(current + (diff < 0 ? 1 : -1));
     }, { passive: true });
 
-    function handleSwipe() {
-      const diff = touchEndX - touchStartX;
-      if (Math.abs(diff) > 45) {
-        if (diff < 0) show(current + 1); // swipe gauche -> suivant
-        else show(current - 1);          // swipe droite -> précédent
+    return {
+      open: function (items, index, from) {
+        list = items;
+        trigger = from;
+        show(index);
       }
+    };
+  }
+
+  function setupGallery(grid, allImages, lightbox) {
+    const allowed = (grid.dataset.cats || '').split(',').filter(Boolean);
+    const images = allowed.length
+      ? allImages.filter(function (img) { return allowed.indexOf(img.cat) !== -1; })
+      : allImages;
+    const filtersWrap = grid.id ? document.querySelector('.gal-filters[data-for="' + grid.id + '"]') : null;
+    const preset = filtersWrap && filtersWrap.querySelector('.gal-filter.active');
+    let activeCats = ((preset && preset.dataset.cat) || 'all').split(',');
+
+    function render() {
+      const visible = activeCats[0] === 'all'
+        ? images
+        : images.filter(function (img) { return activeCats.indexOf(img.cat) !== -1; });
+      grid.replaceChildren();
+      visible.forEach(function (img, i) {
+        const figure = document.createElement('figure');
+        figure.className = 'gal-item reveal';
+        figure.setAttribute('role', 'button');
+        figure.tabIndex = 0;
+        figure.setAttribute('aria-label', img.caption || 'Photo ' + (i + 1));
+
+        const el = document.createElement('img');
+        el.src = img.src;
+        el.alt = img.caption;
+        el.loading = 'lazy';
+        const cap = document.createElement('figcaption');
+        cap.textContent = img.caption;
+        figure.append(el, cap);
+
+        figure.addEventListener('click', function () { lightbox.open(visible, i, figure); });
+        figure.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            lightbox.open(visible, i, figure);
+          }
+        });
+        grid.appendChild(figure);
+      });
+      initReveal();
     }
+
+    if (filtersWrap) {
+      filtersWrap.addEventListener('click', function (e) {
+        const btn = e.target.closest('.gal-filter');
+        if (!btn) return;
+        activeCats = (btn.dataset.cat || 'all').split(',');
+        filtersWrap.querySelectorAll('.gal-filter').forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+        });
+        render();
+      });
+    }
+    render();
+  }
+
+  function initGalerie() {
+    if (typeof GALERIE === 'undefined') return;
+    const grids = document.querySelectorAll('.gal-grid[data-gallery]');
+    if (!grids.length) return;
+    const lightbox = createLightbox();
+    if (!lightbox) return;
+    const allImages = GALERIE.map(function (item) {
+      const raw = item[0] || '';
+      return {
+        src: /^(https?:|data:)/.test(raw) ? raw : 'assets/img/galerie/' + raw,
+        caption: item[1] || '',
+        cat: item[2] || ''
+      };
+    });
+    grids.forEach(function (grid) { setupGallery(grid, allImages, lightbox); });
   }
 
   /* ---------------------------------------------------------------

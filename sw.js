@@ -1,7 +1,7 @@
 // Service Worker pour ONG Vision Citoyenne
 // Améliore le fonctionnement hors-ligne et la vitesse de chargement des ressources locales.
 
-const CACHE_NAME = 'ong-vision-citoyenne-v13';
+const CACHE_NAME = 'ong-vision-citoyenne-v15';
 
 // Ressources essentielles mises en cache à l'installation
 const CORE_ASSETS = [
@@ -54,7 +54,7 @@ const CORE_ASSETS = [
   './assets/img/projets/renovation-epp/ceremonie-officiel.jpg',
   './assets/img/projets/renovation-epp/ceremonie-ippdr.jpg',
   './assets/img/domaines/autonomisation.jpg',
-  './assets/img/domaines/climat.jpg',
+  './assets/img/domaines/eha.jpg',
   './assets/img/domaines/genre.jpg',
   './assets/img/domaines/sante.jpg',
   './assets/img/domaines/paix.jpg',

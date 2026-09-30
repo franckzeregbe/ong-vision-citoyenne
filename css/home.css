@@ -52,16 +52,12 @@
   width: auto;
   max-width: 140px;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: .62;
+  /* Fond blanc des logos JPG fondu dans le bandeau */
   mix-blend-mode: multiply;
-  transition: filter .25s var(--ease), opacity .25s var(--ease);
+  transition: transform .25s var(--ease);
 }
-.trust-group img:hover { filter: none; opacity: 1; }
+.trust-group img:hover { transform: scale(1.06); }
 .trust-group img.is-round { border-radius: 50%; }
-/* Emblème blanc sur fond coloré : inversé pour rester lisible en monochrome */
-.trust-group img.is-inverse { filter: grayscale(1) invert(1) brightness(2.1); }
-.trust-group img.is-inverse:hover { filter: none; }
 .trust-link {
   flex: none;
   font-family: var(--head);

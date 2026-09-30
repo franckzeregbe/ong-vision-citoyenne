@@ -6,7 +6,7 @@
    2. Ajoutez un bloc en HAUT de la liste NEWS ci-dessous
       (la plus récente en premier), en copiant un bloc existant.
    3. date : "AAAA-MM-JJ" (jour connu) ou "AAAA-MM" (mois seulement)
-   4. cat  : "annonce", "evenement", "don", "chantier" ou "sensibilisation"
+   4. cat  : "annonce", "evenement", "don", "chantier", "projet" ou "sensibilisation"
    L'accueil affiche automatiquement les 4 plus récentes.
    ================================================================ */
 
@@ -15,6 +15,7 @@ const NEWS_CATS = {
   evenement: { fr: 'Événement', en: 'Event' },
   don: { fr: 'Don', en: 'Donation' },
   chantier: { fr: 'Chantier', en: 'Works' },
+  projet: { fr: 'Projet', en: 'Project' },
   sensibilisation: { fr: 'Sensibilisation', en: 'Awareness' }
 };
 
@@ -113,6 +114,30 @@ const NEWS = [
         'The new welcome wall now reads "Welcome to SICOGI 1 Pre-school".'
       ],
       cta: 'Compare before / after'
+    }
+  },
+  {
+    date: '2026-07',
+    cat: 'projet',
+    image: 'assets/img/projets/pasea/remise-kits-tpe.jpg',
+    link: 'projets.html#pasea',
+    fr: {
+      title: 'Lancement du projet pilote PASEA Hambol',
+      excerpt: 'Dans la région du Hambol, 57 très petites entreprises locales sont formées et équipées pour construire des latrines familiales à double fosse.',
+      body: [
+        'Après des réunions de mobilisation dans les villages, les artisans des TPE ont suivi des sessions de formation aux techniques de construction et aux règles de sécurité, puis ont reçu leurs kits de matériel.',
+        "L'ONG Vision Citoyenne facilite leur approvisionnement en matériaux grâce à une quincaillerie dédiée, dans cinq sous-préfectures : Katiola, Fronan, Niakaramandougou, Arikokaha et Timbé."
+      ],
+      cta: 'Découvrir le projet PASEA'
+    },
+    en: {
+      title: 'Launch of the PASEA Hambol pilot project',
+      excerpt: 'In the Hambol region, 57 local very small businesses are being trained and equipped to build double-pit family latrines.',
+      body: [
+        'After mobilisation meetings in the villages, the artisans took part in training sessions on building techniques and safety rules, then received their equipment kits.',
+        'ONG Vision Citoyenne makes it easier for them to source materials through a dedicated hardware supply, in five sub-prefectures: Katiola, Fronan, Niakaramandougou, Arikokaha and Timbé.'
+      ],
+      cta: 'Discover the PASEA project'
     }
   },
   {
