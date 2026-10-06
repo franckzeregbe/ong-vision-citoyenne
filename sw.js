@@ -1,7 +1,7 @@
 // Service Worker pour ONG Vision Citoyenne
 // Améliore le fonctionnement hors-ligne et la vitesse de chargement des ressources locales.
 
-const CACHE_NAME = 'ong-vision-citoyenne-v17';
+const CACHE_NAME = 'ong-vision-citoyenne-v18';
 
 // Ressources essentielles mises en cache à l'installation
 const CORE_ASSETS = [
@@ -17,6 +17,8 @@ const CORE_ASSETS = [
   './js/galerie.js',
   './js/news.js',
   './js/news-render.js',
+  './js/partners.js',
+  './js/partners-render.js',
   './manifest.json',
   './assets/logo.jpeg',
   './assets/img/presidente-wassia.jpg',
@@ -91,6 +93,25 @@ self.addEventListener('fetch', (event) => {
 
   // Laisser passer les requêtes externes (Facebook, Google Maps, polices...)
   if (url.origin !== self.location.origin) return;
+
+  // Espace admin : jamais de cache (connexion et données toujours à jour)
+  if (url.pathname.includes('/admin/')) return;
+
+  // Contenu publié depuis l'admin : réseau d'abord pour voir tout de suite les nouveautés
+  if (/\/js\/(news|galerie|partners)\.js$/.test(url.pathname)) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          if (res && res.status === 200) {
+            const copy = res.clone();
+            caches.open(CACHE_NAME).then((c) => c.put(req, copy));
+          }
+          return res;
+        })
+        .catch(() => caches.match(req))
+    );
+    return;
+  }
 
   // Navigation HTML : réseau d'abord, puis cache
   if (req.mode === 'navigate') {

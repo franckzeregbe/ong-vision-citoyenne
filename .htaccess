@@ -10,6 +10,7 @@ DirectoryIndex index.html
   # Bloquer l'accès au dossier .git et aux fichiers internes (le déploiement Git les copie dans public_html)
   RewriteRule (^|/)\.git(/|$) - [F,L]
   RewriteRule ^(README|TODO)\.md$ - [F,L,NC]
+  RewriteRule ^admin/(inc/|LISEZMOI\.md$) - [F,L]
 
   # Forcer HTTPS
   RewriteCond %{HTTPS} off
@@ -27,8 +28,8 @@ DirectoryIndex index.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
-  # Le service worker et les pages HTML doivent toujours être revérifiés
-  <FilesMatch "(\.html|sw\.js|manifest\.json)$">
+  # Pages HTML, service worker, contenu publié et espace admin : toujours revérifiés
+  <FilesMatch "(\.html|sw\.js|manifest\.json|news\.js|galerie\.js|partners\.js|admin\.js|admin-forms\.js|admin\.css)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
@@ -50,3 +51,8 @@ DirectoryIndex index.html
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
+
+# Contenu publié depuis l'espace admin : toujours revérifié (pas de cache d'un an)
+<FilesMatch "^(news|galerie|partners)\.js$">
+  ExpiresActive Off
+</FilesMatch>

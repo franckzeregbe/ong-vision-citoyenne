@@ -2,5 +2,6 @@
 
 User-agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://ongvici.org/sitemap.xml

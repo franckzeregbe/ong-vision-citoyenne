@@ -14,8 +14,8 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="css/fonts.css?v=21" />
-  <link rel="stylesheet" href="css/style.css?v=21" />
+  <link rel="stylesheet" href="css/fonts.css?v=22" />
+  <link rel="stylesheet" href="css/style.css?v=22" />
 </head>
 <body>
 
@@ -59,7 +59,7 @@
       </div>
     </section>
 
-    <!-- PARTENAIRES (6 partenaires) -->
+    <!-- PARTENAIRES (js/partners.js, modifiable dans l'espace admin) -->
     <section class="section section-alt" id="partenaires">
       <div class="container">
         <div class="section-head">
@@ -67,139 +67,7 @@
           <h2 data-i18n="partners_all_title">Tous nos partenaires</h2>
         </div>
 
-        <div class="partner-grid">
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/onu.jpg" alt="Logo ONU" loading="lazy" /></div>
-              <span class="partner-tag" data-i18n="partner_tag_int">International</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner1_t">Organisation des Nations Unies</h3>
-              <p data-i18n="partner1_d">Institution internationale de référence, avec laquelle l'ONG est engagée pour les Objectifs de Développement Durable, notamment l'ODD 6.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/minhas.png" alt="Logo MINHAS" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--gov" data-i18n="partner_tag_gov">Gouvernement</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner2_t">Ministère de l'Hydraulique, de l'Assainissement et de la Salubrité</h3>
-              <p data-i18n="partner2_d">Ministère de Côte d'Ivoire chargé de la politique nationale en matière d'hydraulique, d'accès à l'eau potable, d'assainissement et de salubrité.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/ippdr.webp" alt="Logo IPPDR" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--dip" data-i18n="partner_tag_dip">Diplomatie</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner4_t">Institute of Public Policy &amp; Diplomacy Research</h3>
-              <p data-i18n="partner4_d">Institut international basé à New York, engagé pour la paix, la sécurité, les droits humains et le développement durable.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/eicf.jpg" alt="Logo ONG EICF" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--ngo" data-i18n="partner_tag_ngo">ONG Partenaire</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner3_t">ONG EICF</h3>
-              <p data-i18n="partner3_d">Organisation partenaire engagée dans le renforcement des capacités communautaires, l'éducation civique et la solidarité de proximité.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/verdis.png" alt="Armoiries du Gouvernement de Verdis" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--gov" data-i18n="partner_tag_gov">Gouvernement</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner5_t">Government of Verdis</h3>
-              <p data-i18n="partner5_d">Partenaire institutionnel du Gouvernement de Verdis, engagé pour la coopération internationale, la solidarité entre les peuples et le développement durable.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/hff.jpeg" alt="Logo Humanitarian Focus Foundation" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--hum" data-i18n="partner_tag_hum">Humanitaire</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner6_t">Humanitarian Focus Foundation</h3>
-              <p data-i18n="partner6_d">Organisation humanitaire internationale engagée dans l'aide aux populations vulnérables, la protection des droits humains et le développement durable à travers le monde.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/unicef.png" alt="Logo UNICEF" loading="lazy" /></div>
-              <span class="partner-tag" data-i18n="partner_tag_int">International</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner7_t">UNICEF</h3>
-              <p data-i18n="partner7_d">Fonds des Nations Unies pour l'enfance, partenaire majeur pour la protection des droits des enfants, l'accès à l'éducation, à l'eau potable et à l'hygiène.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/ecosoc.jpg" alt="Logo ECOSOC" loading="lazy" /></div>
-              <span class="partner-tag" data-i18n="partner_tag_int">International</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner8_t">ECOSOC — Conseil économique et social de l'ONU</h3>
-              <p data-i18n="partner8_d">Organe central de coordination des activités économiques et sociales de l'ONU. Vision Citoyenne y bénéficie d'un statut consultatif pour porter la voix des communautés.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/banque-mondiale.jpg" alt="Logo Banque Mondiale" loading="lazy" /></div>
-              <span class="partner-tag" data-i18n="partner_tag_int">International</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner9_t">Banque Mondiale</h3>
-              <p data-i18n="partner9_d">Institution financière internationale soutenant le développement économique et social, notamment via des programmes eau, assainissement et santé dans les pays en développement.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/iom.jpg" alt="Logo OIM" loading="lazy" /></div>
-              <span class="partner-tag" data-i18n="partner_tag_int">International</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner10_t">OIM — Organisation Internationale pour les Migrations</h3>
-              <p data-i18n="partner10_d">Agence des Nations Unies chargée des migrations. Partenaire pour l'accompagnement des populations déplacées et l'accès aux services essentiels dans les zones sensibles.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/usaid.svg" alt="Logo USAID" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--hum" data-i18n="partner_tag_coop">Coopération</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner11_t">USAID</h3>
-              <p data-i18n="partner11_d">Agence des États-Unis pour le développement international, soutenant les programmes de santé, d'éducation et d'eau-assainissement en Afrique de l'Ouest.</p>
-            </div>
-          </article>
-
-          <article class="partner-card">
-            <div class="partner-visual">
-              <div class="partner-logo-wrap"><img class="partner-logo" src="assets/partenaires/piducas.png" alt="Logo PIDUCAS" loading="lazy" /></div>
-              <span class="partner-tag partner-tag--gov" data-i18n="partner_tag_gov">Gouvernement</span>
-            </div>
-            <div class="partner-body">
-              <h3 data-i18n="partner12_t">PIDUCAS</h3>
-              <p data-i18n="partner12_d">Projet d'Infrastructures pour le Développement Urbain et la Compétitivité des Agglomérations Économiques Secondaires. Partenaire opérationnel sur les projets d'infrastructures WASH.</p>
-            </div>
-          </article>
-        </div>
+        <div class="partner-grid" data-partners></div>
       </div>
     </section>
 
@@ -212,29 +80,7 @@
           <p class="section-sub" data-i18n="testi_sub">Communautés, enseignants et partenaires racontent l'impact de l'eau et de l'hygiène au quotidien.</p>
         </div>
 
-        <div class="testi-grid">
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi1">Depuis l'installation du point d'eau, les enfants ne manquent plus l'école pour aller chercher de l'eau.</p>
-            <div class="testi-who">
-              <div class="testi-avatar" aria-hidden="true">AK</div>
-              <div><div class="testi-name" data-i18n="testi1_name">M. Kouamé</div><div class="testi-role" data-i18n="testi1_role">Directeur d'école, Yopougon</div></div>
-            </div>
-          </article>
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi2">Les latrines séparées ont redonné confiance aux filles, qui restent en classe toute la journée.</p>
-            <div class="testi-who">
-              <div class="testi-avatar" aria-hidden="true">AM</div>
-              <div><div class="testi-name" data-i18n="testi2_name">Mme Traoré</div><div class="testi-role" data-i18n="testi2_role">Enseignante, Abidjan</div></div>
-            </div>
-          </article>
-          <article class="testi-card">
-            <p class="testi-quote" data-i18n="testi3">Notre comité gère l'ouvrage ensemble : c'est notre santé, c'est notre fierté.</p>
-            <div class="testi-who">
-              <div class="testi-avatar" aria-hidden="true">SD</div>
-              <div><div class="testi-name" data-i18n="testi3_name">Mme Sidibé</div><div class="testi-role" data-i18n="testi3_role">Membre du comité de gestion</div></div>
-            </div>
-          </article>
-        </div>
+        <div class="testi-grid" data-testimonials></div>
       </div>
     </section>
 
@@ -243,7 +89,9 @@
   <div id="site-footer"></div>
   <div id="site-floating"></div>
 
-  <script src="js/layout.js?v=21"></script>
-  <script src="js/main.js?v=21"></script>
+  <script src="js/layout.js?v=22"></script>
+  <script src="js/main.js?v=22"></script>
+  <script src="js/partners.js?v=22"></script>
+  <script src="js/partners-render.js?v=22"></script>
 </body>
 </html>

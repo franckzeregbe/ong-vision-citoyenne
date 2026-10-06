@@ -14,6 +14,16 @@
     en: { read: 'Read more', close: 'Close' }
   };
 
+  // Catégories proposées dans l'espace admin (admin/admin.js garde la même liste)
+  const NEWS_CATS = {
+    annonce: { fr: 'Annonce', en: 'Announcement' },
+    evenement: { fr: 'Événement', en: 'Event' },
+    don: { fr: 'Don', en: 'Donation' },
+    chantier: { fr: 'Chantier', en: 'Works' },
+    projet: { fr: 'Projet', en: 'Project' },
+    sensibilisation: { fr: 'Sensibilisation', en: 'Awareness' }
+  };
+
   let current = null;
   function lang() {
     if (current) return current;

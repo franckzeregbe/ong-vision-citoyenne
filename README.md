@@ -68,7 +68,7 @@ python -m http.server 8000
 Remplacez les valeurs entre crochets et coordonnées :
 
 - **Adresse / téléphone / e-mail** : dans `index.html`, section `#contact`
-  (`ongvisioncitoyenne@gmail.com`, `(+225) 27 23 25 87 65`, Yopougon Niangon Sud, Abidjan).
+  (`ongvisioncitoyenne@gmail.com`, `(+225) 27 23 29 72 99`, Yopougon Niangon Sud, Abidjan).
 - **Réseaux sociaux** : liens `Facebook / Instagram / LinkedIn` dans `#contact`.
 - **Statistiques du hero** : les 4 compteurs animés dans la section `#accueil`
   (`.hero-stats`). Pour modifier les chiffres, ajustez les attributs

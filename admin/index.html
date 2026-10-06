@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="theme-color" content="#0d3b7a" />
+  <title>Espace admin — ONG Vision Citoyenne</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg" />
+  <link rel="stylesheet" href="../css/fonts.css?v=22" />
+  <link rel="stylesheet" href="../css/style.css?v=22" />
+  <link rel="stylesheet" href="admin.css?v=1" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+
+    <!-- CHARGEMENT -->
+    <section id="bootScreen" class="login-card">
+      <p class="hint">Chargement de l'espace admin…</p>
+    </section>
+
+    <!-- NON CONFIGURÉ -->
+    <section id="setupScreen" class="login-card" hidden>
+      <h2>Espace admin pas encore activé</h2>
+      <p class="hint">Le serveur n'a pas encore reçu sa clé d'accès GitHub. Suivez le guide d'installation (fichier <code>admin/LISEZMOI.md</code> du dépôt) pour créer le fichier <code>admin-config.php</code> à côté du dossier <code>public_html</code>.</p>
+      <p class="hint" id="setupMirror" hidden>Vous êtes sur la copie de secours GitHub : l'espace admin ne fonctionne que sur <a href="https://ongvici.org/admin/">ongvici.org/admin</a>.</p>
+      <a href="../index.html" class="admin-back">← Retour au site</a>
+    </section>
+
+    <!-- CONNEXION -->
+    <section id="loginScreen" class="login-card" hidden>
+      <img src="../assets/logo.jpeg" alt="" class="login-logo" width="64" height="64" />
+      <h2>Espace administrateur</h2>
+      <p class="hint">Gestion des actualités, photos, partenaires et témoignages du site.</p>
+      <form id="loginForm">
+        <div class="field">
+          <label for="pwd">Mot de passe</label>
+          <input id="pwd" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+        <p class="form-msg" id="loginMsg" role="alert"></p>
+      </form>
+      <a href="../index.html" class="admin-back">← Retour au site</a>
+    </section>
+
+    <!-- INTERFACE ADMIN -->
+    <section id="adminScreen" hidden>
+      <header class="admin-header">
+        <img src="../assets/logo.jpeg" alt="" width="44" height="44" />
+        <div>
+          <h1>Administration</h1>
+          <small>ONG Vision Citoyenne — ongvici.org</small>
+        </div>
+        <div class="admin-actions">
+          <a href="../index.html" class="btn btn-ghost btn-sm" target="_blank" rel="noopener">Voir le site</a>
+          <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn">Déconnexion</button>
+        </div>
+      </header>
+
+      <div class="publish-bar" id="publishBar" hidden>
+        <p><strong id="pendingCount"></strong> Les visiteurs ne les voient pas encore.</p>
+        <button type="button" class="btn btn-warm" id="publishBtn">Publier sur le site</button>
+      </div>
+      <p class="banner" id="banner" role="status" hidden></p>
+
+      <nav class="admin-tabs" role="tablist" aria-label="Rubriques">
+        <button type="button" class="admin-tab active" role="tab" data-tab="news">Actualités</button>
+        <button type="button" class="admin-tab" role="tab" data-tab="gallery">Galerie photos</button>
+        <button type="button" class="admin-tab" role="tab" data-tab="partners">Partenaires</button>
+        <button type="button" class="admin-tab" role="tab" data-tab="testimonials">Témoignages</button>
+        <button type="button" class="admin-tab" role="tab" data-tab="messages">Messages</button>
+        <button type="button" class="admin-tab" role="tab" data-tab="settings">Mot de passe</button>
+      </nav>
+
+      <div class="admin-card" data-panel="news">
+        <div class="panel-head">
+          <div><h2>Actualités</h2><p class="hint">La plus récente en premier. L'accueil affiche les 4 premières.</p></div>
+          <button type="button" class="btn btn-primary btn-sm" data-add="news">+ Nouvelle actualité</button>
+        </div>
+        <div class="item-list" id="list-news"></div>
+      </div>
+
+      <div class="admin-card" data-panel="gallery" hidden>
+        <div class="panel-head">
+          <div><h2>Galerie photos</h2><p class="hint">Photos des pages Actualités et Projets. Les catégories « EPP » et « PASEA » alimentent aussi la page Projets.</p></div>
+          <button type="button" class="btn btn-primary btn-sm" data-add="gallery">+ Ajouter une photo</button>
+        </div>
+        <div class="item-list" id="list-gallery"></div>
+      </div>
+
+      <div class="admin-card" data-panel="partners" hidden>
+        <div class="panel-head">
+          <div><h2>Partenaires</h2><p class="hint">Affichés sur la page Partenaires, dans cet ordre.</p></div>
+          <button type="button" class="btn btn-primary btn-sm" data-add="partners">+ Nouveau partenaire</button>
+        </div>
+        <div class="item-list" id="list-partners"></div>
+      </div>
+
+      <div class="admin-card" data-panel="testimonials" hidden>
+        <div class="panel-head">
+          <div><h2>Témoignages</h2><p class="hint">Affichés en bas de la page Partenaires.</p></div>
+          <button type="button" class="btn btn-primary btn-sm" data-add="testimonials">+ Nouveau témoignage</button>
+        </div>
+        <div class="item-list" id="list-testimonials"></div>
+      </div>
+
+      <div class="admin-card" data-panel="messages" hidden>
+        <div class="panel-head">
+          <div><h2>Messages reçus</h2><p class="hint">Formulaires du site : contact, bénévolat et newsletter. Ces données personnelles restent sur le serveur Hostinger (jamais sur GitHub).</p></div>
+          <button type="button" class="btn btn-outline btn-sm" id="msgRefresh">Actualiser</button>
+        </div>
+        <div class="msg-filters" role="group" aria-label="Filtrer les messages">
+          <button type="button" class="btn-mini active" data-kind="">Tous</button>
+          <button type="button" class="btn-mini" data-kind="contact">Contact</button>
+          <button type="button" class="btn-mini" data-kind="benevole">Bénévoles</button>
+          <button type="button" class="btn-mini" data-kind="newsletter">Newsletter</button>
+        </div>
+        <div class="item-list" id="list-messages"><p class="empty">Chargement…</p></div>
+      </div>
+
+      <div class="admin-card" data-panel="settings" hidden>
+        <h2>Changer le mot de passe</h2>
+        <p class="hint">Au moins 10 caractères. Choisissez une phrase facile à retenir, par exemple « Eau-potable-pour-tous-2026 ».</p>
+        <form id="pwdForm" class="admin-form">
+          <div class="field"><label for="pwdCurrent">Mot de passe actuel</label><input id="pwdCurrent" type="password" autocomplete="current-password" required /></div>
+          <div class="field"><label for="pwdNext">Nouveau mot de passe</label><input id="pwdNext" type="password" autocomplete="new-password" minlength="10" required /></div>
+          <div class="field"><label for="pwdConfirm">Confirmer le nouveau mot de passe</label><input id="pwdConfirm" type="password" autocomplete="new-password" minlength="10" required /></div>
+          <button type="submit" class="btn btn-primary">Enregistrer le mot de passe</button>
+          <p class="form-msg" id="pwdMsg" role="alert"></p>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- Fenêtre d'édition (remplie par admin.js) -->
+  <dialog class="edit-dialog" id="editDialog" aria-labelledby="editTitle">
+    <form method="dialog" id="editForm">
+      <h2 id="editTitle"></h2>
+      <div id="editFields"></div>
+      <p class="form-msg" id="editMsg" role="alert"></p>
+      <div class="edit-actions">
+        <button type="button" class="btn btn-outline" id="editCancel">Annuler</button>
+        <button type="submit" class="btn btn-primary">Valider</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="admin-forms.js?v=1"></script>
+  <script src="admin.js?v=1"></script>
+  <script src="admin-messages.js?v=1"></script>
+</body>
+</html>

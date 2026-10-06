@@ -15,7 +15,7 @@
   const SITE_CONFIG = {
     DONATION_URL: '',        // Ex: 'https://www.helloasso.com/...' (laisser vide pour mailto)
     NEWSLETTER_ENDPOINT: '', // Ex: 'https://formspree.io/f/...' — ajouter aussi ce domaine à connect-src dans la CSP des pages
-    WHATSAPP_NUMBER: '2250707597457',
+    WHATSAPP_NUMBER: '2250584844614',
     OFFICIAL_EMAIL: 'ongvisioncitoyenne@gmail.com'
   };
 
@@ -1260,38 +1260,86 @@
       const msgVal = form.querySelector('textarea[name="message"]') ? form.querySelector('textarea[name="message"]').value.trim() : '';
 
       const isVol = formId === 'volForm';
-      const subject = isVol
-        ? (lang === 'fr' ? 'Candidature Bénévole — ' + nameVal : 'Volunteer Application — ' + nameVal)
-        : (lang === 'fr' ? 'Message Contact — ' + nameVal : 'Contact Message — ' + nameVal);
+      const honeypot = form.querySelector('input[name="website"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const payload = {
+        kind: isVol ? 'benevole' : 'contact', name: nameVal, email: emailVal, phone: phoneVal,
+        message: msgVal, lang: lang, website: honeypot ? honeypot.value : ''
+      };
 
-      const body = encodeURIComponent(
-        (lang === 'fr' ? 'Nom' : 'Name') + ' : ' + nameVal + '\n' +
-        'E-mail : ' + emailVal + '\n' +
-        (phoneVal ? (lang === 'fr' ? 'Téléphone/WhatsApp' : 'Phone/WhatsApp') + ' : ' + phoneVal + '\n' : '') +
-        '\n' + (lang === 'fr' ? 'Message' : 'Message') + ' :\n' + msgVal
-      );
+      if (submitBtn) submitBtn.disabled = true;
+      setFormStatus(statusEl, lang === 'fr' ? 'Envoi en cours…' : 'Sending…', 'ok');
 
-      const mailto = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + body;
-
-      const info = lang === 'fr'
-        ? 'Merci ! Cliquez ci-dessous pour finaliser l\'envoi par e-mail :'
-        : 'Thank you! Click below to send via your email client:';
-      setFormStatus(statusEl, info, 'ok');
-
-      const oldLink = statusEl.querySelector('.form-mail-btn');
-      if (oldLink) oldLink.remove();
-
-      const sendLink = document.createElement('a');
-      sendLink.className = 'form-mail-btn btn btn-primary';
-      sendLink.href = mailto;
-      sendLink.style.display = 'inline-flex';
-      sendLink.style.marginTop = '10px';
-      sendLink.style.fontSize = '0.9rem';
-      sendLink.textContent = lang === 'fr' ? 'Ouvrir mon application e-mail →' : 'Open email application →';
-      statusEl.appendChild(sendLink);
-
-      form.reset();
+      sendToServer(payload)
+        .then(function () {
+          setFormStatus(statusEl, isVol
+            ? (lang === 'fr' ? 'Merci ! Votre candidature a bien été reçue. Nous vous recontacterons rapidement.' : 'Thank you! Your application has been received. We will get back to you soon.')
+            : (lang === 'fr' ? 'Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.' : 'Thank you! Your message has been sent. We will reply soon.'), 'ok');
+          form.reset();
+        })
+        .catch(function (err) {
+          if (err && err.userMessage) {
+            setFormStatus(statusEl, err.userMessage, 'err');
+            return;
+          }
+          showMailFallback(statusEl, isVol, lang, nameVal, emailVal, phoneVal, msgVal);
+          form.reset();
+        })
+        .then(function () { if (submitBtn) submitBtn.disabled = false; });
     });
+  }
+
+  /* Envoi vers la base de données du site (api/contact.php).
+     Rejette avec userMessage si le serveur refuse les données (à corriger
+     par le visiteur), sans userMessage si le serveur est indisponible. */
+  function sendToServer(payload) {
+    return fetch('api/contact.php', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'vc-site' },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      return res.json().catch(function () { return null; }).then(function (json) {
+        if (json && json.ok) return json;
+        const fixable = json && json.error && (res.status === 400 || res.status === 429);
+        const error = new Error(json && json.error ? json.error : 'HTTP ' + res.status);
+        if (fixable) error.userMessage = json.error;
+        throw error;
+      });
+    });
+  }
+
+  // Secours si la base est indisponible (ex. copie GitHub) : envoi par e-mail
+  function showMailFallback(statusEl, isVol, lang, nameVal, emailVal, phoneVal, msgVal) {
+    const subject = isVol
+      ? (lang === 'fr' ? 'Candidature Bénévole — ' + nameVal : 'Volunteer Application — ' + nameVal)
+      : (lang === 'fr' ? 'Message Contact — ' + nameVal : 'Contact Message — ' + nameVal);
+
+    const body = encodeURIComponent(
+      (lang === 'fr' ? 'Nom' : 'Name') + ' : ' + nameVal + '\n' +
+      'E-mail : ' + emailVal + '\n' +
+      (phoneVal ? (lang === 'fr' ? 'Téléphone/WhatsApp' : 'Phone/WhatsApp') + ' : ' + phoneVal + '\n' : '') +
+      '\n' + (lang === 'fr' ? 'Message' : 'Message') + ' :\n' + msgVal
+    );
+
+    const mailto = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + body;
+
+    const info = lang === 'fr'
+      ? 'Merci ! Cliquez ci-dessous pour finaliser l\'envoi par e-mail :'
+      : 'Thank you! Click below to send via your email client:';
+    setFormStatus(statusEl, info, 'ok');
+
+    const oldLink = statusEl.querySelector('.form-mail-btn');
+    if (oldLink) oldLink.remove();
+
+    const sendLink = document.createElement('a');
+    sendLink.className = 'form-mail-btn btn btn-primary';
+    sendLink.href = mailto;
+    sendLink.style.display = 'inline-flex';
+    sendLink.style.marginTop = '10px';
+    sendLink.style.fontSize = '0.9rem';
+    sendLink.textContent = lang === 'fr' ? 'Ouvrir mon application e-mail →' : 'Open email application →';
+    statusEl.appendChild(sendLink);
   }
 
   function initNewsletter() {
@@ -1307,6 +1355,20 @@
 
       if (!email || !EMAIL_RE.test(email)) {
         setFormStatus(statusEl, lang === 'fr' ? 'Adresse e-mail invalide.' : 'Invalid email address.', 'err');
+        return;
+      }
+
+      const honeypot = form.querySelector('input[name="website"]');
+      if (!SITE_CONFIG.NEWSLETTER_ENDPOINT) {
+        sendToServer({ kind: 'newsletter', email: email, lang: lang, website: honeypot ? honeypot.value : '' })
+          .then(function () {
+            setFormStatus(statusEl, lang === 'fr' ? 'Merci ! Vous êtes bien inscrit(e).' : 'Thank you! You are subscribed.', 'ok');
+            form.reset();
+          })
+          .catch(function (err) {
+            if (err && err.userMessage) setFormStatus(statusEl, err.userMessage, 'err');
+            else showNewsletterMail(form, statusEl, email, lang);
+          });
         return;
       }
 
@@ -1326,22 +1388,25 @@
         return;
       }
 
-      const subject = lang === 'fr' ? 'Inscription newsletter Vision Citoyenne' : 'Vision Citoyenne Newsletter Subscription';
-      const mailto = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent((lang === 'fr' ? 'Inscription e-mail' : 'Email subscription') + ' : ' + email);
-      setFormStatus(statusEl, lang === 'fr' ? 'Merci ! Confirmez par e-mail ci-dessous :' : 'Click below to confirm by email:', 'ok');
-
-      const old = statusEl.querySelector('a');
-      if (old) old.remove();
-      const link = document.createElement('a');
-      link.href = mailto;
-      link.className = 'btn btn-primary btn-sm';
-      link.style.display = 'inline-block';
-      link.style.marginTop = '8px';
-      link.textContent = lang === 'fr' ? 'Confirmer par e-mail →' : 'Confirm via email →';
-      statusEl.appendChild(link);
-      form.reset();
     });
+  }
+
+  function showNewsletterMail(form, statusEl, email, lang) {
+    const subject = lang === 'fr' ? 'Inscription newsletter Vision Citoyenne' : 'Vision Citoyenne Newsletter Subscription';
+    const mailto = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent((lang === 'fr' ? 'Inscription e-mail' : 'Email subscription') + ' : ' + email);
+    setFormStatus(statusEl, lang === 'fr' ? 'Merci ! Confirmez par e-mail ci-dessous :' : 'Click below to confirm by email:', 'ok');
+
+    const old = statusEl.querySelector('a');
+    if (old) old.remove();
+    const link = document.createElement('a');
+    link.href = mailto;
+    link.className = 'btn btn-primary btn-sm';
+    link.style.display = 'inline-block';
+    link.style.marginTop = '8px';
+    link.textContent = lang === 'fr' ? 'Confirmer par e-mail →' : 'Confirm via email →';
+    statusEl.appendChild(link);
+    form.reset();
   }
 
   function initCopyButtons() {
