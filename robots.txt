@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://franckzeregbe.github.io/ong-vision-citoyenne/sitemap.xml
+Sitemap: https://ongvici.org/sitemap.xml

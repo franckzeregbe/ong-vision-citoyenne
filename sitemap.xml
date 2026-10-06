@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- sitemap.xml — ONG Vision Citoyenne (à mettre à jour si un nom de domaine personnalisé est ajouté) -->
+<!-- sitemap.xml — ONG Vision Citoyenne (domaine officiel : ongvici.org) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/</loc>
+    <loc>https://ongvici.org/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/projets.html</loc>
+    <loc>https://ongvici.org/projets.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/actualites.html</loc>
+    <loc>https://ongvici.org/actualites.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/partenaires.html</loc>
+    <loc>https://ongvici.org/partenaires.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/don.html</loc>
+    <loc>https://ongvici.org/don.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://franckzeregbe.github.io/ong-vision-citoyenne/contact.html</loc>
+    <loc>https://ongvici.org/contact.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
