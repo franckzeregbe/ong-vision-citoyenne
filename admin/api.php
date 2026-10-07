@@ -168,15 +168,15 @@ function action_logout(): never
     respond([]);
 }
 
+// Le contenu lu est celui du site en ligne (fichiers locaux de public_html)
 function action_load(): never
 {
     require_login();
-    $sha = head_sha();
-    $news = parse_consts(read_repo_file(DATA_FILES['news'], $sha), DATA_FILES['news']);
-    $gallery = parse_consts(read_repo_file(DATA_FILES['gallery'], $sha), DATA_FILES['gallery']);
-    $partners = parse_consts(read_repo_file(DATA_FILES['partners'], $sha), DATA_FILES['partners']);
+    $news = parse_consts(read_local(DATA_FILES['news']), DATA_FILES['news']);
+    $gallery = parse_consts(read_local(DATA_FILES['gallery']), DATA_FILES['gallery']);
+    $partners = parse_consts(read_local(DATA_FILES['partners']), DATA_FILES['partners']);
     respond(['data' => [
-        'base' => $sha,
+        'base' => local_base(),
         'news' => $news['NEWS'] ?? [],
         'gallery' => $gallery['GALERIE'] ?? [],
         'partners' => $partners['PARTNERS'] ?? [],
@@ -191,20 +191,39 @@ function action_publish(): never
     $body = read_body();
     $base = pattern($body['base'] ?? '', '/^[0-9a-f]{40}$/', 'version du site');
 
-    $files = clean_images($body['images'] ?? []);
-    if (array_key_exists('news', $body)) $files[DATA_FILES['news']] = build_news(clean_news($body['news']));
-    if (array_key_exists('gallery', $body)) $files[DATA_FILES['gallery']] = build_gallery(clean_gallery($body['gallery']));
+    $imageFiles = clean_images($body['images'] ?? []);
+    $dataFiles = [];
+    if (array_key_exists('news', $body)) $dataFiles[DATA_FILES['news']] = build_news(clean_news($body['news']));
+    if (array_key_exists('gallery', $body)) $dataFiles[DATA_FILES['gallery']] = build_gallery(clean_gallery($body['gallery']));
     if (array_key_exists('partners', $body) || array_key_exists('testimonials', $body)) {
-        $files[DATA_FILES['partners']] = build_partners(
+        $dataFiles[DATA_FILES['partners']] = build_partners(
             clean_partners($body['partners'] ?? []),
             clean_testimonials($body['testimonials'] ?? [])
         );
     }
-    if (!$files) throw new ApiError('Aucune modification à publier.');
+    if (!$dataFiles && !$imageFiles) throw new ApiError('Aucune modification à publier.');
 
-    $summary = text($body['summary'] ?? 'mise à jour du contenu', 200, 'résumé', false) ?: 'mise à jour du contenu';
-    $sha = commit_files($base, $files, "contenu: $summary\n\nPublié depuis l'espace admin (ongvici.org/admin).");
-    respond(['data' => ['base' => $sha]]);
+    // Protection contre une modification faite entre-temps depuis un autre appareil
+    if ($base !== local_base()) {
+        throw new ApiError("Le site a été modifié entre-temps (depuis un autre appareil ?). Rechargez la page : vos modifications non publiées seront perdues.", 409);
+    }
+
+    // Mise à jour immédiate du site en ligne
+    write_all_local($dataFiles, $imageFiles);
+
+    // Sauvegarde GitHub facultative (sans bloquer la publication si elle échoue)
+    if (github_enabled()) {
+        $summary = text($body['summary'] ?? 'mise à jour du contenu', 200, 'résumé', false) ?: 'mise à jour du contenu';
+        try {
+            $allFiles = $dataFiles;
+            foreach ($imageFiles as $path => $binary) $allFiles[$path] = $binary;
+            commit_files(head_sha(), $allFiles, "contenu: $summary\n\nPublié depuis l'espace admin (ongvici.org/admin).");
+        } catch (Throwable $e) {
+            error_log('[vc-admin] sauvegarde GitHub ignorée : ' . $e->getMessage());
+        }
+    }
+
+    respond(['data' => ['base' => local_base()]]);
 }
 
 function action_password(): never

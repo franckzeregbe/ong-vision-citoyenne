@@ -9,6 +9,8 @@ declare(strict_types=1);
 
 const PRIVATE_DIR = __DIR__ . '/../../..';
 const CONFIG_FILE = PRIVATE_DIR . '/admin-config.php';
+// Racine web du site (public_html) : l'admin y lit et écrit le contenu
+const PUBLIC_DIR = __DIR__ . '/../..';
 
 /* ---------------------------------------------------------------
    Réponses
@@ -44,11 +46,21 @@ function raw_config(): array
     return $cfg;
 }
 
-// Configuration de l'espace admin : null tant que la clé GitHub manque
+// L'espace admin est configuré dès qu'il a un mot de passe, une base de
+// données, ou un accès GitHub. Le contenu est géré en local (public_html) ;
+// GitHub n'est qu'une sauvegarde facultative.
 function config(): ?array
 {
     $cfg = raw_config();
-    return empty($cfg['github_token']) || empty($cfg['repo']) ? null : $cfg;
+    $ready = !empty($cfg['admin_password']) || !empty($cfg['db']) || github_enabled();
+    return $ready ? $cfg : null;
+}
+
+// Sauvegarde GitHub active uniquement si un jeton et un dépôt sont fournis
+function github_enabled(): bool
+{
+    $cfg = raw_config();
+    return !empty($cfg['github_token']) && !empty($cfg['repo']);
 }
 
 function require_config(): array

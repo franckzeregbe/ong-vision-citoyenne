@@ -18,7 +18,54 @@ const GALLERY_CATS = ['avant', 'travaux', 'apres', 'ceremonie', 'don', 'sensibil
 const PARTNER_TAGS = ['int', 'gov', 'dip', 'ngo', 'env', 'hum', 'coop'];
 
 /* ---------------------------------------------------------------
-   GitHub
+   Fichiers locaux du site (public_html) — source du site en ligne
+   --------------------------------------------------------------- */
+function read_local(string $rel): string
+{
+    $content = @file_get_contents(PUBLIC_DIR . '/' . $rel);
+    return $content === false ? '' : $content;
+}
+
+function write_local(string $rel, string $content): void
+{
+    $path = PUBLIC_DIR . '/' . $rel;
+    if (@file_put_contents($path, $content, LOCK_EX) === false) {
+        throw new ApiError("Écriture impossible sur le serveur : $rel. Vérifiez les droits du dossier.", 500);
+    }
+}
+
+// Écrit une image (crée le sous-dossier au besoin)
+function write_local_image(string $rel, string $binary): void
+{
+    $path = PUBLIC_DIR . '/' . $rel;
+    $dir = dirname($path);
+    if (!is_dir($dir) && !@mkdir($dir, 0755, true) && !is_dir($dir)) {
+        throw new ApiError("Dossier d'images introuvable : " . dirname($rel), 500);
+    }
+    if (@file_put_contents($path, $binary, LOCK_EX) === false) {
+        throw new ApiError("Enregistrement de la photo impossible : $rel.", 500);
+    }
+}
+
+// Empreinte du contenu actuel : sert à détecter une modification concurrente
+function local_base(): string
+{
+    return sha1(read_local(DATA_FILES['news']) . read_local(DATA_FILES['gallery']) . read_local(DATA_FILES['partners']));
+}
+
+// Écrit en local les fichiers de données et les images d'un seul coup
+function write_all_local(array $dataFiles, array $imageFiles): void
+{
+    foreach ($imageFiles as $path => $binary) {
+        write_local_image($path, $binary);
+    }
+    foreach ($dataFiles as $path => $content) {
+        write_local($path, $content);
+    }
+}
+
+/* ---------------------------------------------------------------
+   GitHub (sauvegarde facultative)
    --------------------------------------------------------------- */
 function github(string $method, string $path, ?array $body = null): array
 {
