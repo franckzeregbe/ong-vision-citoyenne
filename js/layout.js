@@ -140,7 +140,7 @@
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <p><span data-i18n="footer_legal">Récépissé N° 0373/MIS DGAT/SDVA — Yopougon Niangon Sud, Abidjan, Côte d'Ivoire</span></p>
-          <p><span data-i18n="footer_founded">Fondée le 6 juin 2018</span> · &copy; <span id="year"></span> ONG Vision Citoyenne. <span data-i18n="rights">Tous droits réservés.</span> · <a href="admin/" rel="nofollow">Espace admin</a></p>
+          <p><span data-i18n="footer_founded">Fondée le 6 juin 2018</span> · &copy; <span id="year"></span> ONG Vision Citoyenne. <span data-i18n="rights">Tous droits réservés.</span></p>
         </div>
       </div>
     </footer>
