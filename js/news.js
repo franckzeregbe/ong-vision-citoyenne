@@ -6,30 +6,6 @@
 
 const NEWS = [
     {
-        "date": "2026-09",
-        "cat": "annonce",
-        "image": "assets/img/actualites/rentree-2026.jpg",
-        "link": "projets.html#chantier",
-        "fr": {
-            "title": "Bonne rentrée scolaire 2026-2027 !",
-            "excerpt": "L'ONG Vision Citoyenne souhaite à tous les élèves, enseignants, parents et partenaires une excellente rentrée, pleine de réussite, de santé et d'opportunités.",
-            "body": [
-                "Ensemble pour une éducation de qualité pour tous : investir dans l'éducation, c'est bâtir un avenir meilleur.",
-                "Cette année, les élèves de l'EPP SICOGI 1 à Yopougon retrouvent une école aux sanitaires rénovés, une cour assainie et une aire de jeux toute neuve."
-            ],
-            "cta": "Voir la rénovation de l’école"
-        },
-        "en": {
-            "title": "Happy 2026-2027 school year!",
-            "excerpt": "ONG Vision Citoyenne wishes all pupils, teachers, parents and partners an excellent start to the school year, full of success, health and opportunities.",
-            "body": [
-                "Together for quality education for all: investing in education means building a better future.",
-                "This year, pupils at EPP SICOGI 1 in Yopougon return to a school with renovated toilets, a cleaner yard and a brand-new playground."
-            ],
-            "cta": "See the school renovation"
-        }
-    },
-    {
         "date": "2026-09-09",
         "cat": "evenement",
         "image": "assets/img/projets/renovation-epp/inauguration-ruban.jpg",
@@ -51,6 +27,30 @@ const NEWS = [
                 "On the programme: a speech by President Wassia MADOU, a performance prepared by the pupils and the handover of school and hygiene kits."
             ],
             "cta": "See the project in pictures"
+        }
+    },
+    {
+        "date": "2026-09",
+        "cat": "annonce",
+        "image": "assets/img/actualites/rentree-2026.jpg",
+        "link": "projets.html#chantier",
+        "fr": {
+            "title": "Bonne rentrée scolaire 2026-2027 !",
+            "excerpt": "L'ONG Vision Citoyenne souhaite à tous les élèves, enseignants, parents et partenaires une excellente rentrée, pleine de réussite, de santé et d'opportunités.",
+            "body": [
+                "Ensemble pour une éducation de qualité pour tous : investir dans l'éducation, c'est bâtir un avenir meilleur.",
+                "Cette année, les élèves de l'EPP SICOGI 1 à Yopougon retrouvent une école aux sanitaires rénovés, une cour assainie et une aire de jeux toute neuve."
+            ],
+            "cta": "Voir la rénovation de l’école"
+        },
+        "en": {
+            "title": "Happy 2026-2027 school year!",
+            "excerpt": "ONG Vision Citoyenne wishes all pupils, teachers, parents and partners an excellent start to the school year, full of success, health and opportunities.",
+            "body": [
+                "Together for quality education for all: investing in education means building a better future.",
+                "This year, pupils at EPP SICOGI 1 in Yopougon return to a school with renovated toilets, a cleaner yard and a brand-new playground."
+            ],
+            "cta": "See the school renovation"
         }
     },
     {
