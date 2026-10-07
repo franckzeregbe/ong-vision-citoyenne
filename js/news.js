@@ -6,30 +6,6 @@
 
 const NEWS = [
     {
-        "date": "2026-09-09",
-        "cat": "evenement",
-        "image": "assets/img/projets/renovation-epp/inauguration-ruban.jpg",
-        "link": "projets.html#chantier",
-        "fr": {
-            "title": "L'EPP SICOGI 1 rénovée a été inaugurée",
-            "excerpt": "Élèves, enseignants, autorités et partenaires ont célébré la fin des travaux de réhabilitation de l'école de Yopougon.",
-            "body": [
-                "La cérémonie s'est tenue aux côtés de l'IPPDR, de la République Libre de Verdis et de la communauté locale. Après la coupure du ruban devant le bloc sanitaire rénové, les invités ont visité les nouvelles installations.",
-                "Au programme : discours de la Présidente Wassia MADOU, animation préparée par les élèves et remise de kits scolaires et d'hygiène."
-            ],
-            "cta": "Voir le chantier en images"
-        },
-        "en": {
-            "title": "The renovated EPP SICOGI 1 has been inaugurated",
-            "excerpt": "Pupils, teachers, authorities and partners celebrated the end of the rehabilitation works at the Yopougon school.",
-            "body": [
-                "The ceremony was held alongside IPPDR, the Free Republic of Verdis and the local community. After the ribbon was cut in front of the renovated toilet block, guests toured the new facilities.",
-                "On the programme: a speech by President Wassia MADOU, a performance prepared by the pupils and the handover of school and hygiene kits."
-            ],
-            "cta": "See the project in pictures"
-        }
-    },
-    {
         "date": "2026-09",
         "cat": "annonce",
         "image": "assets/img/actualites/rentree-2026.jpg",
@@ -51,6 +27,30 @@ const NEWS = [
                 "This year, pupils at EPP SICOGI 1 in Yopougon return to a school with renovated toilets, a cleaner yard and a brand-new playground."
             ],
             "cta": "See the school renovation"
+        }
+    },
+    {
+        "date": "2026-09-09",
+        "cat": "evenement",
+        "image": "assets/img/projets/renovation-epp/inauguration-ruban.jpg",
+        "link": "projets.html#chantier",
+        "fr": {
+            "title": "L'EPP SICOGI 1 rénovée a été inaugurée",
+            "excerpt": "Élèves, enseignants, autorités et partenaires ont célébré la fin des travaux de réhabilitation de l'école de Yopougon.",
+            "body": [
+                "La cérémonie s'est tenue aux côtés de l'IPPDR, de la République Libre de Verdis et de la communauté locale. Après la coupure du ruban devant le bloc sanitaire rénové, les invités ont visité les nouvelles installations.",
+                "Au programme : discours de la Présidente Wassia MADOU, animation préparée par les élèves et remise de kits scolaires et d'hygiène."
+            ],
+            "cta": "Voir le chantier en images"
+        },
+        "en": {
+            "title": "The renovated EPP SICOGI 1 has been inaugurated",
+            "excerpt": "Pupils, teachers, authorities and partners celebrated the end of the rehabilitation works at the Yopougon school.",
+            "body": [
+                "The ceremony was held alongside IPPDR, the Free Republic of Verdis and the local community. After the ribbon was cut in front of the renovated toilet block, guests toured the new facilities.",
+                "On the programme: a speech by President Wassia MADOU, a performance prepared by the pupils and the handover of school and hygiene kits."
+            ],
+            "cta": "See the project in pictures"
         }
     },
     {
