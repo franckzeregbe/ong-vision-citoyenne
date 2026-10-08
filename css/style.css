@@ -3187,95 +3187,10 @@ button, input, textarea, select {
   color: var(--blue-900);
 }
 
-/* ===================================================
-   CHAMPS ÉLARGIS — bandeau chips
-   =================================================== */
-.fields-extended {
-  margin-top: 32px;
-  padding: 24px 28px;
-  background: linear-gradient(120deg, var(--blue-50) 0%, #fff 60%);
-  border: 1px solid var(--blue-100);
-  border-radius: var(--radius-lg);
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: 26px;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.fields-extended::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 180px; height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(30,136,229,.14), transparent 70%);
-  pointer-events: none;
-}
-.fields-tag {
-  display: inline-block;
-  font-family: var(--head);
-  font-size: .72rem;
-  font-weight: 700;
-  color: var(--blue-700);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-}
-.fields-extended-head h3 {
-  font-family: var(--head);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--ink);
-  line-height: 1.25;
-  margin-bottom: 8px;
-  letter-spacing: -.3px;
-}
-.fields-extended-head p {
-  font-size: .9rem;
-  color: var(--muted);
-  line-height: 1.55;
-  margin: 0;
-}
-.fields-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.fields-chips li {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: .84rem;
-  font-weight: 500;
-  color: var(--ink);
-  box-shadow: 0 2px 6px rgba(10,25,41,.04);
-  transition: transform .18s var(--ease), border-color .18s var(--ease), box-shadow .18s var(--ease);
-}
-.fields-chips li:hover {
-  transform: translateY(-2px);
-  border-color: var(--blue-400);
-  box-shadow: 0 6px 16px rgba(30,136,229,.14);
-}
-.chip-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-/* ===== Responsive Valeurs & Champs élargis ===== */
+/* ===== Responsive Valeurs ===== */
 @media (max-width: 1024px) {
   .values-grid { grid-template-columns: repeat(3, 1fr); }
   .value-pillar--featured { grid-column: span 3; }
-  .fields-extended { grid-template-columns: 1fr; gap: 18px; }
 }
 @media (max-width: 768px) {
   .values-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -3284,9 +3199,6 @@ button, input, textarea, select {
   .value-pillar--featured { grid-column: span 2; }
   .value-pillar h3 { font-size: .95rem; }
   .value-pillar p { font-size: .8rem; }
-  .fields-extended { padding: 20px 18px; }
-  .fields-extended-head h3 { font-size: 1.15rem; }
-  .fields-chips li { font-size: .78rem; padding: 6px 12px; }
 }
 @media (max-width: 480px) {
   .values-grid { grid-template-columns: 1fr; }

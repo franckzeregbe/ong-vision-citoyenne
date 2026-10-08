@@ -155,6 +155,7 @@
       // Champs élargis
       fields_ext_tag: 'Notre horizon',
       fields_ext_title: 'Au-delà du WASH, un engagement global',
+      fields_ext_cta: "Voir nos domaines d'intervention →",
       fields_ext_sub: "L'ONG Vision Citoyenne intervient aussi sur les enjeux transversaux qui touchent les mêmes communautés.",
       field_a: 'Genre & inclusion sociale',
       field_b: 'Autonomisation de la femme en milieu rural',
@@ -555,6 +556,7 @@
       // Extended fields
       fields_ext_tag: 'Our horizon',
       fields_ext_title: 'Beyond WASH, a global commitment',
+      fields_ext_cta: 'See our areas of work →',
       fields_ext_sub: 'ONG Vision Citoyenne also engages with the cross-cutting issues affecting the same communities.',
       field_a: 'Gender & social inclusion',
       field_b: 'Empowerment of rural women',

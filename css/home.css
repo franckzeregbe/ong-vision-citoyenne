@@ -72,6 +72,136 @@
 .trust-link:hover,
 .trust-link:focus-visible { border-bottom-color: var(--gold); }
 
+/* ===== NOTRE HORIZON — au-delà du WASH ===== */
+.horizon {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+  margin-top: 36px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(197, 211, 228, .8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.horizon-intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 34px 32px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(66, 165, 245, .35), transparent 45%),
+    radial-gradient(circle at 8% 100%, rgba(245, 124, 0, .22), transparent 50%),
+    var(--grad-hero);
+}
+/* Ondes concentriques discrètes, rappel de l'eau */
+.horizon-intro::after {
+  content: '';
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  width: 220px;
+  height: 220px;
+  border: 2px solid rgba(255, 255, 255, .09);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(255, 255, 255, .04), 0 0 0 56px rgba(255, 255, 255, .025);
+  pointer-events: none;
+}
+.horizon-tag {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  font-family: var(--head);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.horizon-intro h3 {
+  margin: 0;
+  font-family: var(--head);
+  font-size: clamp(1.35rem, 1rem + 1vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -.4px;
+  color: #fff;
+}
+.horizon-intro p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: .93rem;
+  line-height: 1.6;
+  color: rgba(227, 242, 253, .9);
+}
+.horizon-link {
+  position: relative;
+  z-index: 1;
+  align-self: flex-start;
+  margin-top: 6px;
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--gold);
+  font-family: var(--head);
+  font-size: .88rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.horizon-link:hover,
+.horizon-link:focus-visible { color: var(--yellow); border-bottom-color: var(--yellow); }
+
+.horizon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 22px;
+  list-style: none;
+  background: linear-gradient(135deg, var(--blue-50) 0%, #fff 70%);
+}
+.horizon-item {
+  --c: var(--blue-600);
+  --c-soft: var(--blue-100);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid rgba(197, 211, 228, .8);
+  border-left: 4px solid var(--c);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--head);
+  font-size: .92rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.horizon-icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--c-soft);
+  color: var(--c);
+}
+.horizon-icon svg { width: 22px; height: 22px; }
+.horizon-item--orange { --c: var(--gold); --c-soft: #fff1e0; }
+.horizon-item--yellow { --c: #c98a00; --c-soft: var(--yellow-soft); }
+.horizon-item--red    { --c: var(--red); --c-soft: #fee2e2; }
+.horizon-item--green  { --c: var(--green); --c-soft: #d1fae5; }
+.horizon-item--blue   { --c: var(--blue-600); --c-soft: var(--blue-100); }
+.horizon-item--navy   { --c: var(--blue-900); --c-soft: #dbe7f7; }
+
 /* ===== PROJET PHARE ===== */
 .featured-project {
   background: #fff;
@@ -309,6 +439,8 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
+  .horizon { grid-template-columns: 1fr; }
+  .horizon-intro { padding: 26px 22px; }
   .fp-grid { grid-template-columns: 1fr; gap: 32px; }
   .fp-visual { max-width: 620px; margin: 0 auto; width: 100%; }
 
@@ -338,6 +470,17 @@
 }
 
 @media (max-width: 560px) {
+  .horizon-grid { gap: 10px; padding: 14px; }
+  .horizon-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 12px;
+    border-left-width: 1px;
+    border-top: 4px solid var(--c);
+    font-size: .84rem;
+  }
+  .horizon-icon { width: 40px; height: 40px; }
   .tl-card--media { display: block; }
   .tl-card--media img { height: 150px; min-height: 0; }
 }
