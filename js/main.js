@@ -137,7 +137,7 @@
       tl_sub: "De la fondation de l'ONG à nos chantiers d'aujourd'hui : les étapes qui ont construit notre action.",
       tl_cta: 'Tous nos projets',
       tl1_tag: 'Fondation',
-      tl1_t: 'Naissance de Vision Citoyenne',
+      tl1_t: "Naissance de l'ONG Vision Citoyenne",
       tl1_d: "L'ONG est fondée le 6 juin 2018 à Abidjan avec une mission claire : l'eau, l'hygiène et l'assainissement pour tous.",
       tl2_tag: 'WASH scolaire',
       tl2_d: "Points d'eau et latrines construits ou réhabilités dans les écoles, comités de gestion formés à l'hygiène.",
@@ -155,7 +155,7 @@
       // Champs élargis
       fields_ext_tag: 'Notre horizon',
       fields_ext_title: 'Au-delà du WASH, un engagement global',
-      fields_ext_sub: 'Vision Citoyenne intervient aussi sur les enjeux transversaux qui touchent les mêmes communautés.',
+      fields_ext_sub: "L'ONG Vision Citoyenne intervient aussi sur les enjeux transversaux qui touchent les mêmes communautés.",
       field_a: 'Genre & inclusion sociale',
       field_b: 'Autonomisation de la femme en milieu rural',
       field_c: 'Lutte contre les violences basées sur le genre',
@@ -249,7 +249,7 @@
       partner7_t: "UNICEF",
       partner7_d: "Fonds des Nations Unies pour l'enfance, partenaire majeur pour la protection des droits des enfants, l'accès à l'éducation, à l'eau potable et à l'hygiène.",
       partner8_t: "ECOSOC — Conseil économique et social de l'ONU",
-      partner8_d: "Organe central de coordination des activités économiques et sociales de l'ONU. Vision Citoyenne y bénéficie d'un statut consultatif pour porter la voix des communautés.",
+      partner8_d: "Organe central de coordination des activités économiques et sociales de l'ONU. L'ONG Vision Citoyenne y bénéficie d'un statut consultatif pour porter la voix des communautés.",
       partner9_t: "Banque Mondiale",
       partner9_d: "Institution financière internationale soutenant le développement économique et social, notamment via des programmes eau, assainissement et santé dans les pays en développement.",
       partner10_t: "OIM — Organisation Internationale pour les Migrations",
@@ -432,8 +432,8 @@
 
     en: {
       skip: 'Skip to content',
-      page_title: 'Vision Citoyenne NGO — Water, Sanitation and Hygiene (WASH)',
-      meta_desc: "Vision Citoyenne NGO - Water, Sanitation and Hygiene in schools and communities. Safe drinking water, dignified latrines and hygiene promotion in Ivory Coast.",
+      page_title: 'ONG Vision Citoyenne — Water, Sanitation and Hygiene (WASH)',
+      meta_desc: "ONG Vision Citoyenne - Water, Sanitation and Hygiene in schools and communities. Safe drinking water, dignified latrines and hygiene promotion in Ivory Coast.",
       brand_sub: 'Non-Governmental Organization',
 
       // Navigation
@@ -457,7 +457,7 @@
       hero_title_2: 'Together,',
       hero_title_3: "let's build a future that is",
       hero_title_4: 'dignified and lasting',
-      hero_lead: 'Because access to safe water and hygiene is a fundamental right, Vision Citoyenne NGO works every day alongside schools and communities across Ivory Coast.',
+      hero_lead: 'Because access to safe water and hygiene is a fundamental right, ONG Vision Citoyenne works every day alongside schools and communities across Ivory Coast.',
       hero_cta1: 'Support our actions',
       hero_cta2: 'Discover the mission',
       stat1: 'Years of action',
@@ -469,7 +469,7 @@
       about_tag: 'About Us',
       about_title: 'Our Mission',
       about_sub: 'A clear vision: ensuring water, sanitation and hygiene for all, in schools and communities alike.',
-      about_p1: 'Vision Citoyenne NGO works to ensure that every child and family has safe access to drinking water, dignified latrines and proper hygiene practices.',
+      about_p1: 'ONG Vision Citoyenne works to ensure that every child and family has safe access to drinking water, dignified latrines and proper hygiene practices.',
       about_p2: 'We build water points and latrines, train local management committees and run school and community hygiene awareness campaigns with transparency and local proximity.',
       about_caption1: 'Education and water, pillars of the future',
       impact_years: 'Years of action',
@@ -536,7 +536,7 @@
       tl_sub: "From the NGO's founding to today's projects: the milestones that shaped our work.",
       tl_cta: 'All our projects',
       tl1_tag: 'Founding',
-      tl1_t: 'Vision Citoyenne is born',
+      tl1_t: 'ONG Vision Citoyenne is born',
       tl1_d: 'The NGO was founded on 6 June 2018 in Abidjan with a clear mission: water, hygiene and sanitation for all.',
       tl2_tag: 'School WASH',
       tl2_d: 'Water points and latrines built or rehabilitated in schools, management committees trained in hygiene.',
@@ -555,7 +555,7 @@
       // Extended fields
       fields_ext_tag: 'Our horizon',
       fields_ext_title: 'Beyond WASH, a global commitment',
-      fields_ext_sub: 'Vision Citoyenne also engages with the cross-cutting issues affecting the same communities.',
+      fields_ext_sub: 'ONG Vision Citoyenne also engages with the cross-cutting issues affecting the same communities.',
       field_a: 'Gender & social inclusion',
       field_b: 'Empowerment of rural women',
       field_c: 'Fight against gender-based violence',
@@ -616,16 +616,16 @@
       // Recognitions
       recog_tag: 'Recognitions',
       recog_title: 'Institutional Accreditations & Partnerships',
-      recog_sub: 'Vision Citoyenne NGO is officially recognized by the United Nations and collaborates with national and international institutions.',
+      recog_sub: 'ONG Vision Citoyenne is officially recognized by the United Nations and collaborates with national and international institutions.',
       recog_un_t: 'UN Recognition',
-      recog_un_d: 'Vision Citoyenne NGO is officially registered with the United Nations and aligned with the Sustainable Development Goals, notably SDG 6 (Clean Water and Sanitation).',
+      recog_un_d: 'ONG Vision Citoyenne is officially registered with the United Nations and aligned with the Sustainable Development Goals, notably SDG 6 (Clean Water and Sanitation).',
       recog_pasea_t: 'PASEA Project Partner',
       recog_pasea_d: 'Engagement within the Water and Sanitation Sector Support Program (PASEA) to improve safe water and sanitation in schools and communities.',
 
       // Partners
       partners_tag: 'Partners',
       partners_title: 'Our Partners & Allies',
-      partners_sub: 'Vision Citoyenne NGO works alongside national, international and civic institutions committed to water, hygiene and environmental care.',
+      partners_sub: 'ONG Vision Citoyenne works alongside national, international and civic institutions committed to water, hygiene and environmental care.',
       partner_tag_int: 'International',
       partner_tag_gov: 'Government',
       partner_tag_dip: 'Diplomacy',
@@ -649,7 +649,7 @@
       partner7_t: 'UNICEF',
       partner7_d: "United Nations Children's Fund, key partner for child rights, education access, safe drinking water and hygiene.",
       partner8_t: 'ECOSOC — United Nations Economic and Social Council',
-      partner8_d: "Central coordinating body for the economic and social work of the UN. Vision Citoyenne holds consultative status there to voice community concerns.",
+      partner8_d: "Central coordinating body for the economic and social work of the UN. ONG Vision Citoyenne holds consultative status there to voice community concerns.",
       partner9_t: 'World Bank',
       partner9_d: 'International financial institution supporting economic and social development, notably through water, sanitation and health programmes in developing countries.',
       partner10_t: 'IOM — International Organization for Migration',
@@ -1167,10 +1167,10 @@
         donateBtn.target = '_blank';
         donateBtn.rel = 'noopener';
       } else {
-        const subject = lang === 'fr' ? 'Intention de Don — ONG Vision Citoyenne' : 'Donation Pledge — Vision Citoyenne NGO';
+        const subject = lang === 'fr' ? 'Intention de Don — ONG Vision Citoyenne' : 'Donation Pledge — ONG Vision Citoyenne';
         const bodyText = lang === 'fr'
           ? 'Bonjour,\n\nJe souhaite soutenir les actions de l\'ONG Vision Citoyenne par un don de ' + formattedAmount + '.\n\nMerci de m\'indiquer les modalités de versement (Mobile Money, Virement bancaire, Carte).'
-          : 'Hello,\n\nI would like to support Vision Citoyenne NGO with a donation of ' + formattedAmount + '.\n\nPlease provide payment details (Mobile Money, Wire transfer, Card).';
+          : 'Hello,\n\nI would like to support ONG Vision Citoyenne with a donation of ' + formattedAmount + '.\n\nPlease provide payment details (Mobile Money, Wire transfer, Card).';
         donateBtn.href = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(bodyText);
       }
 
@@ -1178,7 +1178,7 @@
       if (donateWaBtn) {
         const waMsg = lang === 'fr'
           ? 'Bonjour ONG Vision Citoyenne, je souhaite faire un don de ' + formattedAmount + ' pour soutenir vos projets.'
-          : 'Hello Vision Citoyenne NGO, I want to make a donation of ' + formattedAmount + ' to support your projects.';
+          : 'Hello ONG Vision Citoyenne, I want to make a donation of ' + formattedAmount + ' to support your projects.';
         donateWaBtn.href = 'https://wa.me/' + SITE_CONFIG.WHATSAPP_NUMBER + '?text=' + encodeURIComponent(waMsg);
       }
     }
@@ -1392,7 +1392,7 @@
   }
 
   function showNewsletterMail(form, statusEl, email, lang) {
-    const subject = lang === 'fr' ? 'Inscription newsletter Vision Citoyenne' : 'Vision Citoyenne Newsletter Subscription';
+    const subject = lang === 'fr' ? 'Inscription newsletter ONG Vision Citoyenne' : 'ONG Vision Citoyenne Newsletter Subscription';
     const mailto = 'mailto:' + SITE_CONFIG.OFFICIAL_EMAIL + '?subject=' + encodeURIComponent(subject) +
       '&body=' + encodeURIComponent((lang === 'fr' ? 'Inscription e-mail' : 'Email subscription') + ' : ' + email);
     setFormStatus(statusEl, lang === 'fr' ? 'Merci ! Confirmez par e-mail ci-dessous :' : 'Click below to confirm by email:', 'ok');

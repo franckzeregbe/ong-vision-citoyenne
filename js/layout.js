@@ -19,7 +19,7 @@
         <a href="index.html" class="brand" aria-label="ONG Vision Citoyenne - Accueil">
           <img class="brand-logo" src="assets/logo.jpeg" alt="Logo ONG Vision Citoyenne" width="40" height="40" />
           <span class="brand-text">
-            <strong>Vision Citoyenne</strong>
+            <strong>ONG Vision Citoyenne</strong>
             <small data-i18n="brand_sub">Organisation Non Gouvernementale</small>
           </span>
         </a>

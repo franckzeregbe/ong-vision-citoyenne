@@ -1,6 +1,6 @@
 # Site web — ONG Vision Citoyenne
 
-Site vitrine bilingue (FR / EN) pour l'ONG **Vision Citoyenne**, spécialisée dans
+Site vitrine bilingue (FR / EN) pour l'**ONG Vision Citoyenne**, spécialisée dans
 l'**Eau, l'Hygiène et l'Assainissement (WASH) en milieu scolaire et communautaire**.
 
 ## Contenu

@@ -13,7 +13,7 @@ const GALERIE = [
     ["../projets/renovation-epp/inauguration-officiels.jpg","EPP SICOGI 1 — Photo officielle avec les élèves et les autorités","ceremonie"],
     ["../projets/renovation-epp/ceremonie-officiel.jpg","Accueil des officiels lors de l'inauguration — 9 septembre 2026","ceremonie"],
     ["../projets/renovation-epp/ceremonie-equipe.jpg","Cérémonie d'inauguration — Bénévoles avec le drapeau de Verdis","ceremonie"],
-    ["../projets/renovation-epp/ceremonie-vc.jpg","Membre de l'ONG devant la bannière Vision Citoyenne","ceremonie"],
+    ["../projets/renovation-epp/ceremonie-vc.jpg","Membre de l'équipe devant la bannière de l'ONG Vision Citoyenne","ceremonie"],
     ["../projets/renovation-epp/ceremonie-ippdr.jpg","Bannière IPPDR lors de la cérémonie d'inauguration de l'EPP SICOGI 1","ceremonie"],
     ["../projets/renovation-epp/don-kits-hygiene.jpg","EPP SICOGI 1 — Kits d'hygiène offerts à l'école : seaux, balais et savon liquide","don"],
     ["../projets/renovation-epp/don-kits-scolaires.jpg","EPP SICOGI 1 — Remise de kits scolaires aux élèves","don"],
@@ -82,7 +82,7 @@ const GALERIE = [
     ["sensibilisation-eleves.jpg","Les élèves participent activement à la sensibilisation","sensibilisation"],
     ["distribution-hygiene.jpg","Distribution de kits d'hygiène et de produits d'entretien","terrain"],
     ["distribution-nord.jpg","Remise de matériel dans une école du Nord — Mai 2022","terrain"],
-    ["equipe-terrain.jpg","L'équipe Vision Citoyenne sur le terrain","terrain"],
+    ["equipe-terrain.jpg","L'équipe de l'ONG Vision Citoyenne sur le terrain","terrain"],
     ["action-terrain-ecole.jpg","Action de terrain dans une école partenaire","terrain"],
     ["suivi-projet.jpg","Suivi et évaluation de projet dans un établissement scolaire","terrain"]
 ];

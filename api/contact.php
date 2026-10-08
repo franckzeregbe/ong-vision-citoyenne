@@ -47,7 +47,7 @@ function notify(array $m): void
         'Nom : ' . $m['name'] . "\nE-mail : " . $m['email'] . "\nTéléphone : " . $m['phone'] . "\n\n" . $m['message'] .
         "\n\n— Tous les messages : https://$host/admin/";
     $headers = [
-        'From' => "Site Vision Citoyenne <no-reply@$host>",
+        'From' => "Site ONG Vision Citoyenne <no-reply@$host>",
         'Reply-To' => $m['email'], // validé par FILTER_VALIDATE_EMAIL : pas de retour à la ligne possible
         'Content-Type' => 'text/plain; charset=UTF-8',
     ];

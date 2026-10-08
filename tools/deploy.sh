@@ -15,6 +15,7 @@
 REPO="franckzeregbe/ong-vision-citoyenne"
 BRANCH="main"
 STAMP="$HOME/.vc-deployed"
+SYNC="$HOME/.vc-content-sync"
 TMP="$HOME/.vc-site.tgz"
 
 # Dossier public du site (détecté automatiquement)
@@ -40,6 +41,18 @@ if tar xzf "$TMP" -C "$DIR" --strip-components=1 \
     --exclude='*/js/partners.js'; then
   echo "$SHA" > "$STAMP"
   echo "Site mis a jour : $SHA"
+
+  # Resynchronisation exceptionnelle du contenu admin depuis GitHub,
+  # déclenchée en changeant tools/content-sync.txt. À n'utiliser que si le
+  # contenu en ligne est identique à celui de GitHub (sinon il serait perdu).
+  WANT=$(tar xzf "$TMP" -O --wildcards '*/tools/content-sync.txt' 2>/dev/null | head -1)
+  if [ -n "$WANT" ] && [ "$WANT" != "$(cat "$SYNC" 2>/dev/null)" ]; then
+    if tar xzf "$TMP" -C "$DIR" --strip-components=1 --wildcards \
+        '*/js/news.js' '*/js/galerie.js' '*/js/partners.js'; then
+      echo "$WANT" > "$SYNC"
+      echo "Contenu admin resynchronise : $WANT"
+    fi
+  fi
 fi
 
 rm -f "$TMP"

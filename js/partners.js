@@ -94,11 +94,11 @@ const PARTNERS = [
         "tag": "int",
         "fr": {
             "name": "ECOSOC — Conseil économique et social de l'ONU",
-            "desc": "Organe central de coordination des activités économiques et sociales de l'ONU. Vision Citoyenne y bénéficie d'un statut consultatif pour porter la voix des communautés."
+            "desc": "Organe central de coordination des activités économiques et sociales de l'ONU. L'ONG Vision Citoyenne y bénéficie d'un statut consultatif pour porter la voix des communautés."
         },
         "en": {
             "name": "ECOSOC — United Nations Economic and Social Council",
-            "desc": "Central coordinating body for the economic and social work of the UN. Vision Citoyenne holds consultative status there to voice community concerns."
+            "desc": "Central coordinating body for the economic and social work of the UN. ONG Vision Citoyenne holds consultative status there to voice community concerns."
         }
     },
     {
